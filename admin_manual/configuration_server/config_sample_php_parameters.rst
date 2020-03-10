@@ -1370,16 +1370,16 @@ Server details for one or more memcached servers to use for memory caching.
 		\Memcached::OPT_SEND_TIMEOUT =>    50,
 		\Memcached::OPT_RECV_TIMEOUT =>    50,
 		\Memcached::OPT_POLL_TIMEOUT =>    50,
-	
+
 		// Enable compression
 		\Memcached::OPT_COMPRESSION =>          true,
-	
+
 		// Turn on consistent hashing
 		\Memcached::OPT_LIBKETAMA_COMPATIBLE => true,
-	
+
 		// Enable Binary Protocol
 		\Memcached::OPT_BINARY_PROTOCOL =>      true,
-	
+
 		// Binary serializer vill be enabled if the igbinary PECL module is available
 		//\Memcached::OPT_SERIALIZER => \Memcached::SERIALIZER_IGBINARY,
 	),
@@ -2005,6 +2005,11 @@ Simply set this property to "false", if you want to turn this feature off.
 App config options
 ------------------
 
+.. _label-activity-app-config:
+
+Activity app
+^^^^^^^^^^^^
+
 Retention for activities of the activity app:
 
 
@@ -2017,6 +2022,6 @@ which are older then the number of days that is set for ``activity_expire_days``
 
 ::
 
-	'wnd.logging.enable' => true,
+	'activity_use_cached_mountpoints' => false,
 
-This enables debug logs for the windows_network_drive app.
+Before enabling this, read the warning in :ref:`label-activities-groupfolders`
