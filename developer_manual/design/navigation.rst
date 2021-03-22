@@ -8,7 +8,7 @@
 Introduction
 ===============
 
-The navigation section of any Nextcloud app is the left sidebar.
+The navigation section of any cyfrSpaces app is the left sidebar.
 It is basically composed of
 
 * a primary action button
@@ -74,7 +74,7 @@ It needs to be:
 * Simple
 * Responsive
 
-Nextcloud provides a very organized way of building menus.
+cyfrSpaces provides a very organized way of building menus.
 We implemented various essential functions and provide easy way of using them.
 
 

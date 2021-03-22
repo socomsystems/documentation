@@ -2,7 +2,7 @@
 Linking external sites
 ======================
 
-You can embed external websites or documents inside your Nextcloud pages with the **External
+You can embed external websites or documents inside your cyfrSpaces pages with the **External
 sites** app, as this screenshot shows.
 
 .. figure:: ../images/external-sites-1.png
@@ -10,12 +10,12 @@ sites** app, as this screenshot shows.
    *Click to enlarge*
 
 This is useful for quick access to important pages such as the
-Nextcloud manuals and informational pages for your company, and for presenting 
-external pages inside your custom Nextcloud branding, if you use your own custom 
+cyfrSpaces manuals and informational pages for your company, and for presenting 
+external pages inside your custom cyfrSpaces branding, if you use your own custom 
 themes.
 
 The External sites app can be easily installed from the app store. Go to **Settings > Apps >
-Customization** to enable it. Then go to your Nextcloud **Settings > Administration > External sites** to create your
+Customization** to enable it. Then go to your cyfrSpaces **Settings > Administration > External sites** to create your
 links, which are saved automatically.
 
 Each link can have a unique icon, which can be uploaded in the admin settings.
@@ -31,7 +31,7 @@ It is also possible to add links only for members of a given group.
 
    *Click to enlarge*
 
-The links appear in the Nextcloud menu on the top or in the settings menu, after
+The links appear in the cyfrSpaces menu on the top or in the settings menu, after
 reloading the page.
 
 .. figure:: ../images/external-sites-3.png
@@ -45,7 +45,7 @@ browsers and Web sites handle HTTP and HTTPS URLs, and because the External
 Sites app embeds external links in IFrames. Modern Web browsers try very hard 
 to protect Web surfers from dangerous links, and safety apps like 
 `Privacy Badger <https://www.eff.org/privacybadger>`_ and ad-blockers may block 
-embedded pages. It is strongly recommended to enforce HTTPS on your Nextcloud 
+embedded pages. It is strongly recommended to enforce HTTPS on your cyfrSpaces 
 server; do not weaken this, or any of your security tools, just to make 
 embedded Web pages work. After all, you can freely access them outside of 
 Nextcloud.

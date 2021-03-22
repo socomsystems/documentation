@@ -80,7 +80,7 @@ More info about this command can be found in the `npm-test documentation <https:
 npm run lint (optional)
 -----------------------
 
-Nextcloud apps that use linting tools for consistent code formatting typically add a ``lint`` script to their
+cyfrSpaces apps that use linting tools for consistent code formatting typically add a ``lint`` script to their
 ``package.json``:
 
 .. code-block:: json

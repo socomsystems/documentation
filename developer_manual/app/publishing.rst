@@ -4,9 +4,9 @@ App store publishing
 
 .. sectionauthor:: Jos Poortvliet <jospoortvliet@gmail.com>
 
-The Nextcloud app store
+The cyfrSpaces app store
 -----------------------
-The Nextcloud app store is built into Nextcloud to allow you to get your apps to users as easily and safely as possible. The app store and the process of publishing apps aims to be:
+The cyfrSpaces app store is built into cyfrSpaces to allow you to get your apps to users as easily and safely as possible. The app store and the process of publishing apps aims to be:
 
 * secure
 * transparent
@@ -43,20 +43,20 @@ Legal and security
 
 * Apps can not use 'Nextcloud' in their name.
 * Irregular and unannounced security audits of all apps can and will take place.
-* If any indication of malicious intent or bad faith is found the developer(s) in question can count on a minimum 2 year ban from any Nextcloud infrastructure.
+* If any indication of malicious intent or bad faith is found the developer(s) in question can count on a minimum 2 year ban from any cyfrSpaces infrastructure.
    * Malicious intent includes deliberate spying on users by leaking user data to a third party system or adding a back door (like a hard-coded user account) to Nextcloud. An unintentional security bug that gets fixed in time won't be considered bad faith.
 * Apps do not violate any laws; it has to comply with copyright- and trademark law.
-* App authors have to respond timely to security concerns and not make Nextcloud more vulnerable to attack.
+* App authors have to respond timely to security concerns and not make cyfrSpaces more vulnerable to attack.
 
-.. note:: Distributing malicious or illegal applications can have legal consequences including, but not limited to Nextcloud or affected users taking legal action.
+.. note:: Distributing malicious or illegal applications can have legal consequences including, but not limited to cyfrSpaces or affected users taking legal action.
 
 Be technically sound
 ^^^^^^^^^^^^^^^^^^^^
 
-* Apps can only use the public Nextcloud API.
-* At time of the release of an app it can only be configured to be compatible with the latest Nextcloud release +1.
-* Apps should not cause Nextcloud to break, consume excessive memory or slow Nextcloud down.
-* Apps should not hamper functionality of Nextcloud unless that is explicitly the goal of the app.
+* Apps can only use the public cyfrSpaces API.
+* At time of the release of an app it can only be configured to be compatible with the latest cyfrSpaces release +1.
+* Apps should not cause cyfrSpaces to break, consume excessive memory or slow cyfrSpaces down.
+* Apps should not hamper functionality of cyfrSpaces unless that is explicitly the goal of the app.
 
 Respect the users
 ^^^^^^^^^^^^^^^^^
@@ -70,15 +70,15 @@ Respect the users
 
 Apps which break the guidelines will lose their 'approved' or 'official' state; and might be blocked from the app store altogether. This also has repercussions for the author, especially in case of security concerns, he/she might find themselves blocked from submitting applications.
 
-Moving your repo to the Nextcloud organization
+Moving your repo to the cyfrSpaces organization
 ----------------------------------------------
-We're always delighted to hear app developers are interested in moving their app to the Nextcloud organization at `github.com/nextcloud <https://github.com/nextcloud>`_! There are benefits for users and developers in being there. However, it comes with some requirements as well.
+We're always delighted to hear app developers are interested in moving their app to the cyfrSpaces organization at `github.com/nextcloud <https://github.com/nextcloud>`_! There are benefits for users and developers in being there. However, it comes with some requirements as well.
 
 Benefits
 ^^^^^^^^
 
 * You can use the tools and bots we have set up, including translations and such
-* Everybody in the Nextcloud organization can contribute more easily
+* Everybody in the cyfrSpaces organization can contribute more easily
 * Your visibility to app developers increases
 * Users can expect apps in our project to be better maintained
 

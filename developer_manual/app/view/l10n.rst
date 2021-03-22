@@ -4,7 +4,7 @@ Translation
 
 .. sectionauthor:: Bernhard Posselt <dev@bernhard-posselt.com>, Kristof Hamann
 
-Nextcloud provides mechanisms for internationalization (make an application translatable) and localization (add translations for specific languages). This section provides detailed instructions for both aspects.
+cyfrSpaces provides mechanisms for internationalization (make an application translatable) and localization (add translations for specific languages). This section provides detailed instructions for both aspects.
 
 
 Make text translatable
@@ -119,7 +119,7 @@ There are global functions **t()** and **n()** available for translating strings
 .. code-block:: js
 
     t('myapp', 'Hello World!');
-    t('myapp', '{name} is available. Get {linkstart}more information{linkend}}', {name: 'Nextcloud 16', linkstart: '<a href="...">', linkend: '</a>'});
+    t('myapp', '{name} is available. Get {linkstart}more information{linkend}}', {name: 'cyfrSpaces 16', linkstart: '<a href="...">', linkend: '</a>'});
 
 
 
@@ -193,7 +193,7 @@ In case some translation strings may be translated wrongly because they have mul
 Adding translations
 -------------------
 
-Nextcloud's translation system is powered by `Transifex <https://www.transifex.com/nextcloud/>`_. To start translating sign up and enter a group. If your community app should be translated by the `Nextcloud community on Transifex <https://www.transifex.com/nextcloud/nextcloud/dashboard/>`_ just follow the setup section below.
+Nextcloud's translation system is powered by `Transifex <https://www.transifex.com/nextcloud/>`_. To start translating sign up and enter a group. If your community app should be translated by the `cyfrSpaces community on Transifex <https://www.transifex.com/nextcloud/nextcloud/dashboard/>`_ just follow the setup section below.
 
 
 
@@ -216,7 +216,7 @@ the root folder of your app and specify the files one per line::
 Setup of the transifex sync
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To setup the transifex sync within the Nextcloud community you need to add first the
+To setup the transifex sync within the cyfrSpaces community you need to add first the
 transifex config to your app folder at :file:`.tx/config` (please replace **MYAPP** with your apps id)::
 
     [main]

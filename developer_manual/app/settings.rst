@@ -130,7 +130,7 @@ of their own (see below), and also register into sections of other apps.
 the more on top it will appear, and vice versa. The result depends on the
 priorities of other settings.
 
-Nextcloud will look for the templates in a template folder located in your apps
+cyfrSpaces will look for the templates in a template folder located in your apps
 root directory. It should always end on .php, in this case ``templates/admin.php``
 would be the final relative path.
 
@@ -187,7 +187,7 @@ would be the final relative path.
 Then, the implementing class should be added to the info.xml. Settings will be
 registered upon install and update. When settings are added to an existing,
 installed and enabled app, it should be made sure that the version is
-increased so Nextcloud can register the class. It is only possible to register
+increased so cyfrSpaces can register the class. It is only possible to register
 one ISettings implementor.
 
 For a more complex example using embedded templates have a look at the

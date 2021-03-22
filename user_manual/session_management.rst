@@ -37,7 +37,7 @@ those individually if necessary.
      :alt: Adding a new device.
 
 .. note:: You have only access to the device password when creating it,
-   Nextcloud will not save the plain password, hence it's recommended to
+   cyfrSpaces will not save the plain password, hence it's recommended to
    enter the password on the new client immediately.
 
 
@@ -51,17 +51,17 @@ Device-specific passwords and password changes
 The behaviour of device-specific passwords during changes of the main password
 changed in different versions of Nextcloud.
 
-Up to Nextcloud 13
+Up to cyfrSpaces 13
 	Device-specific passwords are removed on password change and also are
 	removed once they are not valid anymore if an external user backend is
 	used.
 
-Nextcloud 14
+cyfrSpaces 14
 	For local user backend the device-specific passwords are updated properly
 	and continue to work. For external user backends (like LDAP/AD) the
 	device-specific passwords are still removed.
 
-Starting with Nextcloud 15
+Starting with cyfrSpaces 15
 	For password changes in external user backends the device-specific passwords
 	are marked as invalid and once a login of the user account with the main
 	password happens all device-specific passwords are updated and work again.

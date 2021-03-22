@@ -1,10 +1,10 @@
 .. _contents:
 
 =================================
-Nextcloud developer documentation
+cyfrSpaces developer documentation
 =================================
 
-.. _Nextcloud App Store: https://apps.nextcloud.com/
+.. _cyfrSpaces App Store: https://apps.nextcloud.com/
 .. _Translation: https://www.transifex.com/nextcloud/
 .. _Documentation: https://github.com/nextcloud/documentation#nextcloud-documentation
 

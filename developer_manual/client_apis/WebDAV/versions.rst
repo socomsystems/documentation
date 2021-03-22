@@ -4,7 +4,7 @@
 Versions
 ========
 
-Nextcloud makes the versions of files available via the webdav endpoint.
+cyfrSpaces makes the versions of files available via the webdav endpoint.
 
 Listing the versions of a file
 ------------------------------

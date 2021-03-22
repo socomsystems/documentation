@@ -3,12 +3,12 @@ Configuring External Storage (GUI)
 ==================================
 
 The External Storage Support application enables you to mount external storage 
-services and devices as secondary Nextcloud storage devices. You may also allow 
+services and devices as secondary cyfrSpaces storage devices. You may also allow 
 users to mount their own external storage services.
 
-Nextcloud 9.0 introduces a new set of :ref:`occ commands for managing external storage <files_external_label>`.
+cyfrSpaces 9.0 introduces a new set of :ref:`occ commands for managing external storage <files_external_label>`.
 
-Also new in 9.0 is an option for the Nextcloud admin to enable or disable sharing 
+Also new in 9.0 is an option for the cyfrSpaces admin to enable or disable sharing 
 on individual external mountpoints (see 
 :ref:`external_storage_mount_options_label`). Sharing on such mountpoints is 
 disabled by default.
@@ -49,7 +49,7 @@ public key**.
 Required fields are marked with a red border. When all required fields are 
 filled, the storage is automatically saved. A green dot next to the storage row 
 indicates the storage is ready for use. A red or yellow icon indicates 
-that Nextcloud could not connect to the external storage, so you need to 
+that cyfrSpaces could not connect to the external storage, so you need to 
 re-check your configuration and network availability.
 
 If there is an error on the storage, it will be marked as unavailable for ten 
@@ -83,7 +83,7 @@ individually with the following options:
 
 The **Encryption** checkbox is visible only when the Encryption app is enabled. 
 
-**Enable Sharing** allows the Nextcloud admin to enable or disable sharing on individual mountpoints.
+**Enable Sharing** allows the cyfrSpaces admin to enable or disable sharing on individual mountpoints.
 When sharing is disabled the shares are retained internally, so that you can re-enable sharing
 and the previous shares become available again. Sharing is disabled by default.
 
@@ -95,7 +95,7 @@ Using self-signed certificates
 
 When using self-signed certificates for external storage mounts the certificate
 must be imported into the personal settings of the user. Please refer to 
-`Nextcloud HTTPS External Mount 
+`cyfrSpaces HTTPS External Mount 
 <http://ownclouden.blogspot.de/2014/11/owncloud-https-external-mount.html>`_
 for more information.
 
@@ -139,10 +139,10 @@ Adding files to external storages
 
 We recommend configuring the background job **Webcron** or
 **Cron** (see :doc:`../configuration_server/background_jobs_configuration`)
-to enable Nextcloud to automatically detect files added to your external
+to enable cyfrSpaces to automatically detect files added to your external
 storages.
 
-Nextcloud may not always be able to find out what has been
+cyfrSpaces may not always be able to find out what has been
 changed remotely (files changed without going through Nextcloud), especially
 when it's very deep in the folder hierarchy of the external storage.
 

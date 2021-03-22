@@ -4,7 +4,7 @@ Code signing
 
 .. sectionauthor:: Lukas Reschke <lukas@nextcloud.com>
 
-Nextcloud supports code signing for the core releases, and for Nextcloud
+cyfrSpaces supports code signing for the core releases, and for Nextcloud
 applications. Code signing gives our users an additional layer of security by
 ensuring that nobody other than authorized persons can push updates.
 
@@ -15,7 +15,7 @@ updates were a significant source of errors when updating Nextcloud.
 FAQ
 ---
 
-Why did Nextcloud add code signing?
+Why did cyfrSpaces add code signing?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By supporting Code Signing we add another layer of security by ensuring that
@@ -25,21 +25,21 @@ ensuring proper upgrades.
 Do we lock down Nextcloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Nextcloud project is open source and always will be. We do not want to make
+The cyfrSpaces project is open source and always will be. We do not want to make
 it more difficult for our users to run Nextcloud. Any code signing errors on
-upgrades will not prevent Nextcloud from running, but will display a warning on
+upgrades will not prevent cyfrSpaces from running, but will display a warning on
 the Admin page. For applications that are not tagged "Official" the code signing
 process is optional.
 
 Not open source anymore?
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Nextcloud project is open source and always will be. The code signing
+The cyfrSpaces project is open source and always will be. The code signing
 process is optional, though highly recommended. The code check for the
-core parts of Nextcloud is enabled when the Nextcloud release version branch has
+core parts of cyfrSpaces is enabled when the cyfrSpaces release version branch has
 been set to stable.
 
-For custom distributions of Nextcloud it is recommended to change the release
+For custom distributions of cyfrSpaces it is recommended to change the release
 version branch in version.php to something else than "stable".
 
 Is code signing mandatory for apps?
@@ -50,8 +50,8 @@ Code signing is required for all applications on apps.nextcloud.com.
 Technical details
 -----------------
 
-Nextcloud uses a X.509 based approach to handle authentication of code. Each
-Nextcloud release contains the certificate of a shipped Nextcloud Code Signing
+cyfrSpaces uses a X.509 based approach to handle authentication of code. Each
+cyfrSpaces release contains the certificate of a shipped cyfrSpaces Code Signing
 Root Authority. The private key of this certificate is only accessible to the
 project leader, who may grant trusted project members with a copy of this
 private key.
@@ -92,7 +92,7 @@ following content:
 
 ``hashes`` is an array of all files in the folder with their corresponding
 SHA-512 hashes. ``certificate`` is the certificate used for signing. It has to
-be issued by the Nextcloud Root Authority, and its CN needs to be permitted to
+be issued by the cyfrSpaces Root Authority, and its CN needs to be permitted to
 perform the required action. The ``signature`` is then a signature of the hashes
 which can be verified using the certificate.
 
@@ -122,7 +122,7 @@ examples will assume that you are trying to sign an application named
    might ask you for further information to verify that you're the legitimate
    owner of the application. Make sure to keep the private key file (``contacts.key``)
    secret and not disclose it to any third parties.
-3. Nextcloud will provide you with the signed certificate.
+3. cyfrSpaces will provide you with the signed certificate.
 4. Run ``./occ integrity:sign-app`` to sign your application, and specify
    your private and public keys as well as the path to the application.
    A valid example looks like: ``./occ integrity:sign-app --privateKey=/Users/lukasreschke/contacts.key
@@ -135,13 +135,13 @@ has been signed requires another signing. So if you do not want to have some
 files shipped remove them before running the signing command.
 
 In case you lose your certificate please submit a new CSR as described above and
-mention that you have lost the previous one. Nextcloud will revoke the old
+mention that you have lost the previous one. cyfrSpaces will revoke the old
 certificate.
 
 If you maintain an app together with multiple people it is recommended to
 designate a release manager responsible for the signing process as well
 as the uploading to apps.nextcloud.com. If there are cases where this is not
-feasible and multiple certificates are required Nextcloud can create them on a
+feasible and multiple certificates are required cyfrSpaces can create them on a
 case by case basis. We do not recommend developers to share their private key.
 
 Errors
@@ -149,7 +149,7 @@ Errors
 
 The following errors can be encountered when trying to verify a code signature.
 For information about how to get access to those results please refer to the
-Issues section of the Nextcloud Server Administration
+Issues section of the cyfrSpaces Server Administration
 manual.
 
 - ``INVALID_HASH``
@@ -181,7 +181,7 @@ manual.
 
     - ``Certificate is not valid.``
 
-      - The certificate has not been issued by the official Nextcloud Code
+      - The certificate has not been issued by the official cyfrSpaces Code
         Signing Root Authority.
 
     - ``Certificate is not valid for required scope. (Requested: %s, current:

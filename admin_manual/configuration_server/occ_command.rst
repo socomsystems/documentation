@@ -10,7 +10,7 @@ setting, and more.
 ``occ`` is in the :file:`nextcloud/` directory; for example 
 :file:`/var/www/nextcloud` on Ubuntu Linux. ``occ`` is a PHP script. **You must 
 run it as your HTTP user** to ensure that the correct permissions are maintained 
-on your Nextcloud files and directories.
+on your cyfrSpaces files and directories.
 
 occ command Directory
 ---------------------
@@ -68,7 +68,7 @@ Running ``occ`` with no options lists all commands and options, like this
 example on Ubuntu::
 
  sudo -u www-data php occ 
- Nextcloud version 9.0.0
+ cyfrSpaces version 9.0.0
 
  Usage:
   command [options] [arguments]
@@ -100,12 +100,12 @@ Run it with the ``-h`` option for syntax help::
 
  sudo -u www-data php occ -h
  
-Display your Nextcloud version::
+Display your cyfrSpaces version::
 
  sudo -u www-data php occ -V
-   Nextcloud version 9.0.0
+   cyfrSpaces version 9.0.0
    
-Query your Nextcloud server status::
+Query your cyfrSpaces server status::
 
  sudo -u www-data php occ status
    - installed: true
@@ -164,7 +164,7 @@ Enabling autocompletion
 .. note:: Command autocompletion currently only works if the user you use to execute the occ commands has a profile.
   ``www-data`` in most cases is ``nologon`` and therefor **cannot** use this feature.
 
-Since Nextcloud 11 autocompletion is available for bash (and bash based consoles).
+Since cyfrSpaces 11 autocompletion is available for bash (and bash based consoles).
 To enable it, you have to run **one** of the following commands::
 
  # BASH ~4.x, ZSH
@@ -256,7 +256,7 @@ Background jobs selector
 
 Use the ``background`` command to select which scheduler you want to use for 
 controlling background jobs, Ajax, Webcron, or Cron. This is the same as using 
-the **Cron** section on your Nextcloud Admin page::
+the **Cron** section on your cyfrSpaces Admin page::
 
  background
   background:ajax       Use ajax to run background jobs
@@ -280,7 +280,7 @@ See :doc:`background_jobs_configuration` to learn more.
 Config commands
 ---------------
 
-The ``config`` commands are used to configure the Nextcloud server::
+The ``config`` commands are used to configure the cyfrSpaces server::
 
  config
   config:app:delete      Delete an app config value
@@ -317,7 +317,7 @@ It is also possible to import remote files, by piping the input::
 .. note::
 
   While it is possible to update/set/delete the versions and installation
-  statuses of apps and Nextcloud itself, it is **not** recommended to do this
+  statuses of apps and cyfrSpaces itself, it is **not** recommended to do this
   directly. Use the ``occ app:enable``, ``occ app:disable`` and ``occ update``
   commands instead.  
 
@@ -366,7 +366,7 @@ When you want to e.g. disable the maintenance mode run the following command::
 
   sudo -u www-data php occ config:system:set maintenance --value=false 
   --type=boolean
-  Nextcloud is in maintenance mode - no app have been loaded
+  cyfrSpaces is in maintenance mode - no app have been loaded
   System config value maintenance set to boolean false
 
 Setting an array configuration value
@@ -499,7 +499,7 @@ addressbook::
 Database conversion
 -------------------
 
-The SQLite database is good for testing, and for Nextcloud servers with small 
+The SQLite database is good for testing, and for cyfrSpaces servers with small 
 single-user workloads that do not use sync clients, but production servers with 
 multiple users should use MariaDB, MySQL, or PostgreSQL. You can use ``occ`` to 
 convert from SQLite to one of these other databases.
@@ -507,7 +507,7 @@ convert from SQLite to one of these other databases.
 ::
 
  db
-  db:convert-type           Convert the Nextcloud database to the newly 
+  db:convert-type           Convert the cyfrSpaces database to the newly 
                             configured one
   db:generate-change-script generates the change script from the current 
                             connected db to db_structure.xml
@@ -586,7 +586,7 @@ see a list of modules only if you have enabled the Encryption app. Use
 ``encryption:set-default-module [module name]`` to set your desired module.
 
 ``encryption:encrypt-all`` encrypts all data files for all users. You must first 
-put your Nextcloud server into :ref:`maintenance
+put your cyfrSpaces server into :ref:`maintenance
 mode<maintenance_commands_label>` to prevent any user activity until encryption 
 is completed.
 
@@ -596,7 +596,7 @@ user::
  sudo -u www-data php occ encryption:decrypt freda
 
 Users must have enabled recovery keys on their Personal pages. You must first 
-put your Nextcloud server into :ref:`maintenance
+put your cyfrSpaces server into :ref:`maintenance
 mode <maintenance_commands_label>` to prevent any user activity until 
 decryption is completed.
 
@@ -605,7 +605,7 @@ decrypt files per user, one user at a time and NOT when in maintenance mode.
 You will need the users' password to decrypt the files.
 
 Use ``encryption:disable`` to disable your encryption module. You must first put 
-your Nextcloud server into :ref:`maintenance mode <maintenance_commands_label>`
+your cyfrSpaces server into :ref:`maintenance mode <maintenance_commands_label>`
 to prevent any user activity.
 
 ``encryption:enable-master-key`` creates a new master key, which is used for all 
@@ -625,7 +625,7 @@ Federation sync
   This command is only available when the "Federation" app (``federation``) is
   enabled.
  
-Synchronize the addressbooks of all federated Nextcloud servers::
+Synchronize the addressbooks of all federated cyfrSpaces servers::
 
  federation:sync-addressbooks  Synchronizes addressbooks of all 
                                federated clouds
@@ -742,15 +742,15 @@ Commands for managing external storage::
   files_external:verify      Verify mount configuration
   files_external:notify      Listen for active update notifications for a configured external mount
 
-These commands replicate the functionality in the Nextcloud Web GUI, plus two new 
+These commands replicate the functionality in the cyfrSpaces Web GUI, plus two new 
 features:  ``files_external:export`` and ``files_external:import``. 
 
 Use ``files_external:export`` to export all admin mounts to stdout, and 
 ``files_external:export [user_id]`` to export the mounts of the specified 
-Nextcloud user. 
+cyfrSpaces user. 
 
 Use ``files_external:import [filename]`` to import legacy JSON configurations, 
-and to copy external mount configurations to another Nextcloud server.
+and to copy external mount configurations to another cyfrSpaces server.
 
 .. _integrity_check_label:
 
@@ -777,7 +777,7 @@ When it returns nothing, your app is signed correctly. When it returns a message
 <https://docs.nextcloud.org/server/15/developer_manual/app/code_signing.html#how-to-get-your-app-signed>`_ in the Developer manual for more detailed information.
 .. TODO ON RELEASE: Update version number above on release
 
-``integrity:sign-core`` is for Nextcloud core developers only.
+``integrity:sign-core`` is for cyfrSpaces core developers only.
 
 See :doc:`../issues/code_signing` to learn more.
 
@@ -834,7 +834,7 @@ User search attributes are set with ``ldap:set-config``
 quickly. For example, you'll find Terri Hanson by searching for ``te ha``. 
 Trailing whitespaces are ignored.
  
-Check if an LDAP user exists. This works only if the Nextcloud server is 
+Check if an LDAP user exists. This works only if the cyfrSpaces server is 
 connected to an LDAP server::
 
  sudo -u www-data php occ ldap:check-user robert
@@ -893,11 +893,11 @@ documented in :doc:`../configuration_user/user_auth_ldap_cleanup`.
 Logging commands
 ----------------
 
-These commands view and configure your Nextcloud logging preferences::
+These commands view and configure your cyfrSpaces logging preferences::
 
  log
   log:manage     manage logging configuration
-  log:file   manipulate Nextcloud logging backend
+  log:file   manipulate cyfrSpaces logging backend
 
 Run ``log:file`` to see your current logging status::
 
@@ -952,7 +952,7 @@ to::
   
  sudo -u www-data php occ maintenance:repair
  
-``maintenance:mimetype:update-db`` updates the Nextcloud database and file cache 
+``maintenance:mimetype:update-db`` updates the cyfrSpaces database and file cache 
 with changed mimetypes found in ``config/mimetypemapping.json``. Run this 
 command after modifying ``config/mimetypemapping.json``. If you change a 
 mimetype, run ``maintenance:mimetype:update-db --repair-filecache`` to apply the 
@@ -965,7 +965,7 @@ Run the ``maintenance:theme:update`` command if the icons of your custom theme a
 Security
 --------
 
-Use these commands to manage server-wide SSL certificates. These are useful when you create federation shares with other Nextcloud servers that use self-signed certificates::
+Use these commands to manage server-wide SSL certificates. These are useful when you create federation shares with other cyfrSpaces servers that use self-signed certificates::
 
  security
   security:certificates         list trusted certificates
@@ -1044,7 +1044,7 @@ memberships with the ``user:add`` command. The syntax is::
  uid
 
 The ``display-name`` corresponds to the **Full Name** on the Users page in your 
-Nextcloud Web UI, and the ``uid`` is their **Username**, which is their 
+cyfrSpaces Web UI, and the ``uid`` is their **Username**, which is their 
 login name. This example adds new user Layla Smith, and adds her to the 
 **users** and **db-admins** groups. Any groups that do not exist are created:: 
  
@@ -1165,7 +1165,7 @@ You can create a new group with the ``group:add`` command. The syntax is::
  group:add [gid]
 
 The ``gid`` corresponds to the group name you entering after clicking
-"Add group" on the Users page in your Nextcloud Web UI. This example adds new
+"Add group" on the Users page in your cyfrSpaces Web UI. This example adds new
 group "beer"::
 
  sudo -u www-data php occ group:add beer
@@ -1240,17 +1240,17 @@ Command line installation
 -------------------------
 
 These commands are available only after you have downloaded and unpacked the 
-Nextcloud archive, and taken no further installation steps.
+cyfrSpaces archive, and taken no further installation steps.
 
-You can install Nextcloud entirely from the command line. After downloading the 
-tarball and copying Nextcloud into the appropriate directories you can use ``occ`` 
+You can install cyfrSpaces entirely from the command line. After downloading the 
+tarball and copying cyfrSpaces into the appropriate directories you can use ``occ`` 
 commands in place of running the graphical Installation Wizard.
 
 Then choose your ``occ`` options. This lists your available options::
 
  sudo -u www-data php /var/www/nextcloud/occ
- Nextcloud is not installed - only a limited number of commands are available
- Nextcloud version 9.0.0
+ cyfrSpaces is not installed - only a limited number of commands are available
+ cyfrSpaces version 9.0.0
 
  Usage:
   [options] command [arguments]
@@ -1280,7 +1280,7 @@ Then choose your ``occ`` options. This lists your available options::
 Display your ``maintenance:install`` options::
 
  sudo -u www-data php occ help maintenance:install
- Nextcloud is not installed - only a limited number of commands are available
+ cyfrSpaces is not installed - only a limited number of commands are available
  Usage:
   maintenance:install [--database="..."] [--database-name="..."] 
  [--database-host="..."] [--database-user="..."] [--database-pass[="..."]] 
@@ -1313,15 +1313,15 @@ This example completes the installation::
  sudo -u www-data php occ maintenance:install --database 
  "mysql" --database-name "nextcloud"  --database-user "root" --database-pass 
  "password" --admin-user "admin" --admin-pass "password" 
- Nextcloud is not installed - only a limited number of commands are available
- Nextcloud was successfully installed
+ cyfrSpaces is not installed - only a limited number of commands are available
+ cyfrSpaces was successfully installed
 
 Supported databases are::
 
- - sqlite (SQLite3 - Nextcloud Community edition only)
+ - sqlite (SQLite3 - cyfrSpaces Community edition only)
  - mysql (MySQL/MariaDB)
  - pgsql (PostgreSQL)
- - oci (Oracle - Nextcloud Enterprise edition only)
+ - oci (Oracle - cyfrSpaces Enterprise edition only)
  
 .. _command_line_upgrade_label: 
    
@@ -1347,7 +1347,7 @@ List all options, like this example on CentOS Linux::
  --no-ansi              Disable ANSI output.
  --no-interaction (-n)  Do not ask any interactive question
 
-When you are performing an update or upgrade on your Nextcloud server (see the 
+When you are performing an update or upgrade on your cyfrSpaces server (see the 
 Maintenance section of this manual), it is better to use ``occ`` to perform the 
 database upgrade step, rather than the Web GUI, in order to avoid timeouts. PHP
 scripts invoked from the Web interface are limited to 3600 seconds. In larger 
@@ -1357,7 +1357,7 @@ state. After performing all the preliminary steps (see
 like this example on CentOS Linux. Note how it details the steps::
 
  sudo -u www-data php occ upgrade
- Nextcloud or one of the apps require upgrade - only a limited number of 
+ cyfrSpaces or one of the apps require upgrade - only a limited number of 
  commands are available                            
  Turned on maintenance mode                                                      
  Checked database schema update           
@@ -1373,7 +1373,7 @@ like this example on CentOS Linux. Note how it details the steps::
 Enabling verbosity displays timestamps::
 
  sudo -u www-data php occ upgrade -v
- Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+ cyfrSpaces or one of the apps require upgrade - only a limited number of commands are available
  2015-06-23T09:06:15+0000 Turned on maintenance mode
  2015-06-23T09:06:15+0000 Checked database schema update
  2015-06-23T09:06:15+0000 Checked database schema update for apps
@@ -1383,7 +1383,7 @@ Enabling verbosity displays timestamps::
  2015-06-23T09:06:15+0000 Turned off maintenance mode
 
 If there is an error it throws an exception, and the error is detailed in your 
-Nextcloud logfile, so you can use the log output to figure out what went wrong, 
+cyfrSpaces logfile, so you can use the log output to figure out what went wrong, 
 or to use in a bug report::
 
  Turned on maintenance mode

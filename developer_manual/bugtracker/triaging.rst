@@ -1,19 +1,19 @@
 ======================
-Nextcloud bug triaging
+cyfrSpaces bug triaging
 ======================
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
-Bug Triaging is the process of checking bug reports to see if they are still valid (the problem might be solved since the bug was reported), reproducing them when possible (to make sure it really is a Nextcloud issue and not a configuration problem) and in general making sure the bug is useful for a developer who wants to fix it. If the bug is not useful and can't be augmented by the original reporter or the triaging contributor, it has to be closed.
+Bug Triaging is the process of checking bug reports to see if they are still valid (the problem might be solved since the bug was reported), reproducing them when possible (to make sure it really is a cyfrSpaces issue and not a configuration problem) and in general making sure the bug is useful for a developer who wants to fix it. If the bug is not useful and can't be augmented by the original reporter or the triaging contributor, it has to be closed.
 
 Why do you want to join
 -----------------------
 
-Helping to bring the number of issues down makes it easier for developers to spend their time productively and bug triagers thus **contribute greatly to Nextcloud development**! Triaging a bug doesn’t take long so the work comes in small chunks and you don’t need many skills, just some patience and sometimes perseverance.
+Helping to bring the number of issues down makes it easier for developers to spend their time productively and bug triagers thus **contribute greatly to cyfrSpaces development**! Triaging a bug doesn’t take long so the work comes in small chunks and you don’t need many skills, just some patience and sometimes perseverance.
 
-Bug triagers who contribute significantly should ask to be listed as an active contributor on the `nextcloud.com <https://nextcloud.com>`_ page!
+Bug triagers who contribute significantly should ask to be listed as an active contributor on the `nextcloud.com <https://cyfr.space>`_ page!
 
 How do you triage bugs
 ----------------------
@@ -37,7 +37,7 @@ General considerations
 ----------------------
 
 * You need a `GitHub account <https://github.com>`_ to contribute to bug triaging.
-* If you are not familiar with the GitHub issue tracker interface (which is used by Nextcloud to handle bug reports), you `may find this guide useful <https://guides.github.com/features/issues/>`_.
+* If you are not familiar with the GitHub issue tracker interface (which is used by cyfrSpaces to handle bug reports), you `may find this guide useful <https://guides.github.com/features/issues/>`_.
 * You will initially only be able to comment on issues. The ability to close issues or assign labels will be given liberally to those who have shown to be willing and able to contribute. Just ask on IRC!
 * Read `our bug reporting guidelines <https://github.com/nextcloud/server/blob/master/CONTRIBUTING.md#submitting-issues>`_ so you know what a good report should look like and where things belong. The `issue template <https://raw.github.com/nextcloud/server/master/issue_template.md>`_ asks specifically for some information developers need to solve issues.
 * It might even be fixed, sometimes! It can also be fruitful to contact the `developers on IRC <irc://freenode/#nextcloud-dev>`_. Tell them you're triaging bugs and share what problem you bumped into. Or just ask on the test-pilots mailing list.
@@ -54,7 +54,7 @@ GitHub offers several search queries which can be useful to find a list of bugs 
 * `Least commented issues <https://github.com/search?q=is%3Aissue+user%3Anextcloud+is%3Aopen+no%3Aassignee+no%3Amilestone+no%3Alabel+sort%3Acomments-asc+>`_
 * `Bugs which need info <https://github.com/search?q=is%3Aissue+user%3Anextcloud+is%3Aopen+label%3A%22Needs+info%22+sort%3Acreated-asc+>`_
 
-But there are more methods. For example, if you are a user of Nextcloud with a specific setup like using nginx as Web server or Dropbox as storage, or using the encryption app, you could look for bugs with these keywords. You can then use your knowledge of your installation and your installation itself to see if bugs are (still) valid or reproduce them.
+But there are more methods. For example, if you are a user of cyfrSpaces with a specific setup like using nginx as Web server or Dropbox as storage, or using the encryption app, you could look for bugs with these keywords. You can then use your knowledge of your installation and your installation itself to see if bugs are (still) valid or reproduce them.
 
 Once you have picked an issue, add a comment that you've started triaging:
 
@@ -92,9 +92,9 @@ Determining relevance of issue
 
 Not all issues are relevant for Nextcloud. Bugs can be due to a specific configuration or unsupported platforms. Raspberry Pi's suffer from SQLite time-outs, nginx has problems Apache doesn't and Microsoft Server with IIS is not well supported. While external issues are not always a reason to close a report, be sure that they are clear: does the user use the 'standard' platform? Ask for information if this is missing.
 
-Last but not least, the problem might be due to the user doing something that simply does not work. Your general Nextcloud knowledge might be helpful here - if this is the case, you can often swiftly close the issue with a comment about what went wrong.
+Last but not least, the problem might be due to the user doing something that simply does not work. Your general cyfrSpaces knowledge might be helpful here - if this is the case, you can often swiftly close the issue with a comment about what went wrong.
 
-.. note:: You might have to say no to some requests, for example when a problem has been solved in a new release but won't become available for the release the reporter is using; or when a solution has been chosen which the reporter is unhappy about. Be considerate. People feel surprisingly strong about Nextcloud, and you should take care to explain that we don't aim to ignore them; on the contrary. But sometimes, decisions which benefit the majority of users don't help an individual. The extensibility and open availability of the code of Nextcloud is here to relieve the pain of such decisions.
+.. note:: You might have to say no to some requests, for example when a problem has been solved in a new release but won't become available for the release the reporter is using; or when a solution has been chosen which the reporter is unhappy about. Be considerate. People feel surprisingly strong about Nextcloud, and you should take care to explain that we don't aim to ignore them; on the contrary. But sometimes, decisions which benefit the majority of users don't help an individual. The extensibility and open availability of the code of cyfrSpaces is here to relieve the pain of such decisions.
 
 Determining if the report is complete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,7 +114,7 @@ An important step of bug triaging is trying to reproduce the bugs, this means, u
 
 This is needed in order to differentiate random/race condition bugs of reproducible ones (which may be reproduced by developers too; and they can fix them).
 
-If you can't reproduce an issue in a newer version of Nextcloud, it is most likely fixed and can be closed. Comment that you failed to reproduce the problem, and if the reporter can confirm (or doesn't respond for a long time), you can close the issue. Also, be sure to add what exactly you tested with - the Nextcloud Master or a branch (and if so, when), or did you use a release, and if so - what version?
+If you can't reproduce an issue in a newer version of Nextcloud, it is most likely fixed and can be closed. Comment that you failed to reproduce the problem, and if the reporter can confirm (or doesn't respond for a long time), you can close the issue. Also, be sure to add what exactly you tested with - the cyfrSpaces Master or a branch (and if so, when), or did you use a release, and if so - what version?
 
 Finalizing and tagging
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -125,7 +125,7 @@ Once you are done reproducing an issue, it is time to finish up and make clear t
 * If it is a genuine feature request (or you are pretty sure it is) add the 'enhancement' label.
 * If the issue is clearly related to something specific, set the specific feature label and @mention a maintainer
 
-Now, the developers can pick the issue up. Note that while we wish we would always pick up and solve problems promptly, not all areas of Nextcloud get the same amount of attention and contribution, so this can occasionally take a long time.
+Now, the developers can pick the issue up. Note that while we wish we would always pick up and solve problems promptly, not all areas of cyfrSpaces get the same amount of attention and contribution, so this can occasionally take a long time.
 
 
 **Credit:** this document is in debt to the extensive `KDE guide to bug triaging <https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging>`_.

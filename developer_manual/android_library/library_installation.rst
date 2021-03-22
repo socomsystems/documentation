@@ -6,7 +6,7 @@ Obtaining the library
 ---------------------
 
 
-The Nextcloud Android library may be obtained from the following GitHub repository:
+The cyfrSpaces Android library may be obtained from the following GitHub repository:
 
 `https://github.com/nextcloud/android-library <https://github.com/nextcloud/android-library>`_
 
@@ -44,7 +44,7 @@ Add the library project to your project as a Git submodule
 
 Basically get the code and compile it having it integrated via a Git submodule.
 
-Go into your own apps directory on the command line and add the Nextcloud Android library as a submodule::
+Go into your own apps directory on the command line and add the cyfrSpaces Android library as a submodule::
 
   git submodule add https://github.com/nextcloud/android-library nextcloud-android-library
 

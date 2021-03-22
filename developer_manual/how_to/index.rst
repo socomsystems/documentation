@@ -39,7 +39,7 @@ SMB
         -v /tmp/samba:/smbmount dperson/samba \
         -u "user;password" -s "public;/smbmount;yes;no;yes"
 
-Make sure that smbclient is installed on your Nextcloud server and has the following configuration:
+Make sure that smbclient is installed on your cyfrSpaces server and has the following configuration:
 
 ::
 
@@ -76,7 +76,7 @@ SAML setup with onelogin
         - Add "User.FirstName" -> first name (and add to assertion)
         - Add "User.LastName" -> last name (and add to assertion)
 
-- open Nextcloud SAML settings
+- open cyfrSpaces SAML settings
 
     - Select SAML
     - Configure it according to https://portal.nextcloud.com/article/configuring-single-sign-on-10.html

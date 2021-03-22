@@ -10,14 +10,14 @@ Bugtracker
    kanban
    triaging
 
-Thank you for helping Nextcloud by reporting bugs. Before submitting an issue, please read
+Thank you for helping cyfrSpaces by reporting bugs. Before submitting an issue, please read
 `Issue submission guidelines`_ first.
 
-* If the issue is with the Nextcloud server, report it to the `Server repository`_
-* If the issue is with the Nextcloud desktop client, report it to the `Desktop repository`_
-* If the issue is with the Nextcloud Android client, report it to the `Android repository`_
-* If the issue is with the Nextcloud iOS client, report it to the `iOS repository`_
-* If the issue with with a Nextcloud app, report it to where that app is developed
+* If the issue is with the cyfrSpaces server, report it to the `Server repository`_
+* If the issue is with the cyfrSpaces desktop client, report it to the `Desktop repository`_
+* If the issue is with the cyfrSpaces Android client, report it to the `Android repository`_
+* If the issue is with the cyfrSpaces iOS client, report it to the `iOS repository`_
+* If the issue with with a cyfrSpaces app, report it to where that app is developed
 * If the app is listed in our `main GitHub organization`_ report it to the correct sub
   repository
 

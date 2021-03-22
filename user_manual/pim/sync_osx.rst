@@ -24,9 +24,9 @@ and **CardDAV** (Contacts) to your Nextcloud.
 
 4. Select **Manual** as Account-Type and type in your respective credentials:
 
-   **Username**: Your Nextcloud username or email
+   **Username**: Your cyfrSpaces username or email
    **Password**: Your generated App-password/token (`App-password/token <https://docs.nextcloud.com/server/stable/user_manual/session_management.html#managing-devices>`_)
-   **Server Address**: URL of your Nextcloud server (e.g. https://cloud.example.com)
+   **Server Address**: URL of your cyfrSpaces server (e.g. https://cloud.example.com)
 
 .. figure:: ./images/macos_3.png
 

@@ -115,7 +115,7 @@ This request returns a list containing all user IDs. Only admin users can query 
 Capabilities API
 ----------------
 
-Clients can obtain capabilities provided by the Nextcloud server and its apps via the capabilities OCS API.
+Clients can obtain capabilities provided by the cyfrSpaces server and its apps via the capabilities OCS API.
 
 .. code::
 
@@ -156,13 +156,13 @@ Clients can obtain capabilities provided by the Nextcloud server and its apps vi
 Theming capabilities
 --------------------
 
-Values of the theming app are exposed through the capabilities API, allowing client developers to adjust the look of clients to the theming of different Nextcloud instances.
+Values of the theming app are exposed through the capabilities API, allowing client developers to adjust the look of clients to the theming of different cyfrSpaces instances.
 
 .. code:: xml
 
 	<theming>
 		<name>Nextcloud</name>
-		<url>https://nextcloud.com</url>
+		<url>https://cyfr.space</url>
 		<slogan>A safe home for all your data</slogan>
 		<color>#0082c9</color>
 		<color-text>#ffffff</color-text>

@@ -22,14 +22,14 @@ Check Share Link, Allow editing, Hide file listing.
 .. image:: ../images/anonym_hide_file_listing.png
 
 Now you can send the link to the upload folder manually or by using the
-Nextcloud send function, if your administrator has enabled it.
+cyfrSpaces send function, if your administrator has enabled it.
 
 
 Uploading files
 ---------------
 
 Using the anonymous upload function is simple. You receive a link to the upload
-folder, click the link, and then you'll see a Nextcloud page with a **Click to
+folder, click the link, and then you'll see a cyfrSpaces page with a **Click to
 upload** button.
 
 .. image:: ../images/anonym_upload.png

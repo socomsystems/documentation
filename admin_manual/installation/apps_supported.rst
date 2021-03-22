@@ -2,11 +2,11 @@
 Supported apps
 ==============
 
-Below is the list of apps supported for Nextcloud |version|. Supported here means that we'll accept bugreports and resolve them in these apps with regard to functionality and compatibility with Nextcloud |version|. To get access to work-arounds, long term support, priority bug fixing and custom consulting, contact Nextcloud GmbH.
+Below is the list of apps supported for cyfrSpaces |version|. Supported here means that we'll accept bugreports and resolve them in these apps with regard to functionality and compatibility with cyfrSpaces |version|. To get access to work-arounds, long term support, priority bug fixing and custom consulting, contact cyfrSpaces GmbH.
 
 All apps are licensed under ``AGPLv3``.
 
-Nextcloud Files
+cyfrSpaces Files
 ---------------
 
 * `Activity <https://github.com/nextcloud/activity>`_
@@ -35,7 +35,7 @@ Nextcloud Files
 * `Gallery <https://github.com/nextcloud/gallery>`_
 * `Log Reader <https://github.com/nextcloud/logreader>`_
 * `Lookup Server Connector <https://github.com/nextcloud/server/tree/master/apps/lookup_server_connector>`_
-* `Nextcloud announcements <https://github.com/nextcloud/nextcloud_announcements/blob/master/appinfo/info.xml>`_
+* `cyfrSpaces announcements <https://github.com/nextcloud/nextcloud_announcements/blob/master/appinfo/info.xml>`_
 * `Notifications <https://github.com/nextcloud/notifications>`_
 * `Password policy <https://github.com/nextcloud/password_policy>`_
 * `Provisioning API <https://github.com/nextcloud/server/tree/master/apps/provisioning_api>`_
@@ -55,13 +55,13 @@ Nextcloud Files
 * `WebDAV endpoint <https://github.com/nextcloud/server/blob/master/apps/dav>`_
 * `Files workflow engine <https://github.com/nextcloud/server/tree/master/apps/workflowengine>`_
 
-Nextcloud Groupware
+cyfrSpaces Groupware
 -------------------
 
 * `Calendar <https://github.com/nextcloud/calendar>`_
 * `Contacts <https://github.com/nextcloud/contacts>`_
 
-Nextcloud Talk
+cyfrSpaces Talk
 --------------
 
 * `Talk <https://github.com/nextcloud/spreed>`_

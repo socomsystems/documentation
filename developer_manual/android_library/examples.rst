@@ -25,7 +25,7 @@ Code example
 
   ...
 
-  // Parse URI to the base URL of the Nextcloud server
+  // Parse URI to the base URL of the cyfrSpaces server
   Uri serverUri = Uri.parse(getString(R.string.server_base_url));
 
   // Create client object to perform remote operations
@@ -256,7 +256,7 @@ Code example
 Move a file or folder
 ---------------------
 
-Move an exisintg file or folder to a different location in the Nextcloud server. Parameters needed are the path
+Move an exisintg file or folder to a different location in the cyfrSpaces server. Parameters needed are the path
 to the file or folder to move, and the new path desired for it. The parent folder of the new path must exist in
 the server.
 
@@ -319,7 +319,7 @@ Get the share resources for a given file or folder
 Get information about what files and folder are shared by link on a certain
 folder. The info needed is filePath, path of the file/folder on the server, the
 Boolean variable, getReshares, come from the Sharing api, from the moment it is
-not in use within the Nextcloud Android library.
+not in use within the cyfrSpaces Android library.
 
 Code example
 ^^^^^^^^^^^^
@@ -358,7 +358,7 @@ Share a file or a folder from your cloud server by link.
 
 The info needed is filePath, the path of the item that you want to share and
 Password, this comes from the Sharing api, from the moment it is not in use
-within the Nextcloud Android library.
+within the cyfrSpaces Android library.
 
 
 Code example
@@ -426,6 +426,6 @@ Tips
 * Paths must not be on URL Encoding
 * Correct path: ``https://example.com/nextcloud/remote.php/dav/PopMusic``
 * Wrong path: ``https://example.com/nextcloud/remote.php/dav/Pop%20Music/``
-* There are some forbidden characters to be used in folder and file names on the server, same on the Nextcloud Android Library "\","/","<",">",":",""","|","?","*"
+* There are some forbidden characters to be used in folder and file names on the server, same on the cyfrSpaces Android Library "\","/","<",">",":",""","|","?","*"
 * Upload and download actions may be cancelled thanks to the objects uploadOperation.cancel(), downloadOperation.cancel()
 * Unit tests, before launching unit tests you have to enter your account information (server URL, user and password) on TestActivity.java

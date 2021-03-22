@@ -1,5 +1,5 @@
 =======================
-Nextcloud configuration
+cyfrSpaces configuration
 =======================
 
 .. toctree::

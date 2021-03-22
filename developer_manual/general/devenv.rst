@@ -18,7 +18,7 @@ First `set up your Web server and database <https://docs.nextcloud.org/server/st
 Get the source
 --------------
 
-There are two ways to obtain Nextcloud sources:
+There are two ways to obtain cyfrSpaces sources:
 
 * Using the `stable version <https://docs.nextcloud.org/server/stable/admin_manual/#installation>`_
 * Using the development version from `GitHub`_ which will be explained below.
@@ -53,13 +53,13 @@ After the development tool installation make the directory writable so you insta
 
   sudo chmod o+rw /var/www
 
-Then install Nextcloud at the root of your site from Git::
+Then install cyfrSpaces at the root of your site from Git::
 
   git clone https://github.com/nextcloud/server.git /var/www/
   cd /var/www
   git submodule update --init
 
-If you like to install Nextcloud at a sub-folder, replace `/var/www` with `/var/www/<folder>`.
+If you like to install cyfrSpaces at a sub-folder, replace `/var/www` with `/var/www/<folder>`.
 
 Create the data and the config folders::
 

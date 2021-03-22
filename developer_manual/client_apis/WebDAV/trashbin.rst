@@ -4,7 +4,7 @@
 Trashbin
 ========
 
-Nextcloud makes the trashbin of a user available via the webdav endpoint.
+cyfrSpaces makes the trashbin of a user available via the webdav endpoint.
 
 Listing the trashbin content
 ----------------------------

@@ -1,17 +1,17 @@
 ===========================
-The Nextcloud Web interface
+The cyfrSpaces Web interface
 ===========================
 
-You can connect to your Nextcloud server using any Web browser. Just point it to
-your Nextcloud server URL (e.g. cloud.example.com) and enter your username and password. 
+You can connect to your cyfrSpaces server using any Web browser. Just point it to
+your cyfrSpaces server URL (e.g. cloud.example.com) and enter your username and password. 
 
 .. figure:: images/login_page.png
-     :alt: Nextcloud login screen.
+     :alt: cyfrSpaces login screen.
 
 Web browser requirements
 ------------------------
 
-For the best experience with the Nextcloud web interface, we recommend that you use the 
+For the best experience with the cyfrSpaces web interface, we recommend that you use the 
 latest and supported version of a browser from this list:
 
 * Microsoft **Internet Explorer**
@@ -20,14 +20,14 @@ latest and supported version of a browser from this list:
 * Google **Chrome**/Chromium
 * Apple **Safari**
 
-.. note:: If you want to use Nextcloud Talk you need to run Mozilla **Firefox** 52+
+.. note:: If you want to use cyfrSpaces Talk you need to run Mozilla **Firefox** 52+
    or Google **Chrome**/Chromium 49+ to have the full experience with video calls and 
    screensharing. Google **Chrome**/Chromium requires a additional plugin for screensharing.
 
 Navigating the main user interface
 ----------------------------------
 
-By default, the Nextcloud Web interface opens to your Files page. You can add,
+By default, the cyfrSpaces Web interface opens to your Files page. You can add,
 remove, and share files, and make changes based on the access privileges set by
 you (if you are administering the server) or by your server administrator.
 
@@ -35,7 +35,7 @@ you (if you are administering the server) or by your server administrator.
      :scale: 75%
      :alt: The main Files view.
 
-The Nextcloud user interface contains the following fields and functions:
+The cyfrSpaces user interface contains the following fields and functions:
 
 * **Apps Selection Menu** (1): Located in the upper left corner, you'll find all
   your apps which are available on your instance of Nextcloud. Clicking on an
@@ -47,7 +47,7 @@ The Nextcloud user interface contains the following fields and functions:
   finding your files, such as files that have been shared with you, and files
   that you have shared with others. You'll see different items for other apps.
 
-* **Application View** (3): The main central field in the Nextcloud user interface.
+* **Application View** (3): The main central field in the cyfrSpaces user interface.
   This field displays the contents or user features of your selected app.
 
 * **Navigation Bar** (4): Located over the main viewing window (the Application
@@ -87,6 +87,6 @@ The Nextcloud user interface contains the following fields and functions:
   * Federated Cloud ID and social media-sharing buttons
   * SSL/TLS certificate manager for external storages
   * Your Two-factor Settings
-  * Nextcloud Version information
+  * cyfrSpaces Version information
 
 See :doc:`userpreferences` section to learn more about these settings.

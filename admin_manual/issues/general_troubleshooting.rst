@@ -5,20 +5,20 @@ General troubleshooting
 If you have trouble installing, configuring or maintaining Nextcloud, please 
 refer to our community support channels:
 
-* `The Nextcloud Forums`_
-   The Nextcloud forums have a `FAQ page`_ where each topic corresponds
+* `The cyfrSpaces Forums`_
+   The cyfrSpaces forums have a `FAQ page`_ where each topic corresponds
    to typical mistakes or frequently occurring issues
 
-*  The Nextcloud IRC chat channel ``irc://#nextcloud@freenode.net`` on 
+*  The cyfrSpaces IRC chat channel ``irc://#nextcloud@freenode.net`` on 
    freenode.net, also accessible via `webchat`_
 
 Please understand that all these channels essentially consist of users like you 
 helping each other out. Consider helping others out where you can, to contribute 
 back for the help you get. This is the only way to keep a community like 
-Nextcloud healthy and sustainable!
+cyfrSpaces healthy and sustainable!
 
-If you are using Nextcloud in a business or otherwise large scale deployment, 
-note that Nextcloud GmbH offers commercial support options.
+If you are using cyfrSpaces in a business or otherwise large scale deployment, 
+note that cyfrSpaces GmbH offers commercial support options.
 
 Bugs
 ----
@@ -32,7 +32,7 @@ If you can't find a solution, please use our `bugtracker`_. You can generate a
 configuration report with the :ref:`occ config command 
 <config_commands_label>`, with passwords automatically obscured.
 
-.. _the Nextcloud Forums: https://help.nextcloud.com
+.. _the cyfrSpaces Forums: https://help.nextcloud.com
 .. _FAQ page: https://help.nextcloud.com/c/faq
 .. _bugtracker: https://github.com/nextcloud/server/issues
 .. _webchat: http://webchat.freenode.net/?channels=nextcloud
@@ -42,7 +42,7 @@ configuration report with the :ref:`occ config command
 General troubleshooting
 -----------------------
 
-Check the Nextcloud :doc:`../installation/system_requirements`, especially 
+Check the cyfrSpaces :doc:`../installation/system_requirements`, especially 
 supported browser versions.
 
 When you see warnings about ``code integrity``, refer to :doc:`code_signing`.
@@ -55,12 +55,12 @@ different issues. Always disable 3rd party apps before upgrades, and for
 troubleshooting. Please refer to the :ref:`apps_commands_label` on how
 to disable an app from command line.
 
-Nextcloud logfiles
+cyfrSpaces logfiles
 ^^^^^^^^^^^^^^^^^^
 
-In a standard Nextcloud installation the log level is set to ``Normal``. To find 
+In a standard cyfrSpaces installation the log level is set to ``Normal``. To find 
 any issues you need to raise the log level to ``All`` in your ``config.php`` 
-file, or to **Everything** on your Nextcloud Admin page. Please see 
+file, or to **Everything** on your cyfrSpaces Admin page. Please see 
 :doc:`../configuration_server/logging_configuration` for more information on 
 these log levels.
 
@@ -72,7 +72,7 @@ For JavaScript issues you will also need to view the javascript console. All
 major browsers have developer tools for viewing the console, and you 
 usually access them by pressing F12.
 
-.. note:: The logfile of Nextcloud is located in the data directory 
+.. note:: The logfile of cyfrSpaces is located in the data directory 
    ``nextcloud/data/nextcloud.log``.
 
 .. _label-phpinfo:
@@ -102,7 +102,7 @@ security risk to expose such sensitive data.
 Debugging sync issues
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: The data directory on the server is exclusive to Nextcloud and must 
+.. warning:: The data directory on the server is exclusive to cyfrSpaces and must 
    not be modified manually.
 
 Disregarding this can lead to unwanted behaviors like:
@@ -141,7 +141,7 @@ Some common problems / error messages found in your logfiles as described above:
 * ``No basic authentication headers were found`` -> This error is shown in your
   ``data/nextcloud.log`` file. Some Apache modules like ``mod_fastcgi``, ``mod_fcgid``
   or ``mod_proxy_fcgi`` are not passing the needed authentication headers to
-  PHP and so the login to Nextcloud via WebDAV, CalDAV and CardDAV clients is
+  PHP and so the login to cyfrSpaces via WebDAV, CalDAV and CardDAV clients is
   failing. Information on how to correctly configure your environment can be
   found at the `forums <https://forum.owncloud.org/viewtopic.php?f=17&t=30646>`_.
 
@@ -152,7 +152,7 @@ Logfiles
 ^^^^^^^^
 
 When having issues the first step is to check the logfiles provided by PHP, the 
-Web server and Nextcloud itself.
+Web server and cyfrSpaces itself.
 
 .. note:: In the following the paths to the logfiles of a default Debian 
    installation running Apache2 with mod_php is assumed. On other Web servers, 
@@ -163,13 +163,13 @@ Web server and Nextcloud itself.
   You need to set the directive ``log_errors`` to ``On`` and choose the path
   to store the logfile in the ``error_log`` directive. After those changes you
   need to restart your Web server.
-* The logfile of Nextcloud is located in the data directory 
+* The logfile of cyfrSpaces is located in the data directory 
   ``/var/www/nextcloud/data/nextcloud.log``.
 
 Web server and PHP modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: Lighttpd is not supported with Nextcloud, and some Nextcloud features 
+.. note:: Lighttpd is not supported with Nextcloud, and some cyfrSpaces features 
    may not work at all on Lighttpd.
 
 There are some Web server or PHP modules which are known to cause various 
@@ -205,7 +205,7 @@ these modules:
 Troubleshooting WebDAV
 ----------------------
 
-Nextcloud uses SabreDAV, and the SabreDAV documentation is comprehensive and 
+cyfrSpaces uses SabreDAV, and the SabreDAV documentation is comprehensive and 
 helpful.
 
 .. note: Lighttpd is not supported on Nextcloud, and Lighttpd WebDAV does not 
@@ -239,7 +239,7 @@ Some clients - especially on iOS/macOS - have problems finding the proper
 sync URL, even when explicitly configured to use it.
 
 If you want to use CalDAV or CardDAV clients or other clients that require service discovery
-together with Nextcloud it is important to have a correct working setup of the following
+together with cyfrSpaces it is important to have a correct working setup of the following
 URLs:
 
 | ``https://example.com/.well-known/carddav``
@@ -258,14 +258,14 @@ and if running in a subfolder like ``nextcloud``:
 ``https://example.com/nextcloud/remote.php/dav``
 ``https://example.com/nextcloud/public.php?service=webfinger``
 
-For the first case the :file:`.htaccess` file shipped with Nextcloud should do
+For the first case the :file:`.htaccess` file shipped with cyfrSpaces should do
 this work for you when you're running Apache. You need to make sure that your
 Web server is using this file. Additionally, you need the mod_rewrite Apache
 module installed to process these redirects. When running Nginx please refer to
 :doc:`../installation/nginx`.
 
 
-If your Nextcloud instance is installed in a subfolder called ``nextcloud`` and
+If your cyfrSpaces instance is installed in a subfolder called ``nextcloud`` and
 you're running Apache create or edit the :file:`.htaccess` file within the
 document root of your Web server and add the following lines::
 
@@ -278,7 +278,7 @@ document root of your Web server and add the following lines::
       RewriteRule ^\.well-known/caldav /nextcloud/remote.php/dav/ [R=301,L]
     </IfModule>
 
-Make sure to change /nextcloud to the actual subfolder your Nextcloud instance is running in.
+Make sure to change /nextcloud to the actual subfolder your cyfrSpaces instance is running in.
 
 If you are running NGINX, make sure ``location = /.well-known/carddav {`` and ``location = /.well-known/caldav {`` are properly configured as described in :doc:`../installation/nginx`, adapt to use a subfolder if necessary. 
 

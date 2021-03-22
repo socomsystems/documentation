@@ -10,7 +10,7 @@ for each operation, further information for each operation can be found in the c
 WebDAV basics
 -------------
 
-The base url for all WebDAV operations for a Nextcloud instance is :code:`/remote.php/dav`.
+The base url for all WebDAV operations for a cyfrSpaces instance is :code:`/remote.php/dav`.
 
 All requests need to provide authentication information, either as a Basic Auth header or by passing a set of valid session cookies.
 

@@ -2,7 +2,7 @@
 Database configuration
 ======================
 
-Nextcloud requires a database in which administrative data is stored. The following databases are currently supported:
+cyfrSpaces requires a database in which administrative data is stored. The following databases are currently supported:
 
 * `MySQL <http://www.mysql.com/>`_ / `MariaDB <https://mariadb.org/>`_
 * `PostgreSQL <http://www.postgresql.org/>`_
@@ -25,7 +25,7 @@ requires that you install and set up the server software first.
 Database "READ COMMITTED" transaction isolation level
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As discussed above Nextcloud is using the ``TRANSACTION_READ_COMMITTED`` transaction isolation
+As discussed above cyfrSpaces is using the ``TRANSACTION_READ_COMMITTED`` transaction isolation
 level. Some database configurations are enforcing other transaction isolation levels. To avoid
 data loss under high load scenarios (e.g. by using the sync client with many clients/users and
 many parallel operations) you need to configure the transaction isolation level accordingly.
@@ -34,7 +34,7 @@ for detailed information.
 
 Parameters
 ----------
-For setting up Nextcloud to use any database, use the instructions in :doc:`../installation/installation_wizard`. You should not have to edit the respective values in the :file:`config/config.php`.  However, in special cases (for example, if you want to connect your Nextcloud instance to a database created by a previous installation of Nextcloud), some modification might be required.
+For setting up cyfrSpaces to use any database, use the instructions in :doc:`../installation/installation_wizard`. You should not have to edit the respective values in the :file:`config/config.php`.  However, in special cases (for example, if you want to connect your cyfrSpaces instance to a database created by a previous installation of Nextcloud), some modification might be required.
 
 Configuring a MySQL or MariaDB database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -140,7 +140,7 @@ You can quit the prompt by entering::
 
   quit;
 
-An Nextcloud instance configured with MySQL would contain the hostname on which
+An cyfrSpaces instance configured with MySQL would contain the hostname on which
 the database is running, a valid username and password to access it, and the
 name of the database. The :file:`config/config.php` as created by the
 :doc:`../installation/installation_wizard` would therefore contain entries like
@@ -199,7 +199,7 @@ You can quit the prompt by entering::
 
   \q
 
-A Nextcloud instance configured with PostgreSQL would contain the path to the socket on
+A cyfrSpaces instance configured with PostgreSQL would contain the path to the socket on
 which the database is running as the hostname, the system username the PHP process is using,
 and an empty password to access it, and the name of the database. The :file:`config/config.php` as
 created by the :doc:`../installation/installation_wizard` would therefore contain entries like
@@ -221,7 +221,7 @@ this:
 If you use another authentication method (not peer), you'll need to use the following steps to get the database setup:
 Now you need to create a database user and the database itself by using the
 PostgreSQL command line interface. The database tables will be created by
-Nextcloud when you login for the first time.
+cyfrSpaces when you login for the first time.
 
 To start the postgres command line mode use::
 
@@ -240,7 +240,7 @@ You can quit the prompt by entering::
 
   \q
 
-A Nextcloud instance configured with PostgreSQL would contain the hostname on
+A cyfrSpaces instance configured with PostgreSQL would contain the hostname on
 which the database is running, a valid username and password to access it, and
 the name of the database. The :file:`config/config.php` as created by the
 :doc:`../installation/installation_wizard` would therefore contain entries like
@@ -271,7 +271,7 @@ refer to the manual of your database for how to raise the configuration options
 ``wait_timeout`` and/or ``max_allowed_packet``.
 
 Some shared hosters are not allowing the access to these config options. For such
-systems Nextcloud is providing a ``dbdriveroptions`` configuration option within your
+systems cyfrSpaces is providing a ``dbdriveroptions`` configuration option within your
 :file:`config/config.php` where you can pass such options to the database driver.
 Please refer to :doc:`../configuration_server/config_sample_php_parameters` for an example.
 
@@ -355,7 +355,7 @@ Useful SQL commands
   MySQL     : SHOW DATABASES;
   PostgreSQL: \l
 
-**Show Nextcloud Tables in Database**::
+**Show cyfrSpaces Tables in Database**::
 
   MySQL     : USE nextcloud; SHOW TABLES;
   PostgreSQL: \c nextcloud; \d

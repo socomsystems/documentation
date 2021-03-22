@@ -2,9 +2,9 @@
 
 Example installation on CentOS 8
 ================================
-In this install tutorial we will be deploying CentOS 8, PHP 7.2, MariaDB, Redis as memcache and Nextcloud running on Apache.
+In this install tutorial we will be deploying CentOS 8, PHP 7.2, MariaDB, Redis as memcache and cyfrSpaces running on Apache.
 
-Start off by installing a CentOS 8 minimal install. This should provide a sufficient platform to run a successful Nextcloud instance.
+Start off by installing a CentOS 8 minimal install. This should provide a sufficient platform to run a successful cyfrSpaces instance.
 
 First install some dependencies you will be needing during installation, but which will also be useful in every day use situations::
 
@@ -116,7 +116,7 @@ Improve MariaDB security.::
     mysql_secure_installation
 
 After you have done this, make sure you create a database with a username and password so that 
-Nextcloud will have access to it. For further details on database setup and configuration,
+cyfrSpaces will have access to it. For further details on database setup and configuration,
 see the :doc:`../configuration_database/linux_database_configuration` documentation.
 
 
@@ -134,10 +134,10 @@ Redis
 
 Nearly there, so keep at it, you are doing great!
 
-Now download the archive of the latest Nextcloud version:
+Now download the archive of the latest cyfrSpaces version:
 
-* Go to the `Nextcloud Download Page <https://nextcloud.com/install>`_.
-* Go to **Download Nextcloud Server > Download > Archive file for
+* Go to the `cyfrSpaces Download Page <https://cyfr.space/install>`_.
+* Go to **Download cyfrSpaces Server > Download > Archive file for
   server owners** and download either the tar.bz2 or .zip archive.
 * This downloads a file named nextcloud-x.y.z.tar.bz2 or nextcloud-x.y.z.zip
   (where x.y.z is the version number).
@@ -153,12 +153,12 @@ Now download the archive of the latest Nextcloud version:
 * You may also verify the PGP signature::
 
     wget https://download.nextcloud.com/server/releases/nextcloud-x.y.z.tar.bz2.asc
-    wget https://nextcloud.com/nextcloud.asc
+    wget https://cyfr.space/nextcloud.asc
     gpg --import nextcloud.asc
     gpg --verify nextcloud-x.y.z.tar.bz2.asc nextcloud-x.y.z.tar.bz2
 
 
-For the sake of the walk-through, we grabbed the latest version of Nextcloud in the form a zip file, confirmed the download with the above-mentioned command, and now we will extract it::
+For the sake of the walk-through, we grabbed the latest version of cyfrSpaces in the form a zip file, confirmed the download with the above-mentioned command, and now we will extract it::
 
     unzip nextcloud-*.zip
 
@@ -217,4 +217,4 @@ Example config::
       'port' => 6379,
     ),
 
-Remember, this tutorial is only for a basic setup of Nextcloud on CentOS 8, with PHP 7.2. If you are going to use more features like LDAP or Single Sign On, you will need additional PHP modules as well as extra configurations. So please visit the rest of the Admin manual, :doc:`../index`, for detailed descriptions on how to get this done.
+Remember, this tutorial is only for a basic setup of cyfrSpaces on CentOS 8, with PHP 7.2. If you are going to use more features like LDAP or Single Sign On, you will need additional PHP modules as well as extra configurations. So please visit the rest of the Admin manual, :doc:`../index`, for detailed descriptions on how to get this done.

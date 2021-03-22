@@ -2,7 +2,7 @@
 Repair steps
 ============
 
-Repair steps are methods which are executed by Nextcloud on certain
+Repair steps are methods which are executed by cyfrSpaces on certain
 events which directly affect the app. You can use these repair steps to run
 code when your app is installed, uninstalled, upgraded etc. It's called repair
 steps because they are frequently used to fix things automatically.
@@ -82,7 +82,7 @@ The following function will sleep for 10 seconds and show the progress:
 Register a repair-step
 ----------------------
 
-To register a repair-step in Nextcloud you have to define the repair-setp in the ``info.xml``
+To register a repair-step in cyfrSpaces you have to define the repair-setp in the ``info.xml``
 file. The following example registers a repair-step which will be executed after installation
 of the app:
 

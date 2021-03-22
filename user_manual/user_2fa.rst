@@ -2,13 +2,13 @@
 Using two-factor authentication
 ===============================
 
-Two-factor authentication (2FA) is a way to protect your Nextcloud account
+Two-factor authentication (2FA) is a way to protect your cyfrSpaces account
 against unauthorized access. It works by requiring two different 'proofs' of
 your identity. For example, *something you know* (like a password) and 
 *something you have* like a physical key. Typically, the first factor is a
 password like you already have and the second can be a text message you
 receive or a code you generate on your phone or another device
-(*something you have*). Nextcloud supports a variety of 2nd factors and
+(*something you have*). cyfrSpaces supports a variety of 2nd factors and
 more can be added.
 
 Once a two-factor authentication app has been enabled by your administrator
@@ -67,7 +67,7 @@ Now, just enter your code:
 .. figure:: images/totp_login_2.png
      :alt: Entering TOTP code at login.
 
-If the code was correct you will be redirected to your Nextcloud account.
+If the code was correct you will be redirected to your cyfrSpaces account.
 
 .. note:: Since the code is time-based, it’s important that your server’s and
   your smartphone’s clock are almost in sync. A time drift of a few seconds

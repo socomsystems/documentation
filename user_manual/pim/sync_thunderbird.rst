@@ -36,7 +36,7 @@ Alternative: Using the CardBook add-on (Contacts only)
 2. In Cardbook:
 
    -  "Adressbook > New Adressbook **Remote** > Next
-   -  Select **CardDAV**, fill in the address of your Nextcloud server, your user name and password
+   -  Select **CardDAV**, fill in the address of your cyfrSpaces server, your user name and password
 
 .. image:: ../images/new_addressbook.png
 
@@ -52,7 +52,7 @@ The old method: Manually subscribing to calendars
 -------------------------------------------------
 This method is only needed if you don't want to install TBSync.
 
-1. Go to your Nextcloud Calendar and click on the 3 dotted menu for the calendar that you want to synchronize which will display and URL that looks something like this:
+1. Go to your cyfrSpaces Calendar and click on the 3 dotted menu for the calendar that you want to synchronize which will display and URL that looks something like this:
 https://cloud.nextcloud.com/remote.php/dav/calendars/daniel/personal/
 
 2. Go to the calendar view in Thunderbird and right click in the calendar menu to the left (where the names of the calendars are) to add a **New Calendar**.

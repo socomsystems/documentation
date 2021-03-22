@@ -5,7 +5,7 @@ Instruction set for users
 Add a new user
 --------------
 
-Create a new user on the Nextcloud server. Authentication is done by sending a 
+Create a new user on the cyfrSpaces server. Authentication is done by sending a 
 basic HTTP authentication header.
 
 **Syntax: ocs/v1.php/cloud/users**
@@ -61,7 +61,7 @@ XML output
 Search/get users
 ----------------
 
-Retrieves a list of users from the Nextcloud server. Authentication is done by 
+Retrieves a list of users from the cyfrSpaces server. Authentication is done by 
 sending a Basic HTTP Authorization header.
 
 **Syntax: ocs/v1.php/cloud/users**
@@ -143,7 +143,7 @@ XML output
       <displayname>Frank K.</displayname>
       <phone>0123 / 456 789</phone>
       <address>Foobar 12, 12345 Town</address>
-      <website>https://nextcloud.com</website>
+      <website>https://cyfr.space</website>
       <twitter>Nextcloud</twitter>
       <groups>
        <element>group1</element>
@@ -214,7 +214,7 @@ XML output
 Disable a user
 --------------
 
-Disables a user on the Nextcloud server so that the user cannot login anymore.
+Disables a user on the cyfrSpaces server so that the user cannot login anymore.
 Authentication is done by sending a Basic HTTP Authorization header.
 
 **Syntax: ocs/v1.php/cloud/users/{userid}/disable**
@@ -253,7 +253,7 @@ XML output
 Enable a user
 -------------
 
-Enables a user on the Nextcloud server so that the user can login again.
+Enables a user on the cyfrSpaces server so that the user can login again.
 Authentication is done by sending a Basic HTTP Authorization header.
 
 **Syntax: ocs/v1.php/cloud/users/{userid}/enable**
@@ -292,7 +292,7 @@ XML output
 Delete a user
 -------------
 
-Deletes a user from the Nextcloud server. Authentication is done by sending a 
+Deletes a user from the cyfrSpaces server. Authentication is done by sending a 
 Basic HTTP Authorization header.
 
 **Syntax: ocs/v1.php/cloud/users/{userid}**

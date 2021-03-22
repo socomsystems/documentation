@@ -2,21 +2,21 @@
 Previews configuration
 ======================
 
-The Nextcloud thumbnail system generates previews of files for all 
-Nextcloud apps that display files, such as Files and Gallery.
+The cyfrSpaces thumbnail system generates previews of files for all 
+cyfrSpaces apps that display files, such as Files and Gallery.
 
 The following image shows some examples of previews of various file types.
 
 .. figure:: ../images/preview_images.png
    :alt: Thumbnails of various image and audio/video files.
 
-By default, Nextcloud can generate previews for the following filetypes:
+By default, cyfrSpaces can generate previews for the following filetypes:
 
 * Images files
 * Cover of MP3 files
 * Text documents
 
-.. note:: Technically Nextcloud can also generate the previews
+.. note:: Technically cyfrSpaces can also generate the previews
           of other file types such as PDF, SVG or various office documents.
           Due to security concerns those providers have been disabled by
           default and are considered unsupported.
@@ -26,7 +26,7 @@ By default, Nextcloud can generate previews for the following filetypes:
 Parameters
 ----------
 
-Please notice that the Nextcloud preview system comes already with sensible 
+Please notice that the cyfrSpaces preview system comes already with sensible 
 defaults, and therefore it is usually unnecessary to adjust those configuration 
 values. 
 
@@ -72,7 +72,7 @@ to a maximum size of 100×100px:
 Maximum scale factor:
 ^^^^^^^^^^^^^^^^^^^^^
 
-If a lot of small pictures are stored on the Nextcloud instance and the preview 
+If a lot of small pictures are stored on the cyfrSpaces instance and the preview 
 system generates blurry previews, you might want to consider setting a maximum 
 scale factor. By default, pictures are upscaled to 10 times the original size:
 

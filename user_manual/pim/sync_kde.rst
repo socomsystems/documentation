@@ -2,7 +2,7 @@
 Synchronizing with KDE Kontact
 ==============================
 
-KOrganizer and KAddressBook can synchronize your calendar, contacts and tasks with a Nextcloud server.
+KOrganizer and KAddressBook can synchronize your calendar, contacts and tasks with a cyfrSpaces server.
 
 This can be done by following these steps:
 
@@ -22,7 +22,7 @@ This can be done by following these steps:
 
 .. image:: ../images/KOrganizer_groupware_server.png
 
-5. Enter your Nextcloud server URL and, if needed, installation path (anything that comes after the first /, for example ``mynextcloud`` in ``https://exampe.com/mynextcloud``). Then click next.
+5. Enter your cyfrSpaces server URL and, if needed, installation path (anything that comes after the first /, for example ``mynextcloud`` in ``https://exampe.com/mynextcloud``). Then click next.
 
 .. image:: ../images/KOrganizer_server_address.png
 
@@ -34,7 +34,7 @@ This can be done by following these steps:
 
 7. Pick a name for this resource, for example ``Work`` or ``Home``. By default, both CalDAV (Calendar) and CardDAV (Contacts) are synced. 
 
-.. note:: You can set a manual refresh rate four your calendar and contacts resources. By default this setting is set to 5 minutes and should be fine for the most use cases. You may want to change this for saving your power or cellular data plan.  that you can update with a right-click on the item in the calendar list and when you create a new appointment it is synced to Nextcloud right away.
+.. note:: You can set a manual refresh rate four your calendar and contacts resources. By default this setting is set to 5 minutes and should be fine for the most use cases. You may want to change this for saving your power or cellular data plan.  that you can update with a right-click on the item in the calendar list and when you create a new appointment it is synced to cyfrSpaces right away.
 
 .. image:: ../images/KOrganizer_pick_resources.png
 

@@ -2,7 +2,7 @@
 User management
 ===============
 
-On the User management page of your Nextcloud Web UI you can:
+On the User management page of your cyfrSpaces Web UI you can:
 
 * Create new users
 * View all of your users in a single scrolling window
@@ -34,10 +34,10 @@ Show user backend, Send email to new users,** and **Show email address**.
 User accounts have the following properties:
 
 *Login Name (Username)*
-  The unique ID of a Nextcloud user, and it cannot be changed.
+  The unique ID of a cyfrSpaces user, and it cannot be changed.
 
 *Full Name*
-  The user's display name that appears on file shares, the Nextcloud Web
+  The user's display name that appears on file shares, the cyfrSpaces Web
   interface, and emails. Admins and users may change the Full Name anytime. If
   the Full Name is not set it defaults to the login name.
 
@@ -76,7 +76,7 @@ leave it for the user to complete.
 
 If you have checked **Send email to new user** in the control panel on the
 lower left sidebar, you may also enter the new user's email address, and
-Nextcloud will automatically send them a notification with their new login
+cyfrSpaces will automatically send them a notification with their new login
 information. You may edit this email using the email template editor on your
 Admin page (see :doc:`../configuration_server/email_configuration`).
 
@@ -100,7 +100,7 @@ password resets. Please see
 Renaming a user
 ---------------
 
-Each Nextcloud user has two names: a unique **Login Name** used for
+Each cyfrSpaces user has two names: a unique **Login Name** used for
 authentication, and a **Full Name**, which is their display name. You can edit
 the display name of a user, but you cannot change the login name of any user.
 
@@ -114,7 +114,7 @@ To set or change a user's display name:
 Granting administrator privileges to a user
 -------------------------------------------
 
-Nextcloud has two types of administrators: **Super Administrators** and **Group
+cyfrSpaces has two types of administrators: **Super Administrators** and **Group
 Administrators**. Group administrators have the rights to create, edit and
 delete users in their assigned groups. Group administrators cannot access
 system settings, or add or modify users in the groups that they are not **Group
@@ -123,7 +123,7 @@ assign group admin privileges.
 
 .. figure:: ../images/users-groups.png
 
-**Super Administrators** have full rights on your Nextcloud server, and can
+**Super Administrators** have full rights on your cyfrSpaces server, and can
 access and modify all settings. To assign the **Super Administrators** role to
 a user, simply add them to the ``admin`` group.
 
@@ -192,7 +192,7 @@ settings and files. The user can be activated any time again, without data-loss.
 Hover your cursor over their name on the **Users** page until the "..."-menu icon
 appears at the far right. After clicking on it, you will see the **Disable** option.
 
-The user will not longer be able to access his Nextcloud until you enable him again.
+The user will not longer be able to access his cyfrSpaces until you enable him again.
 Keep in mind that the files, which were shared by this user will not longer be accessible.
 
 You will find all disabled users in the **disabled**-section on the left pane.
@@ -213,7 +213,7 @@ When the undo button is gone you cannot recover the deleted user.
 
 All of the files owned by the user are deleted as well, including all files they
 have shared. If you need to preserve the user's files and shares, you must first 
-download them from your Nextcloud Files page, which compresses them into a zip
+download them from your cyfrSpaces Files page, which compresses them into a zip
 file, or use a sync client to copy them to your local computer. See
 :doc:`../configuration_files/file_sharing_configuration` to learn how to create
 persistent file shares that survive user deletions.

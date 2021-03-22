@@ -2,20 +2,20 @@
 Configuring Object Storage as Primary Storage
 =============================================
 
-Nextcloud allows to configure object storages like OpenStack Swift or
+cyfrSpaces allows to configure object storages like OpenStack Swift or
 Amazon Simple Storage Service (S3) or any compatible S3-implementation
 (e.g. Minio or Ceph Object Gateway) as primary storage replacing the default
 storage of files.
 
 By default, files are stored in :code:`nextcloud/data` or another directory configured
-in the :code:`config.php` of your Nextcloud instance. This data directory might
+in the :code:`config.php` of your cyfrSpaces instance. This data directory might
 still be used for compatibility reasons)
 
 ------------
 Implications
 ------------
 
-When using an object store as primary storage, Nextcloud assumes exclusive access
+When using an object store as primary storage, cyfrSpaces assumes exclusive access
 over the bucket being used.
 
 Contrary to using an object store as external storage, when an object store is used
@@ -34,7 +34,7 @@ Configuration
 Primary object stores need to be configured in :code:`config.php` by specifying
 the objectstore backend and any backend specific configuration.
 
-.. note:: Configuring a primary object store on an existing Nextcloud instance will
+.. note:: Configuring a primary object store on an existing cyfrSpaces instance will
 	make all existing files on the instance inaccessible.
 
 The configuration has the following structure:
@@ -146,7 +146,7 @@ The class to be used is :code:`\\OC\\Files\\ObjectStore\\S3`
 Multibucket Object Store
 ------------------------
 
-It's possible to configure Nextcloud to distribute its data over multiple buckets
+It's possible to configure cyfrSpaces to distribute its data over multiple buckets
 for scalability purpose. You can find out more information about upscaling with
-object storage and Nextcloud in the
-`Nextcloud customer portal <https://portal.nextcloud.com/article/object-store-as-primary-storage-16.html>`_.
+object storage and cyfrSpaces in the
+`cyfrSpaces customer portal <https://portal.nextcloud.com/article/object-store-as-primary-storage-16.html>`_.

@@ -2,11 +2,11 @@
 SMB/CIFS
 ========
 
-Nextcloud can connect to Windows file servers or other SMB-compatible servers
+cyfrSpaces can connect to Windows file servers or other SMB-compatible servers
 with the SMB/CIFS backend.
 
 .. note:: The SMB/CIFS backend requires ``smbclient`` or
-   the PHP smbclient module to be installed on the Nextcloud server. The PHP
+   the PHP smbclient module to be installed on the cyfrSpaces server. The PHP
    smbclient module is preferred, but either will work. These
    should be included in any Linux distribution. (See `PECL smbclient
    <https://pecl.php.net/package/smbclient>`_ if your distro does not include
@@ -21,10 +21,10 @@ You need the following information:
 *    Password: the password to login to the Samba server.
 *    Share: The share on the Samba server to mount.
 *    Remote Subfolder: The remote subfolder inside the Samba share to mount
-     (optional, defaults to /). To assign the Nextcloud logon username
+     (optional, defaults to /). To assign the cyfrSpaces logon username
      automatically to the subfolder, use ``$user`` instead of a particular
      subfolder name.
-*    And finally, the Nextcloud users and groups who get access to the share.
+*    And finally, the cyfrSpaces users and groups who get access to the share.
 
 Optionally, you can specify a ``Domain``. This is useful in
 cases where the
@@ -49,7 +49,7 @@ See :doc:`auth_mechanisms` for more information on authentication schemes.
 SMB update notifications
 ------------------------
 
-Starting with Nextcloud 10, Nextcloud can use smb update notifications to
+Starting with cyfrSpaces 10, cyfrSpaces can use smb update notifications to
 listen for changes made to a configured SMB/CIFS storage and detect external
 changes made to the storage in near real-time.
 
@@ -82,7 +82,7 @@ in those cases you can provide the username and password using the ``--username`
 Decrease sync delay
 ^^^^^^^^^^^^^^^^^^^
 
-Any updates detected by the notify command will only be synced to the client after the Nextcloud cron job has been executed
+Any updates detected by the notify command will only be synced to the client after the cyfrSpaces cron job has been executed
 (usually every 15 minutes). If this interval is to high for your use case, you can decrease it by running ``occ files:scan --unscanned --all``
 at the desired interval. Note that this might increase the server load and you'll need to ensure that there is no overlap between runs.
 

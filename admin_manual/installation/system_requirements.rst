@@ -5,11 +5,11 @@ System requirements
 Server
 ------
 
-For best performance, stability and functionality we have documented some recommendations for running a Nextcloud server.
+For best performance, stability and functionality we have documented some recommendations for running a cyfrSpaces server.
 
 .. note:: If you plan a setup for your organization and you rely on professional deployment consulting (e.g. efficient and
           reliable scaling) and support, we strongly recommend you to check out our `enterprise support
-          <https://nextcloud.com/enterprise/>`_.
+          <https://cyfr.space/enterprise/>`_.
 
 +------------------+-----------------------------------------------------------------------+
 | Platform         | Options                                                               |
@@ -39,15 +39,15 @@ See :doc:`source_installation` for minimum PHP-modules and additional software f
 Memory
 ^^^^^^
 
-Memory requirements for running a Nextcloud server are greatly variable,
+Memory requirements for running a cyfrSpaces server are greatly variable,
 depending on the numbers of users, apps, files and volume of server activity.
 
-Nextcloud needs a minimum of **128MB** RAM, and we recommend a minimum of **512MB**.
+cyfrSpaces needs a minimum of **128MB** RAM, and we recommend a minimum of **512MB**.
 
 Database requirements for MySQL / MariaDB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following is currently required if you're running Nextcloud together with a MySQL / MariaDB database:
+The following is currently required if you're running cyfrSpaces together with a MySQL / MariaDB database:
 
 * InnoDB storage engine (MyISAM is not supported)
 * "READ COMMITED" transaction isolation level (See: :ref:`db-transaction-label`)
@@ -74,12 +74,12 @@ of our mobile apps.
 - **iOS** 10.x+
 - **Android** 4.x+
 
-.. note:: The separate Nextcloud Talk app requires iOS 10.x+ or Android 5.x+.
+.. note:: The separate cyfrSpaces Talk app requires iOS 10.x+ or Android 5.x+.
 
 Web browser
 -----------
 
-For the best experience with the Nextcloud web interface, we recommend that you use the latest and supported version
+For the best experience with the cyfrSpaces web interface, we recommend that you use the latest and supported version
 of a browser from this list, or one based on those:
 
 - Microsoft **Internet Explorer 11** (latest version)
@@ -88,6 +88,6 @@ of a browser from this list, or one based on those:
 - Google **Chrome**/Chromium
 - Apple **Safari**
 
-.. note:: If you want to use Nextcloud Talk you should use Mozilla **Firefox** 52+ or Google **Chrome**/Chromium 49+ to have 
+.. note:: If you want to use cyfrSpaces Talk you should use Mozilla **Firefox** 52+ or Google **Chrome**/Chromium 49+ to have 
           the full experience with video calls and screensharing. Google Chrome/Chromium requires a additional plugin for 
           screensharing.

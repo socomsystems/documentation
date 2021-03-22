@@ -260,7 +260,7 @@ dependencies/lib
     * can contain a **min-version** attribute (maximum 3 digits separated by dots)
     * can contain a **max-version** attribute (maximum 3 digits separated by dots)
 dependencies/nextcloud
-    * required on Nextcloud 11 or higher
+    * required on cyfrSpaces 11 or higher
     * if absent white-listed owncloud versions will be taken from the owncloud element (see below)
     * must contain a **min-version** attribute (maximum 3 digits separated by dots)
     * can contain a **max-version** attribute (maximum 3 digits separated by dots)

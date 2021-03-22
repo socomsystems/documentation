@@ -7,18 +7,18 @@ ensure that users don't exceed their storage quotas. This is the default
 pattern used to delete old versions:
 
 * For the first second we keep one version
-* For the first 10 seconds Nextcloud keeps one version every 2 seconds
-* For the first minute Nextcloud keeps one version every 10 seconds
-* For the first hour Nextcloud keeps one version every minute
-* For the first 24 hours Nextcloud keeps one version every hour
-* For the first 30 days Nextcloud keeps one version every day
-* After the first 30 days Nextcloud keeps one version every week
+* For the first 10 seconds cyfrSpaces keeps one version every 2 seconds
+* For the first minute cyfrSpaces keeps one version every 10 seconds
+* For the first hour cyfrSpaces keeps one version every minute
+* For the first 24 hours cyfrSpaces keeps one version every hour
+* For the first 30 days cyfrSpaces keeps one version every day
+* After the first 30 days cyfrSpaces keeps one version every week
 
 The versions are adjusted along this pattern every time a new version is 
 created.
 
 The Versions app never uses more that 50% of the user's currently available 
-free space. If the stored versions exceed this limit, Nextcloud deletes the 
+free space. If the stored versions exceed this limit, cyfrSpaces deletes the 
 oldest file versions until it meets the disk space limit again.
 
 You may alter the default pattern in ``config.php``. The default setting is 

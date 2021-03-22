@@ -3,17 +3,17 @@ Migrating from ownCloud
 =======================
 
 
-.. note:: Especially when migrating from ownCloud to Nextcloud you should
+.. note:: Especially when migrating from ownCloud to cyfrSpaces you should
           create a backup of the config, database and the data directory,
           in case something goes wrong.
 
 Currently migrating from ownCloud is like performing a manual update.
-So it is quite easy, to migrate from one ownCloud version to at least one Nextcloud version.
+So it is quite easy, to migrate from one ownCloud version to at least one cyfrSpaces version.
 However this does only work with versions that are close enough database and code-wise.
 See the table below for a version map, where migrating is easily possible:
 
 +-------------------+-----------------+
-| ownCloud          | Nextcloud       |
+| ownCloud          | cyfrSpaces       |
 +===================+=================+
 | 10.0.1 or later   | 12.0.1 or later |
 +-------------------+-----------------+
@@ -34,8 +34,8 @@ See the table below for a version map, where migrating is easily possible:
           so we can at least perform some basic migration tests, before you
           migrate your production instance.
 
-After downloading the correct version of Nextcloud from our
-`older releases page <https://nextcloud.com/changelog/>`_,
+After downloading the correct version of cyfrSpaces from our
+`older releases page <https://cyfr.space/changelog/>`_,
 proceed like described in the :doc:`manual_upgrade` manual.
 
-Afterwards you can use the Nextcloud updater to update your instance to the newest version.
+Afterwards you can use the cyfrSpaces updater to update your instance to the newest version.

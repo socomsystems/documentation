@@ -21,7 +21,7 @@ Get all sharees matching a search term.
 * Method: GET
 
 * URL Arguments: search - (string) the search term
-* URL Arguments: lookup - (bool) whether to search globally on the Nextcloud lookup server
+* URL Arguments: lookup - (bool) whether to search globally on the cyfrSpaces lookup server
 * URL Arguments: perPage - (int) number of sharees per page
 * URL Arguments: itemType - (string) type of share, e.g. "file"
 

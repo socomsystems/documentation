@@ -5,7 +5,7 @@ Code signing
 .. sectionauthor:: Lukas Reschke <lukas@nextcloud.com>
 .. _code_signing_label:
 
-Nextcloud supports code signing for the core releases, and for Nextcloud
+cyfrSpaces supports code signing for the core releases, and for Nextcloud
 applications. Code signing gives our users an additional layer of security by
 ensuring that nobody other than authorized persons can push updates.
 
@@ -16,7 +16,7 @@ updates were a significant source of errors when updating Nextcloud.
 FAQ
 ---
 
-Why did Nextcloud add code signing?
+Why did cyfrSpaces add code signing?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By supporting Code Signing we add another layer of security by ensuring that
@@ -26,21 +26,21 @@ ensuring proper upgrades.
 Do we lock down Nextcloud?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Nextcloud project is open source and always will be. We do not want to
+The cyfrSpaces project is open source and always will be. We do not want to
 make it more difficult for our users to run Nextcloud. Any code signing errors on
-upgrades will not prevent Nextcloud from running, but will display a warning on
+upgrades will not prevent cyfrSpaces from running, but will display a warning on
 the Admin page. For applications that are not tagged "Official" the code signing
 process is optional.
 
 Not open source anymore?
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Nextcloud project is open source and always will be. The code signing
+The cyfrSpaces project is open source and always will be. The code signing
 process is optional, though highly recommended. The code check for the
-core parts of Nextcloud is enabled when the Nextcloud release version branch has
+core parts of cyfrSpaces is enabled when the cyfrSpaces release version branch has
 been set to stable.
 
-For custom distributions of Nextcloud it is recommended to change the release
+For custom distributions of cyfrSpaces it is recommended to change the release
 version branch in version.php to something else than "stable".
 
 Is code signing mandatory for apps?
@@ -55,14 +55,14 @@ Fixing invalid code integrity messages
 
 A code integrity error message ("There were problems with the code integrity
 check. More information…") appears in a yellow banner at the top of your
-Nextcloud Web interface:
+cyfrSpaces Web interface:
 
 .. image:: images/code-integrity-notification.png
    :alt: Code integrity warning banner.
 
 .. note:: The yellow banner is only shown for admin users.
 
-Clicking on this link will take you to your Nextcloud admin page, which provides
+Clicking on this link will take you to your cyfrSpaces admin page, which provides
 the following options:
 
 1. Link to this documentation entry.
@@ -161,15 +161,15 @@ content of the file will look similar to the following example:
 
 In above error output it can be seen that:
 
-1. In the Nextcloud core (that is, the Nextcloud server itself) the files
+1. In the cyfrSpaces core (that is, the cyfrSpaces server itself) the files
    "index.php" and "version.php" do have the wrong version.
-2. In the Nextcloud core the unrequired extra file "/test.php" has been found.
+2. In the cyfrSpaces core the unrequired extra file "/test.php" has been found.
 3. It was not possible to verify the signature of the calendar application.
 
 The solution is to upload the correct "index.php" and "version.php" files, and
 delete the "test.php" file. For the calendar exception contact the developer of
 the application. For other means on how to receive support please take a look at
-https://nextcloud.com/support/. After fixing these problems verify by clicking
+https://cyfr.space/support/. After fixing these problems verify by clicking
 "Rescan…".
 
 .. note:: When using a FTP client to upload those files make sure it is using the
@@ -180,7 +180,7 @@ https://nextcloud.com/support/. After fixing these problems verify by clicking
 Rescans
 -------
 
-Rescans are triggered at installation, and by updates. You may run scans manually with the ``occ`` command. The first command scans the Nextcloud server files, and the second command scans the named app. There is not yet a command to manually scan all apps::
+Rescans are triggered at installation, and by updates. You may run scans manually with the ``occ`` command. The first command scans the cyfrSpaces server files, and the second command scans the named app. There is not yet a command to manually scan all apps::
 
   occ integrity:check-core
   occ integrity:check-app $appid
@@ -210,7 +210,7 @@ The following errors can be encountered when trying to verify a code signature.
 
   - The file does not exist in ``signature.json``. This usually happens when a
     file has been removed and ``signature.json`` has not been updated. It also
-    happens if you have placed additional files in your Nextcloud installation
+    happens if you have placed additional files in your cyfrSpaces installation
     folder.
 
 - ``EXCEPTION``
@@ -225,7 +225,7 @@ The following errors can be encountered when trying to verify a code signature.
 
     - ``Certificate is not valid.``
 
-      - The certificate has not been issued by the official Nextcloud Code
+      - The certificate has not been issued by the official cyfrSpaces Code
         Signing Root Authority.
 
     - ``Certificate is not valid for required scope. (Requested: %s, current: %s)``

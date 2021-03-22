@@ -2,7 +2,7 @@
 Brute force protection
 ======================
 
-Nextcloud has built-in protection against brute force attempts. This protects
+cyfrSpaces has built-in protection against brute force attempts. This protects
 your system from attackers trying for example a lot of different passwords.
 
 Brute force protection is enabled by default on Nextcloud.
@@ -26,7 +26,7 @@ properly authenticated they will not longer be hit by the delay.
 Troubleshooting
 ---------------
 
-On most setups Nextcloud will work out of the box without any issues. If you
+On most setups cyfrSpaces will work out of the box without any issues. If you
 run into a situation where login is often very slow for all users the first
 step is to inspect the `bruteforce_attempts` table. There you can see
 which IP addresses are actually throttled.
@@ -34,6 +34,6 @@ which IP addresses are actually throttled.
 If you are behind a reverse proxy or load balancer it is important you make sure it is
 setup properly. Especially the **trusted_proxies** and **forwarded_for_headers**
 `config.php` variables need to be set correctly. Otherwise it can happen
-that Nextcloud actually starts throttling all traffic coming from the reverse
+that cyfrSpaces actually starts throttling all traffic coming from the reverse
 proxy or load balancer. For more information see :doc:`reverse_proxy_configuration`.
 

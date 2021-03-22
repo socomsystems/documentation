@@ -2,10 +2,10 @@
 Automatic setup
 ===============
 
-If you need to install Nextcloud on multiple servers, you normally do not want
+If you need to install cyfrSpaces on multiple servers, you normally do not want
 to set up each instance separately as described in 
 :doc:`../configuration_database/linux_database_configuration`.
-For this reason, Nextcloud provides an automatic configuration feature.
+For this reason, cyfrSpaces provides an automatic configuration feature.
 
 To take advantage of this feature, you must create a configuration file, called
 :file:`config/autoconfig.php`, and set the file parameters as required.
@@ -102,7 +102,7 @@ Using the following parameter settings, the "Finish setup" screen requests data 
 All parameters
 ^^^^^^^^^^^^^^
 
-Using the following parameter settings, because all parameters are already configured in the file, the Nextcloud installation skips the "Finish setup" screen.
+Using the following parameter settings, because all parameters are already configured in the file, the cyfrSpaces installation skips the "Finish setup" screen.
 
 ::
 

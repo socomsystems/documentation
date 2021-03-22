@@ -2,7 +2,7 @@
 Public Pages
 ============
 
-A lot of apps in Nextcloud want to expose public pages in some form. This can
+A lot of apps in cyfrSpaces want to expose public pages in some form. This can
 be to share files, a calendar or anything else. To ensure all those pages
 benefit from the security enhancements we add we created simple controlers
 for app developers to use.

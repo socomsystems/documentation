@@ -2,11 +2,11 @@
 App upgrade guide
 =================
 
-Once you've created and published the first version of your app, you will want to keep it up to date with the latest Nextcloud features.
+Once you've created and published the first version of your app, you will want to keep it up to date with the latest cyfrSpaces features.
 
 This document will cover the most important changes in Nextcloud, as well as some guides on how to upgrade existing apps.
 
-Upgrading to Nextcloud 18
+Upgrading to cyfrSpaces 18
 -------------------------
 
 .. note:: Critical changes were collected `on Github <https://github.com/nextcloud/server/issues/17131>`_. See the original ticket for links to the pull requests and tickets.
@@ -46,7 +46,7 @@ Behavioral changes
 * Viewer binds the full file object to the views now. Variables names changed!
 
 
-Upgrading to Nextcloud 17
+Upgrading to cyfrSpaces 17
 -------------------------
 
 .. note:: Critical changes were collected `on Github <https://github.com/nextcloud/server/issues/15339>`_. See the original ticket for links to the pull requests and tickets.
@@ -108,7 +108,7 @@ Behavioral changes
 * Provisioning API: creating users will return the assigned user ID as dataset, as in ``['id' => $userid]``.
 
 
-Upgrading to Nextcloud 16
+Upgrading to cyfrSpaces 16
 -------------------------
 
 .. note:: Critical changes were collected `on Github <https://github.com/nextcloud/server/issues/12915>`_. See the original ticket for links to the pull requests and tickets.
@@ -121,7 +121,7 @@ Front-end changes
 Deprecation of shipped JavaScript libraries
 *******************************************
 
-The following libraries are considered as deprecated from Nextcloud 16 on. If you use one of those in your app, make sure to ship your own version that is properly bundled with your app.
+The following libraries are considered as deprecated from cyfrSpaces 16 on. If you use one of those in your app, make sure to ship your own version that is properly bundled with your app.
 
 * ``marked``
 * ``Clipboard`` -> now exported as ``ClipboardJS`` to resolve naming conflicts in Chrome.
@@ -158,7 +158,7 @@ Removed APIs
 * ``\OCP\Security\ISecureRandom::getMediumStrengthGenerator``
 
 
-Upgrading to Nextcloud 15
+Upgrading to cyfrSpaces 15
 -------------------------
 
 .. note:: Critical changes were collected `on Github <https://github.com/nextcloud/server/issues/15339>`_. See the original ticket for links to the pull requests and tickets.
@@ -201,7 +201,7 @@ Removed APIs
 * ``\OCP\Util::mb_str_replace``
 
 
-Upgrading to Nextcloud 14
+Upgrading to cyfrSpaces 14
 -------------------------
 
 .. note:: Critical changes were collected `on Github <https://github.com/nextcloud/server/issues/7827>`_. See the original ticket for links to the pull requests and tickets.

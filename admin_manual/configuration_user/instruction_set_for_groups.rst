@@ -5,7 +5,7 @@ Instruction set for groups
 Search/get groups
 -----------------
 
-Retrieves a list of groups from the Nextcloud server. Authentication is done by 
+Retrieves a list of groups from the cyfrSpaces server. Authentication is done by 
 sending a Basic HTTP Authorization header.
 
 **Syntax: ocs/v1.php/cloud/groups**

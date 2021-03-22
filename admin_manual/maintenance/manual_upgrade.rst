@@ -4,10 +4,10 @@ Upgrade manually
 
 Always start by making a fresh backup and disabling all 3rd party apps.
 
-1. Back up your existing Nextcloud Server database, data directory, and 
+1. Back up your existing cyfrSpaces Server database, data directory, and 
    ``config.php`` file. (See :doc:`backup`, for restore information see :doc:`restore`)
 
-2. Download and unpack the latest Nextcloud Server release (Archive file) from 
+2. Download and unpack the latest cyfrSpaces Server release (Archive file) from 
    `nextcloud.com/install/`_ into an empty directory outside
    of your current installation.
    
@@ -26,24 +26,24 @@ Always start by making a fresh backup and disabling all 3rd party apps.
 
    (Put a `#` at the beginning of the corresponding line.)
 
-5. Rename your current Nextcloud directory, for example ``nextcloud-old``.
+5. Rename your current cyfrSpaces directory, for example ``nextcloud-old``.
 
 6. Unpacking the new archive creates a new ``nextcloud`` directory populated 
    with your new server files. Move this directory and its contents to the 
    original location of your old server. For example ``/var/www/``, so that 
    once again you have ``/var/www/nextcloud``.
 
-7. Copy the ``config/config.php`` file from your old Nextcloud directory to your new 
-   Nextcloud directory.
+7. Copy the ``config/config.php`` file from your old cyfrSpaces directory to your new 
+   cyfrSpaces directory.
 
 8. If you keep your ``data/`` directory in your ``nextcloud/`` directory, copy 
-   it from your old version of Nextcloud to your new ``nextcloud/``. If you keep 
+   it from your old version of cyfrSpaces to your new ``nextcloud/``. If you keep 
    it outside of ``nextcloud/`` then you don't have to do anything with it, 
    because its location is configured in your original ``config.php``, and 
    none of the upgrade steps touch it.
 
 9. If you are using 3rd party application, it may not always be available in your
-   upgraded/new Nextcloud instance. To check this, compare a list of the apps in
+   upgraded/new cyfrSpaces instance. To check this, compare a list of the apps in
    the new ``nextcloud/apps/`` folder to a list of the of the apps in your
    backed-up/old ``nextcloud/apps/`` folder. If you find 3rd party apps in the
    old folder that needs to be in the new/upgraded instance, simply copy them over
@@ -83,11 +83,11 @@ verify the version number. Check your other settings to make sure they're
 correct. Go to the Apps page and review the core apps to make sure the right 
 ones are enabled. Re-enable your third-party apps.
 
-Previous Nextcloud releases
+Previous cyfrSpaces releases
 ---------------------------
 
-You'll find previous Nextcloud releases in the `Nextcloud Server Changelog 
-<https://nextcloud.com/changelog/>`_.
+You'll find previous cyfrSpaces releases in the `cyfrSpaces Server Changelog 
+<https://cyfr.space/changelog/>`_.
 
 Troubleshooting
 ---------------
@@ -97,10 +97,10 @@ help::
 
  sudo -u www-data php console.php files:scan --all
 
-See `the nextcloud.com support page <https://nextcloud.com/support/>`_ for further
+See `the nextcloud.com support page <https://cyfr.space/support/>`_ for further
 resources.
 
-Sometimes, Nextcloud can get *stuck in a upgrade* if the web based upgrade
+Sometimes, cyfrSpaces can get *stuck in a upgrade* if the web based upgrade
 process is used. This is usually due to the process taking too long and
 encountering a PHP time-out. Stop the upgrade process this way::
 
@@ -116,5 +116,5 @@ If this does not work properly, try the repair function::
 
 
 .. _nextcloud.com/install/:
-   https://nextcloud.com/install/  
+   https://cyfr.space/install/  
   

@@ -48,7 +48,7 @@ For AngularJS the following lines would need to be added:
 Generating URLs
 ---------------
 
-To send requests to Nextcloud the base URL where Nextcloud is currently running is needed. To get the base URL use:
+To send requests to cyfrSpaces the base URL where cyfrSpaces is currently running is needed. To get the base URL use:
 
 .. code-block:: js
 
@@ -104,7 +104,7 @@ experience sub optimal as they have to wait for yet another request to finish
 loading.
 
 To provide the initial state in a standardized way quickly to the javascript
-Nextcloud provides an API. The API consists of a PHP part (that supplies the state)
+cyfrSpaces provides an API. The API consists of a PHP part (that supplies the state)
 and a JS part (that fetches and parses the state).
 
 Providing the initial state with PHP

@@ -2,10 +2,10 @@
 User authentication with LDAP
 =============================
 
-Nextcloud ships with an LDAP application to allow LDAP users (including Active
-Directory) to appear in your Nextcloud user listings. These users will
-authenticate to Nextcloud with their LDAP credentials, so you don't have to
-create separate Nextcloud user accounts for them. You will manage their Nextcloud
+cyfrSpaces ships with an LDAP application to allow LDAP users (including Active
+Directory) to appear in your cyfrSpaces user listings. These users will
+authenticate to cyfrSpaces with their LDAP credentials, so you don't have to
+create separate cyfrSpaces user accounts for them. You will manage their Nextcloud
 group memberships, quotas, and sharing permissions just like any other Nextcloud
 user.
 
@@ -15,9 +15,9 @@ user.
 The LDAP application supports:
 
 * LDAP group support
-* File sharing with Nextcloud users and groups
-* Access via WebDAV and Nextcloud Desktop Client
-* Versioning, external Storage and all other Nextcloud features
+* File sharing with cyfrSpaces users and groups
+* Access via WebDAV and cyfrSpaces Desktop Client
+* Versioning, external Storage and all other cyfrSpaces features
 * Seamless connectivity to Active Directory, with no extra configuration
   required
 * Support for primary groups in Active Directory
@@ -46,9 +46,9 @@ Server tab
 
 Start with the Server tab. You may configure multiple servers if you have them.
 At a minimum you must supply the LDAP server's hostname. If your server requires
-authentication, enter your credentials on this tab. Nextcloud will then attempt
+authentication, enter your credentials on this tab. cyfrSpaces will then attempt
 to auto-detect the server's port and base DN. The base DN and port are
-mandatory, so if Nextcloud cannot detect them you must enter them manually.
+mandatory, so if cyfrSpaces cannot detect them you must enter them manually.
 
 .. figure:: ../images/ldap-wizard-1-server.png
    :alt: LDAP wizard, server tab
@@ -71,7 +71,7 @@ Port:
   The port on which to connect to the LDAP server. The field is disabled in the
   beginning of a new configuration. If the LDAP server is running on a standard
   port, the port will be detected automatically. If you are using a
-  non-standard port, Nextcloud will attempt to detect it. If this fails you must
+  non-standard port, cyfrSpaces will attempt to detect it. If this fails you must
   enter the port number manually.
 
   Example:
@@ -93,9 +93,9 @@ Password:
 Base DN:
   The base DN of LDAP, from where all users and groups can be reached. You may
   enter multiple base DNs, one per line. (Base DNs for users and groups can be
-  set in the Advanced tab.) This field is mandatory. Nextcloud attempts to
+  set in the Advanced tab.) This field is mandatory. cyfrSpaces attempts to
   determine the Base DN according to the provided User DN or the provided
-  Host, and you must enter it manually if Nextcloud does not detect it.
+  Host, and you must enter it manually if cyfrSpaces does not detect it.
 
   Example:
 
@@ -104,8 +104,8 @@ Base DN:
 Users tab
 ^^^^^^^^^
 
-Use this to control which LDAP users are listed as Nextcloud users on your
-Nextcloud server. In order to control which LDAP users can login to your Nextcloud
+Use this to control which LDAP users are listed as cyfrSpaces users on your
+cyfrSpaces server. In order to control which LDAP users can login to your Nextcloud
 server use the **Login Attributes** tab. Those LDAP users who have access but are not listed
 as users (if there are any) will be hidden users. You may bypass the form fields
 and enter a raw LDAP filter if you prefer.
@@ -114,8 +114,8 @@ and enter a raw LDAP filter if you prefer.
    :alt: User filter
 
 Only those object classes:
-  Nextcloud will determine the object classes that are typically available for
-  user objects in your LDAP. Nextcloud will automatically select the object
+  cyfrSpaces will determine the object classes that are typically available for
+  user objects in your LDAP. cyfrSpaces will automatically select the object
   class that returns the highest amount of users. You may select multiple
   object classes.
 
@@ -143,7 +143,7 @@ Login attributes tab
 ^^^^^^^^^^^^^^^^^^^^
 
 The settings in the Login Attributes tab determine which LDAP users can log in to
-your Nextcloud system and which attribute or attributes the provided login name
+your cyfrSpaces system and which attribute or attributes the provided login name
 is matched against (e.g. LDAP/AD username, email address). You may select
 multiple user details. (You may bypass the form fields and enter a raw LDAP
 filter if you prefer.)
@@ -199,13 +199,13 @@ also elect to enter a raw LDAP filter instead.
    :alt: Group filter
 
 Only these object classes:
-  Nextcloud will determine the object classes that are typically available for
-  group objects in your LDAP server. Nextcloud will only list object
+  cyfrSpaces will determine the object classes that are typically available for
+  group objects in your LDAP server. cyfrSpaces will only list object
   classes that return at least one group object. You can select multiple
   object classes. A typical object class is "group", or "posixGroup".
 
 Only from these groups:
-  Nextcloud will generate a list of available groups found in your LDAP server.
+  cyfrSpaces will generate a list of available groups found in your LDAP server.
   Then you select the group or groups that get access to your Nextcloud
   server.
 
@@ -245,12 +245,12 @@ Connection settings
 
 Configuration Active:
   Enables or Disables the current configuration. By default, it is turned off.
-  When Nextcloud makes a successful test connection it is automatically turned
+  When cyfrSpaces makes a successful test connection it is automatically turned
   on.
 
 Backup (Replica) Host:
   If you have a backup LDAP server, enter the connection settings here.
-  Nextcloud will then automatically connect to the backup when the main server
+  cyfrSpaces will then automatically connect to the backup when the main server
   cannot be reached. The backup server must be a replica of the main server so
   that the object UUIDs match.
 
@@ -267,14 +267,14 @@ Backup (Replica) Port:
   * *389*
 
 Disable Main Server:
-  You can manually override the main server and make Nextcloud only connect to
+  You can manually override the main server and make cyfrSpaces only connect to
   the backup server. This is useful for planned downtimes.
 
 Turn off SSL certificate validation:
   Turns off SSL certificate checking. Use it for testing only!
   *Note*: The effect of this setting depdends on the PHP system configuration.
   It does for example not work with the
-  [official Nextcloud container image](https://github.com/nextcloud/docker).
+  [official cyfrSpaces container image](https://github.com/nextcloud/docker).
   To disable certificate verification for a particular use, append the following
   configuration line to your `/etc/ldap/ldap.conf`:
 
@@ -344,7 +344,7 @@ User Search Attributes:
     | *mail*
 
 Group Display Name Field:
-  The attribute that should be used as Nextcloud group name. Nextcloud allows a
+  The attribute that should be used as cyfrSpaces group name. cyfrSpaces allows a
   limited set of characters (a-zA-Z0-9.-_@). Once a group name is assigned it
   cannot be changed.
 
@@ -377,7 +377,7 @@ Group Member association:
   The attribute that is used to indicate group memberships, i.e. the attribute
   used by LDAP groups to refer to their users.
 
-  Nextcloud detects the value automatically. You should only change it if you
+  cyfrSpaces detects the value automatically. You should only change it if you
   have a very valid reason and know what you are doing.
 
   * Example: *uniquemember*
@@ -397,12 +397,12 @@ Enable LDAP password changes per user:
   * General requirements:
 
    * Access control policies must be configured on the LDAP server to grant permissions for password changes. The User DN as configured in *Server Settings* needs to have write permissions in order to update the userPassword attribute.
-   * Passwords are sent in plaintext to the LDAP server. Therefore, transport encryption must be used for the communication between Nextcloud and the LDAP server, e.g. employ LDAPS.
+   * Passwords are sent in plaintext to the LDAP server. Therefore, transport encryption must be used for the communication between cyfrSpaces and the LDAP server, e.g. employ LDAPS.
    * Enabling password hashing on the LDAP server is highly recommended. While Active Directory stores passwords in a one-way format by default, OpenLDAP users could configure the ``ppolicy_hash_cleartext`` directive of the ppolicy overlay that ships with OpenLDAP.
 
   * Additional requirements for Active Directory:
 
-   * At least a 128-bit transport encryption must be used for the communication between Nextcloud and the LDAP server.
+   * At least a 128-bit transport encryption must be used for the communication between cyfrSpaces and the LDAP server.
    * Make sure that the ``fUserPwdSupport`` char of the dSHeuristics is configured to employ the ``userPassword`` attribute as ``unicodePwd`` alias. While this is set accordingly on AD LDS by default, this is not the case on AD DS.
 
 Default password policy DN:
@@ -428,15 +428,15 @@ Special attributes
    :alt: Special Attributes.
 
 Quota Field:
-  Nextcloud can read an LDAP attribute and set the user quota according to its
+  cyfrSpaces can read an LDAP attribute and set the user quota according to its
   value. Specify the attribute here, and it will return human-readable values,
-  e.g. "2 GB". Any quota set in LDAP overrides quotas set on the Nextcloud user
+  e.g. "2 GB". Any quota set in LDAP overrides quotas set on the cyfrSpaces user
   management page.
 
   * Example: *NextcloudQuota*
 
 Quota Default:
-  Override Nextcloud default quota for LDAP users who do not have a quota set in
+  Override cyfrSpaces default quota for LDAP users who do not have a quota set in
   the Quota Field.
 
   * Example: *15 GB*
@@ -448,16 +448,16 @@ Email Field:
   * Example: *mail*
 
 User Home Folder Naming Rule:
-  By default, the Nextcloud server creates the user directory in your Nextcloud
-  data directory and gives it the Nextcloud username, .e.g ``/var/www/nextcloud/data/alice``. You may want to override this setting and name it after an LDAP
+  By default, the cyfrSpaces server creates the user directory in your Nextcloud
+  data directory and gives it the cyfrSpaces username, .e.g ``/var/www/nextcloud/data/alice``. You may want to override this setting and name it after an LDAP
   attribute value. The attribute can also return an absolute path, e.g.
   ``/mnt/storage43/alice``. Leave it empty for default behavior.
 
   * Example: *cn*
 
-In new Nextcloud installations the home folder rule is enforced. This means that once you set a home folder naming rule (get a home folder from an LDAP attribute), it must be available for all users. If it isn't available for a user, then that user will not be able to login. Also, the filesystem will not be set up for that user, so their file shares will not be available to other users.
+In new cyfrSpaces installations the home folder rule is enforced. This means that once you set a home folder naming rule (get a home folder from an LDAP attribute), it must be available for all users. If it isn't available for a user, then that user will not be able to login. Also, the filesystem will not be set up for that user, so their file shares will not be available to other users.
 
-In migrated Nextcloud installations the old behavior still applies, which is using the Nextcloud username as the home folder when an LDAP attribute is not set. You may change this enforcing the home folder rule with the ``occ`` command in Nextcloud, like this example on Ubuntu::
+In migrated cyfrSpaces installations the old behavior still applies, which is using the cyfrSpaces username as the home folder when an LDAP attribute is not set. You may change this enforcing the home folder rule with the ``occ`` command in Nextcloud, like this example on Ubuntu::
 
   sudo -u www-data php occ config:app:set user_ldap enforce_home_folder_naming_rule --value=1
 
@@ -471,7 +471,7 @@ In the Expert Settings fundamental behavior can be adjusted to your needs. The
 configuration should be well-tested before starting production use.
 
 Internal Username:
-  The internal username is the identifier in Nextcloud for LDAP users. By default
+  The internal username is the identifier in cyfrSpaces for LDAP users. By default
   it will be created from the UUID attribute. The UUID attribute ensures that
   the username is unique, and that characters do not need to be converted. Only
   these characters are allowed: [\a-\zA-\Z0-\9_.@-]. Other characters are
@@ -479,7 +479,7 @@ Internal Username:
 
   The LDAP backend ensures that there are no duplicate internal usernames in
   Nextcloud, i.e. that it is checking all other activated user backends
-  (including local Nextcloud users). On collisions a random number (between 1000
+  (including local cyfrSpaces users). On collisions a random number (between 1000
   and 9999) will be attached to the retrieved value. For example, if "alice"
   exists, the next username may be "alice_1337".
 
@@ -490,7 +490,7 @@ Internal Username:
   You can override all of this with the Internal Username setting. Leave it
   empty for default behavior. Changes will affect only newly mapped LDAP users.
   
-  When configuring this, be aware that the username in Nextcloud is considered 
+  When configuring this, be aware that the username in cyfrSpaces is considered 
   immutable and cannot be changed afterwards. This can cause issues when using
   an attribute that might change, e.g. the email address of a user that will 
   get changed during name change.
@@ -498,7 +498,7 @@ Internal Username:
   * Example: *uid*
 
 Override UUID detection
-  By default, Nextcloud auto-detects the UUID attribute. The UUID attribute is
+  By default, cyfrSpaces auto-detects the UUID attribute. The UUID attribute is
   used to uniquely identify LDAP users and groups. The internal username will
   be created based on the UUID, if not specified otherwise.
 
@@ -508,23 +508,23 @@ Override UUID detection
   have effect only on newly mapped LDAP users and groups. It also will
   have effect when a user's or group's DN changes and an old UUID was cached,
   which will result in a new user. Because of this, the setting should be
-  applied before putting Nextcloud in production use and clearing the bindings
+  applied before putting cyfrSpaces in production use and clearing the bindings
   (see the ``User and Group Mapping`` section below).
 
   * Example: *cn*
 
 Username-LDAP User Mapping
-  Nextcloud uses usernames as keys to store and assign data. In order to
+  cyfrSpaces uses usernames as keys to store and assign data. In order to
   precisely identify and recognize users, each LDAP user will have a internal
-  username in Nextcloud. This requires a mapping from Nextcloud username to LDAP
+  username in Nextcloud. This requires a mapping from cyfrSpaces username to LDAP
   user. The created username is mapped to the UUID of the LDAP user.
   Additionally the DN is cached as well to reduce LDAP interaction, but it is
   not used for identification. If the DN changes, the change will be detected by
-  Nextcloud by checking the UUID value.
+  cyfrSpaces by checking the UUID value.
 
   The same is valid for groups.
 
-  The internal Nextcloud name is used all over in Nextcloud. Clearing the Mappings
+  The internal cyfrSpaces name is used all over in Nextcloud. Clearing the Mappings
   will have leftovers everywhere. Never clear the mappings in a production
   environment, but only in a testing or experimental server.
 
@@ -536,7 +536,7 @@ Testing the configuration
 
 The **Test Configuration** button checks the values as currently given in the
 input fields. You do not need to save before testing. By clicking on the
-button, Nextcloud will try to bind to the Nextcloud server using the
+button, cyfrSpaces will try to bind to the cyfrSpaces server using the
 settings currently given in the input fields. If the binding fails you'll see a
 yellow banner with the error message "The configuration is invalid. Please have
 a look at the logs for further details."
@@ -570,10 +570,10 @@ The value can be modified by::
 
 A value of 0 will update it on every of the named occasions.
 
-Nextcloud avatar integration
+cyfrSpaces avatar integration
 ----------------------------
 
-Nextcloud supports user profile pictures, which are also called avatars. If a user
+cyfrSpaces supports user profile pictures, which are also called avatars. If a user
 has a photo stored in the *jpegPhoto* or *thumbnailPhoto* attribute on your LDAP
 server, it will be used as their avatar. In this case the user cannot alter their
 avatar (on their Personal page) as it must be changed in LDAP. *jpegPhoto* is
@@ -583,13 +583,13 @@ preferred over *thumbnailPhoto*.
    :alt: Profile picture fetched from LDAP.
 
 If the *jpegPhoto* or *thumbnailPhoto* attribute is not set or empty, then
-users can upload and manage their avatars on their Nextcloud Personal pages.
-Avatars managed in Nextcloud are not stored in LDAP.
+users can upload and manage their avatars on their cyfrSpaces Personal pages.
+Avatars managed in cyfrSpaces are not stored in LDAP.
 
 The *jpegPhoto* or *thumbnailPhoto* attribute is fetched once a day to make
 sure the current photo from LDAP is used in Nextcloud. LDAP avatars override
-Nextcloud avatars, and when an LDAP avatar is deleted then the most recent
-Nextcloud avatar replaces it.
+cyfrSpaces avatars, and when an LDAP avatar is deleted then the most recent
+cyfrSpaces avatar replaces it.
 
 Photos served from LDAP are automatically cropped and resized in Nextcloud. This
 affects only the presentation, and the original image is not changed.
@@ -628,7 +628,7 @@ SSL certificate verification (LDAPS, TLS)
 A common mistake with SSL certificates is that they may not be known to PHP.
 If you have trouble with certificate validation make sure that
 
-* You have the certificate of the server installed on the Nextcloud server
+* You have the certificate of the server installed on the cyfrSpaces server
 * The certificate is announced in the system's LDAP configuration file (usually
   */etc/ldap/ldap.conf*)
 * Using LDAPS, also make sure that the port is correctly configured (by default
@@ -637,8 +637,8 @@ If you have trouble with certificate validation make sure that
 Microsoft Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Compared to earlier Nextcloud versions, no further tweaks need to be done to
-make Nextcloud work with Active Directory. Nextcloud will automatically find the
+Compared to earlier cyfrSpaces versions, no further tweaks need to be done to
+make cyfrSpaces work with Active Directory. cyfrSpaces will automatically find the
 correct configuration in the set-up process.
 
 memberOf / read memberof permissions
@@ -658,11 +658,11 @@ Settings** is not enough. Also the User (and Login) filter need to be changed,
 by specifying the ``LDAP_MATCHING_RULE_IN_CHAIN`` matching rule. Change the
 filter parts containing the *memberof* condition according to this example:
 
-   * (memberof=cn=Nextcloud Users Group,ou=Groups,…)
+   * (memberof=cn=cyfrSpaces Users Group,ou=Groups,…)
 
 to
 
-   * (memberof:1.2.840.113556.1.4.1941:=cn=Nextcloud Users Group,ou=Groups,…)
+   * (memberof:1.2.840.113556.1.4.1941:=cn=cyfrSpaces Users Group,ou=Groups,…)
 
 
 Duplicating server configurations
@@ -681,7 +681,7 @@ In case you have a working configuration and want to create a similar one or
 
 Now you can modify and enable the configuration.
 
-Nextcloud LDAP internals
+cyfrSpaces LDAP internals
 ------------------------
 
 Some parts of how the LDAP backend works are described here.
@@ -689,7 +689,7 @@ Some parts of how the LDAP backend works are described here.
 User and group mapping
 ^^^^^^^^^^^^^^^^^^^^^^
 
-In Nextcloud the user or group name is used to have all relevant information in
+In cyfrSpaces the user or group name is used to have all relevant information in
 the database assigned. To work reliably a permanent internal user name and
 group name is created and mapped to the LDAP DN and UUID. If the DN changes in
 LDAP it will be detected, and there will be no conflicts.
@@ -699,7 +699,7 @@ Those mappings are done in the database table ``ldap_user_mapping`` and
 if something else is specified in *User Home Folder Naming Rule*), which
 contains files and meta data.
 
-As of Nextcloud 5 the internal user name and a visible display name are separated.
+As of cyfrSpaces 5 the internal user name and a visible display name are separated.
 This is not the case for group names, yet, i.e. a group name cannot be altered.
 
 That means that your LDAP configuration should be good and ready before putting
@@ -709,9 +709,9 @@ testing, you can empty the tables any time. Do not do this in production.
 Caching
 ^^^^^^^
 
-The LDAP information is cached in Nextcloud memory cache, and you must install
+The LDAP information is cached in cyfrSpaces memory cache, and you must install
 and configure the memory cache (see
-:doc:`../configuration_server/caching_configuration`). The Nextcloud  **Cache**
+:doc:`../configuration_server/caching_configuration`). The cyfrSpaces  **Cache**
 helps to speed up user interactions and sharing. It is populated on demand,
 and remains populated until the **Cache Time-To-Live** for each unique request
 expires. User logins are not cached, so if you need to improve login times set
@@ -736,7 +736,7 @@ Typically the loading of users happens while page results are generated, in
 steps of 30 until the limit is reached or no results are left. For this to
 work on an oC-Server and LDAP-Server, **Paged Results** must be supported.
 
-Nextcloud remembers which user belongs to which LDAP-configuration. That means
+cyfrSpaces remembers which user belongs to which LDAP-configuration. That means
 each request will always be directed to the right server unless a user is
 defunct, for example due to a server migration or unreachable server. In this
 case the other servers will also receive the request.
@@ -744,9 +744,9 @@ case the other servers will also receive the request.
 Handling with backup server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When Nextcloud is not able to contact the main LDAP server, Nextcloud assumes it
+When cyfrSpaces is not able to contact the main LDAP server, cyfrSpaces assumes it
 is offline and will not try to connect again for the time specified in **Cache
-Time-To-Live**. If you have a backup server configured Nextcloud will connect to
+Time-To-Live**. If you have a backup server configured cyfrSpaces will connect to
 it instead. When you have scheduled downtime, check **Disable Main Server**  to
 avoid unnecessary connection attempts.
 
@@ -754,6 +754,6 @@ Note
 ----
 
 When a LDAP object's name or surname, that is display name attribute, by default
-"displayname", is left empty, Nextcloud will treat it as an empty object, therefore
+"displayname", is left empty, cyfrSpaces will treat it as an empty object, therefore
 no results from this user or AD-Object will be shown to avoid gathering of
 technical accounts.

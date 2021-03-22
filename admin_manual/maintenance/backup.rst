@@ -2,7 +2,7 @@
 Backup
 ======
 
-To backup a Nextcloud installation there are four main things you need to retain:
+To backup a cyfrSpaces installation there are four main things you need to retain:
 
 #. The config folder
 #. The data folder
@@ -30,8 +30,8 @@ Don't forget to change it back to ``false`` when you are finished.
 Backup folders
 --------------
 
-Simply copy your config, data and theme folders (or even your whole Nextcloud install and data folder) to a place outside of
-your Nextcloud environment. You could use this command::
+Simply copy your config, data and theme folders (or even your whole cyfrSpaces install and data folder) to a place outside of
+your cyfrSpaces environment. You could use this command::
 
     rsync -Aavx nextcloud/ nextcloud-dirbkp_`date +"%Y%m%d"`/
 

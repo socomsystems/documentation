@@ -2,9 +2,9 @@
 File Sharing
 ============
 
-Nextcloud users can share files with their Nextcloud groups and other users on 
-the same Nextcloud server, with Nextcloud users on :doc:`other Nextcloud servers <federated_cloud_sharing_configuration>`, and create public shares for people who are not 
-Nextcloud users. You have control of a number of user permissions on file shares.
+cyfrSpaces users can share files with their cyfrSpaces groups and other users on 
+the same cyfrSpaces server, with cyfrSpaces users on :doc:`other cyfrSpaces servers <federated_cloud_sharing_configuration>`, and create public shares for people who are not 
+cyfrSpaces users. You have control of a number of user permissions on file shares.
 
 Configure your sharing policy on your Admin page in the Sharing section.
 
@@ -13,7 +13,7 @@ Configure your sharing policy on your Admin page in the Sharing section.
 * Check ``Allow apps to use the Share API`` to enable users to share files. If 
   this is not checked, no users can create file shares.
 * Check ``Allow users to share via link`` to enable creating public shares for  
-  people who are not Nextcloud users via hyperlink.
+  people who are not cyfrSpaces users via hyperlink.
 * Check ``Allow public uploads`` to allow anyone to upload files to 
   public shares.
 * Check ``Always ask for a password`` to proactively ask a user to set a password
@@ -38,7 +38,7 @@ Configure your sharing policy on your Admin page in the Sharing section.
   get a dropdown list of all your groups to choose from. Members of excluded 
   groups can still receive shares, but not create any.
 * Check ``Allow username autocompletion in share dialog`` to enable 
-  auto-completion of Nextcloud usernames.
+  auto-completion of cyfrSpaces usernames.
 * Check ``Show disclaimer text on the public link upload page`` to set and show
   a disclaimer text on public links with hidden file lists.
 
@@ -46,7 +46,7 @@ With ``Default share permissions`` you are able to set the default permissions
 for user-shares (``Create``, ``Change``, ``Delete`` and ``Share``) without
 forcing them.
 
-.. note:: Nextcloud does not preserve the mtime (modification time) of 
+.. note:: cyfrSpaces does not preserve the mtime (modification time) of 
    directories, though it does update the mtimes on files. See  
    `Wrong folder date when syncing 
    <https://github.com/owncloud/core/issues/7009>`_ for discussion of this.
@@ -72,7 +72,7 @@ Creating persistent file Shares
 
 When a user is deleted, their files are also deleted. As you can imagine, this 
 is a problem if they created file shares that need to be preserved, because 
-these disappear as well. In Nextcloud files are tied to their owners, so 
+these disappear as well. In cyfrSpaces files are tied to their owners, so 
 whatever happens to the file owner also happens to the files.
 
 One solution is to create persistent shares for your users. You can retain 

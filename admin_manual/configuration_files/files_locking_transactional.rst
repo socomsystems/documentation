@@ -24,7 +24,7 @@ simultaneous file saving.
 
 File locking is enabled by default, using the database locking backend. This
 places a significant load on your database. Using ``memcache.locking`` relieves
-the database load and improves performance. Admins of Nextcloud servers with
+the database load and improves performance. Admins of cyfrSpaces servers with
 heavy workloads should install a memcache. (See
 :doc:`../configuration_server/caching_configuration`.)
 

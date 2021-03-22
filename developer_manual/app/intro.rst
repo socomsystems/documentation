@@ -7,7 +7,7 @@ Create an app
 
 .. sectionauthor:: Bernhard Posselt <dev@bernhard-posselt.com>
 
-After :doc:`you've set up the development environment <../general/devenv>` change into the Nextcloud apps directory::
+After :doc:`you've set up the development environment <../general/devenv>` change into the cyfrSpaces apps directory::
 
     cd /var/www/nextcloud/apps
 
@@ -15,7 +15,7 @@ Then create a skeleton app in the `app store <https://apps.nextcloud.com/develop
 
 Enable the app
 --------------
-The app can now be enabled on the Nextcloud apps page.
+The app can now be enabled on the cyfrSpaces apps page.
 
 App architecture
 ----------------

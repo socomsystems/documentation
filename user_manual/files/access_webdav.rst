@@ -1,41 +1,41 @@
 ======================================
-Accessing Nextcloud files using WebDAV
+Accessing cyfrSpaces files using WebDAV
 ======================================
 
-Nextcloud fully supports the WebDAV protocol, and you can connect and synchronize
-with your Nextcloud files over WebDAV. In this chapter you will learn how to
-connect Linux, macOS, Windows, and mobile devices to your Nextcloud server via
+cyfrSpaces fully supports the WebDAV protocol, and you can connect and synchronize
+with your cyfrSpaces files over WebDAV. In this chapter you will learn how to
+connect Linux, macOS, Windows, and mobile devices to your cyfrSpaces server via
 WebDAV. Before we get into configuring WebDAV, let's take a quick look at the
-recommended way of connecting client devices to your Nextcloud servers.
+recommended way of connecting client devices to your cyfrSpaces servers.
 
 .. note:: In the following examples, you should replace **example.com/nextcloud** with the
-   URL of your Nextcloud server (omit the directory part if the installation is
+   URL of your cyfrSpaces server (omit the directory part if the installation is
    in the root of your domain), and "USERNAME" with the username of the connecting user.
 
    See the webdav url (bottom left, settings) on your Nextcloud.
 
-Nextcloud Desktop and mobile clients
+cyfrSpaces Desktop and mobile clients
 ------------------------------------
 
-The recommended way to synchronize a desktop PC with a Nextcloud server is by
-using `Nextcloud/ownCloud sync clients <https://nextcloud.com/install/#install-clients>`_. You can configure the
+The recommended way to synchronize a desktop PC with a cyfrSpaces server is by
+using `Nextcloud/ownCloud sync clients <https://cyfr.space/install/#install-clients>`_. You can configure the
 client to save files in any local directory and you can choose which
-directories on the Nextcloud server to sync with. The client displays the
+directories on the cyfrSpaces server to sync with. The client displays the
 current connection status and logs all activity, so you always know which
 remote files have been downloaded to your PC and you can verify that files
 created and updated on your local PC are properly synchronized with the server.
 
-The recommended way to synchronize Nextcloud server with Android and
+The recommended way to synchronize cyfrSpaces server with Android and
 Apple iOS devices is by using the `mobile apps
-<https://nextcloud.com/install/>`_.
+<https://cyfr.space/install/>`_.
 
-To connect your mobile app to a Nextcloud server use the
+To connect your mobile app to a cyfrSpaces server use the
 base URL and folder only::
 
     example.com/nextcloud
 
-In addition to the mobile apps provided by Nextcloud or ownCloud, you can use other apps to
-connect to Nextcloud from your mobile device using WebDAV. `WebDAV Navigator`_ is
+In addition to the mobile apps provided by cyfrSpaces or ownCloud, you can use other apps to
+connect to cyfrSpaces from your mobile device using WebDAV. `WebDAV Navigator`_ is
 a good (proprietary) app for `Android devices`_ and `iPhones`_. The URL to use on these is::
 
     example.com/nextcloud/remote.php/dav/files/USERNAME/
@@ -43,11 +43,11 @@ a good (proprietary) app for `Android devices`_ and `iPhones`_. The URL to use o
 WebDAV configuration
 --------------------
 
-If you prefer, you may also connect your desktop PC to your Nextcloud server by
+If you prefer, you may also connect your desktop PC to your cyfrSpaces server by
 using the WebDAV protocol rather than using a special client application. Web
 Distributed Authoring and Versioning (WebDAV) is a Hypertext Transfer Protocol
 (HTTP) extension that makes it easy to create, read, and edit files on Web
-servers. With WebDAV you can access your Nextcloud shares on Linux, macOS and
+servers. With WebDAV you can access your cyfrSpaces shares on Linux, macOS and
 Windows in the same way as any remote network share, and stay synchronized.
 
 Accessing files using Linux
@@ -58,11 +58,11 @@ You can access files in Linux operating systems using the following methods.
 Nautilus file manager
 ^^^^^^^^^^^^^^^^^^^^^
 
-**When you configure your Nextcloud account in the** `GNOME Control Center
+**When you configure your cyfrSpaces account in the** `GNOME Control Center
 <../pim/sync_gnome.html>`_, **your files will automatically be mounted
 by Nautilus as a WebDAV share, unless you deselect file access.**
 
-You can also mount your Nextcloud files manually. Use the ``davs://``
+You can also mount your cyfrSpaces files manually. Use the ``davs://``
 protocol to connect the Nautilus file manager to your Nextcloud
 share::
 
@@ -81,7 +81,7 @@ share::
 Accessing files with KDE and Dolphin file manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To access your Nextcloud files using the Dolphin file manager in KDE, use
+To access your cyfrSpaces files using the Dolphin file manager in KDE, use
 the ``webdav://`` protocol::
 
     webdav://example.com/nextcloud/remote.php/dav/files/USERNAME/
@@ -89,7 +89,7 @@ the ``webdav://`` protocol::
 .. image:: ../images/webdav_dolphin.png
    :alt: screenshot of configuring Dolphin file manager to use WebDAV
 
-You can create a permanent link to your Nextcloud server:
+You can create a permanent link to your cyfrSpaces server:
 
 #. Open Dolphin and click "Network" in the left hand "Places" column.
 #. Click on the icon labeled **Add a Network Folder**.
@@ -100,9 +100,9 @@ You can create a permanent link to your Nextcloud server:
 
    * Name: The name you want to see in the **Places** bookmark, for example Nextcloud.
 
-   * User: The Nextcloud username you used to log in, for example admin.
+   * User: The cyfrSpaces username you used to log in, for example admin.
 
-   * Server: The Nextcloud domain name, for example **example.com** (without
+   * Server: The cyfrSpaces domain name, for example **example.com** (without
      **http://** before or directories afterwards).
    * Folder -- Enter the path ``nextcloud/remote.php/dav/files/USERNAME/``.
 #. (Optional) Check the "Create icon checkbox" for a bookmark to appear in the
@@ -114,7 +114,7 @@ Creating WebDAV mounts on the Linux command line
 ------------------------------------------------
 
 You can create WebDAV mounts from the Linux command line. This is useful if you
-prefer to access Nextcloud the same way as any other remote filesystem mount.
+prefer to access cyfrSpaces the same way as any other remote filesystem mount.
 The following example shows how to create a personal mount and have it mounted
 automatically every time you log in to your Linux computer.
 
@@ -147,8 +147,8 @@ automatically every time you log in to your Linux computer.
     chown <linux_username>:<linux_username> ~/.davfs2/secrets
     chmod 600 ~/.davfs2/secrets
 
-6. Add your Nextcloud login credentials to the end of the ``secrets`` file,
-   using your Nextcloud server URL and your Nextcloud username and password::
+6. Add your cyfrSpaces login credentials to the end of the ``secrets`` file,
+   using your cyfrSpaces server URL and your cyfrSpaces username and password::
 
     https://example.com/nextcloud/remote.php/dav/files/USERNAME/ <username> <password>
     or
@@ -171,7 +171,7 @@ automatically every time you log in to your Linux computer.
 
     umount ~/nextcloud
 
-Now every time you login to your Linux system your Nextcloud share should
+Now every time you login to your Linux system your cyfrSpaces share should
 automatically mount via WebDAV in your ``~/nextcloud`` directory. If you prefer
 to mount it manually, change ``auto`` to ``noauto`` in ``/etc/fstab``.
 
@@ -207,21 +207,21 @@ path of your certificate as in this example::
 Accessing files using macOS
 ---------------------------
 
-.. note:: The macOS Finder suffers from a `series of implementation problems <http://sabre.io/dav/clients/finder/>`_ and should only be used if the Nextcloud server runs on **Apache** and **mod_php**, or **Nginx 1.3.8+**. Alternative macOS-compatible clients capable of accessing WebDAV shares include open source apps like `Cyberduck <https://cyberduck.io/>`_ (see instructions `here <https://docs.nextcloud.com/server/stable/user_manual/files/access_webdav.html#accessing-files-using-cyberduck>`_) and `Filezilla <https://filezilla-project.org>`_. Commercial clients include `Mountain Duck <https://mountainduck.io/>`_, `Forklift <https://binarynights.com/>`_, `Transmit <https://panic.com/>`_, and `Commander One <https://mac.eltima.com/>`_.
+.. note:: The macOS Finder suffers from a `series of implementation problems <http://sabre.io/dav/clients/finder/>`_ and should only be used if the cyfrSpaces server runs on **Apache** and **mod_php**, or **Nginx 1.3.8+**. Alternative macOS-compatible clients capable of accessing WebDAV shares include open source apps like `Cyberduck <https://cyberduck.io/>`_ (see instructions `here <https://docs.nextcloud.com/server/stable/user_manual/files/access_webdav.html#accessing-files-using-cyberduck>`_) and `Filezilla <https://filezilla-project.org>`_. Commercial clients include `Mountain Duck <https://mountainduck.io/>`_, `Forklift <https://binarynights.com/>`_, `Transmit <https://panic.com/>`_, and `Commander One <https://mac.eltima.com/>`_.
 
 To access files through the macOS Finder:
 
 1. From the Finder’s top menu bar, choose **Go > Connect to Server...**
 
   .. image:: ../images/osx_webdav1.png
-     :alt: Screenshot of entering your Nextcloud server address on macOS
+     :alt: Screenshot of entering your cyfrSpaces server address on macOS
 
 2. When the **Connect to Server...** window opens, enter your Nexcloud server’s WebDAV address in the **Server Address:** field, ie:
 
     https://cloud.YOURDOMAIN.com/remote.php/dav/files/USERNAME/
 
   .. image:: ../images/osx_webdav2.png
-     :alt: Screenshot: Enter Nextcloud server address in “Connect to Server...” dialog box
+     :alt: Screenshot: Enter cyfrSpaces server address in “Connect to Server...” dialog box
 
 3. Click **Connect**. Your WebDAV server should appear on the Desktop as a shared disk drive.
 
@@ -229,13 +229,13 @@ To access files through the macOS Finder:
 Accessing files using Microsoft Windows
 ---------------------------------------
 
-If you use the native Windows implementation, you can map Nextcloud to a new
+If you use the native Windows implementation, you can map cyfrSpaces to a new
 drive. Mapping to a drive enables you to browse files stored on a Nextcloud
 server the way you would files stored in a mapped network drive.
 
 Using this feature requires network connectivity. If you want to store your
 files offline, use the Desktop Client to sync all files on your
-Nextcloud to one or more directories of your local hard drive.
+cyfrSpaces to one or more directories of your local hard drive.
 
 .. note:: Prior to mapping your drive, you must permit the use of Basic
     Authentication in the Windows Registry: launch „regedit“ and navigate to
@@ -259,14 +259,14 @@ the drive:
     net use Z: https://<drive_path>/remote.php/dav/files/USERNAME/ /user:youruser
     yourpassword
 
-  where <drive_path> is the URL to your Nextcloud server.
+  where <drive_path> is the URL to your cyfrSpaces server.
 
 For example: ``net use Z: https://example.com/nextcloud/remote.php/dav/files/USERNAME/
 /user:youruser yourpassword``
 
-  The computer maps the files of your Nextcloud account to the drive letter Z.
+  The computer maps the files of your cyfrSpaces account to the drive letter Z.
 
-.. note:: Though not recommended, you can also mount the Nextcloud server
+.. note:: Though not recommended, you can also mount the cyfrSpaces server
      using HTTP, leaving the connection unencrypted. If you plan to use HTTP
      connections on devices while in a public place, we strongly recommend using a
      VPN tunnel to provide the necessary security.
@@ -285,7 +285,7 @@ To map a drive using the Microsoft Windows Explorer:
 2. Right-click on **Computer** entry and select **Map network drive...** from
    the drop-down menu.
 3. Choose a local network drive to which you want to map Nextcloud.
-4. Specify the address to your Nextcloud instance, followed by
+4. Specify the address to your cyfrSpaces instance, followed by
    **/remote.php/dav/files/USERNAME/**.
 
   For example::
@@ -294,7 +294,7 @@ To map a drive using the Microsoft Windows Explorer:
 
 .. note:: For SSL protected servers, check **Reconnect at logon** to ensure
      that the mapping is persistent upon subsequent reboots. If you want to
-     connect to the Nextcloud server as a different user, check **Connect using
+     connect to the cyfrSpaces server as a different user, check **Connect using
      different credentials**.
 
 .. figure:: ../images/explorer_webdav.png
@@ -303,7 +303,7 @@ To map a drive using the Microsoft Windows Explorer:
 
 5. Click the ``Finish`` button.
 
-  Windows Explorer maps the network drive, making your Nextcloud instance
+  Windows Explorer maps the network drive, making your cyfrSpaces instance
   available.
 
 Accessing files using Cyberduck
@@ -322,7 +322,7 @@ To use Cyberduck:
   ``example.com``
 
 2. Specify the appropriate port. The port you choose depends on whether or not
-your Nextcloud server supports SSL. Cyberduck requires that you select a
+your cyfrSpaces server supports SSL. Cyberduck requires that you select a
 different connection type if you plan to use SSL. For example:
 
   80 (for WebDAV)
@@ -334,12 +334,12 @@ the 'Path' field. For example:
 
   ``remote.php/dav/files/USERNAME/``
 
-Now Cyberduck enables file access to the Nextcloud server.
+Now Cyberduck enables file access to the cyfrSpaces server.
 
 Accessing public shares over WebDAV
 -----------------------------------
 
-Nextcloud provides the possibility to access public shares over WebDAV.
+cyfrSpaces provides the possibility to access public shares over WebDAV.
 
 To access the public share, open::
 
@@ -364,7 +364,7 @@ Solution 1
 
 The Windows WebDAV Client might not support Server Name Indication (SNI) on
 encrypted connections. If you encounter an error mounting an SSL-encrypted
-Nextcloud instance, contact your provider about assigning a dedicated IP address
+cyfrSpaces instance, contact your provider about assigning a dedicated IP address
 for your SSL-based server.
 
 Solution 2
@@ -407,12 +407,12 @@ Known problems and their solutions are documented in the KB2123563_ article.
 
 Problem
 ^^^^^^^
-Cannot map Nextcloud as a WebDAV drive in Windows using self-signed certificate.
+Cannot map cyfrSpaces as a WebDAV drive in Windows using self-signed certificate.
 
 Solution
 ^^^^^^^^
 
-  #. Go to the your Nextcloud instance via your favorite Web browser.
+  #. Go to the your cyfrSpaces instance via your favorite Web browser.
   #. Click through until you get to the certificate error in the browser status
      line.
   #. View the cert, then from the Details tab, select Copy to File.

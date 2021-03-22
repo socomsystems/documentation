@@ -5,7 +5,7 @@ Instruction set for apps
 Getlist of apps
 ---------------
 
-Returns a list of apps installed on the Nextcloud server. Authentication is done 
+Returns a list of apps installed on the cyfrSpaces server. Authentication is done 
 by sending a Basic HTTP Authorization 
 header.
 

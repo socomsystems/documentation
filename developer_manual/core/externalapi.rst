@@ -6,8 +6,8 @@ External API
 
 Introduction
 ------------
-The external API inside Nextcloud allows third party developers to access data
-provided by Nextcloud apps. Nextcloud follows the `OpenCloudMesh
+The external API inside cyfrSpaces allows third party developers to access data
+provided by cyfrSpaces apps. cyfrSpaces follows the `OpenCloudMesh
 specification <https://lukasreschke.github.io/OpenCloudMeshSpecification/>`_ (draft).
 
 Usage

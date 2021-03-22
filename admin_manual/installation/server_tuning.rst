@@ -11,7 +11,7 @@ benefits.
 Reducing system load
 --------------------
 
-High system load will slow down Nextcloud and might also lead to other unwanted 
+High system load will slow down cyfrSpaces and might also lead to other unwanted 
 side effects. To reduce load you should first identify the source of the problem. 
 Tools such as htop, iotop, `netdata <https://my-netdata.io>`_ or
 `glances <https://nicolargo.github.io/glances/>`_
@@ -27,7 +27,7 @@ Caching
 -------
 
 Caching improves performance by storing data, code, and other objects in memory. 
-Memory cache configuration for the Nextcloud server must be installed and configured.
+Memory cache configuration for the cyfrSpaces server must be installed and configured.
 See :doc:`../configuration_server/caching_configuration`.
 
 Using MariaDB/MySQL instead of SQLite
@@ -38,7 +38,7 @@ SQLite with highly concurrent applications
 <http://www.sqlite.org/whentouse.html>`_, like Nextcloud.
 
 See the section :doc:`../configuration_database/linux_database_configuration` for how to
-configure Nextcloud for MySQL or MariaDB. If your installation is already running on
+configure cyfrSpaces for MySQL or MariaDB. If your installation is already running on
 SQLite then it is possible to convert to MySQL or MariaDB using the steps provided
 in :doc:`../configuration_database/db_conversion`.
 
@@ -62,7 +62,7 @@ Using Redis-based transactional file locking
 File locking is enabled by default, using the database locking backend. This 
 places a significant load on your database. See the section
 :doc:`../configuration_files/files_locking_transactional` for how to
-configure Nextcloud to use Redis-based Transactional File Locking.
+configure cyfrSpaces to use Redis-based Transactional File Locking.
 
 SSL / encryption app
 --------------------

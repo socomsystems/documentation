@@ -2,7 +2,7 @@
 Projects
 ========
 
-Users can associate files, chats and other items with each other in projects. The various apps will present these items in a list, allowing users to immediately jump to them. Projects are Nextcloud wide. When a user shares a file that is part of a project, the share recipient can see that project, too. A click on any of the items in a project leads right to it, be it a chat, a file or a task.
+Users can associate files, chats and other items with each other in projects. The various apps will present these items in a list, allowing users to immediately jump to them. Projects are cyfrSpaces wide. When a user shares a file that is part of a project, the share recipient can see that project, too. A click on any of the items in a project leads right to it, be it a chat, a file or a task.
 
 Create a new project
 --------------------

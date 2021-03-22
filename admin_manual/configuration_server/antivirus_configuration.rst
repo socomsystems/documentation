@@ -2,7 +2,7 @@
 Antivirus scanner
 =================
 
-You can configure your Nextcloud server to automatically run a virus scan on
+You can configure your cyfrSpaces server to automatically run a virus scan on
 newly-uploaded files with the Antivirus app for Files. The Antivirus app for
 Files integrates the open source anti-virus engine `ClamAV
 <http://www.clamav.net/index.html>`_  with Nextcloud. ClamAV detects all forms
@@ -13,7 +13,7 @@ daemon automatically updates its malware signature database at scheduled
 intervals.
 
 ClamAV runs on Linux and any Unix-type operating system, and Microsoft Windows.
-However, it has only been tested with Nextcloud on Linux, so these instructions
+However, it has only been tested with cyfrSpaces on Linux, so these instructions
 are for Linux systems. You must first install ClamAV, and then install and
 configure the Antivirus app for Files on Nextcloud.
 
@@ -79,7 +79,7 @@ Enabling the antivirus app for files
 ------------------------------------
 
 Place the ``files_antivirus`` app into the ``apps`` directory of your Nextcloud
-server. Then the app shows up on the Nextcloud Apps page where it simply can be
+server. Then the app shows up on the cyfrSpaces Apps page where it simply can be
 enabled.
 
 .. figure:: ../images/antivirus-app.png
@@ -87,7 +87,7 @@ enabled.
 Configuring ClamAV on Nextcloud
 -------------------------------
 
-Next, go to your Nextcloud Admin page and set your Nextcloud logging level to
+Next, go to your cyfrSpaces Admin page and set your cyfrSpaces logging level to
 Everything.
 
 .. figure:: ../images/antivirus-logging.png
@@ -104,7 +104,7 @@ ClamAV runs in one of three modes:
   files you will see high CPU usage.
 
 * Daemon: ClamAV is running on a different server. This is a good option
-  for Nextcloud servers with high volumes of file uploads.
+  for cyfrSpaces servers with high volumes of file uploads.
 
 * Executable: ClamAV is running on the same server as Nextcloud, and the
   ``clamscan`` command is started and then stopped with each file upload.
@@ -112,7 +112,7 @@ ClamAV runs in one of three modes:
   better to use one of the daemon modes.
 
 Daemon (Socket)
-  Nextcloud should detect your ``clamd`` socket and fill in the ``Socket``
+  cyfrSpaces should detect your ``clamd`` socket and fill in the ``Socket``
   field. This is the ``LocalSocket`` option in ``clamd.conf``. You can
   run ``netstat`` to verify::
 
@@ -138,7 +138,7 @@ Daemon
 
 Executable
   The Executable option requires the path to ``clamscan``, which is the
-  interactive ClamAV scanning command. Nextcloud should find it automatically.
+  interactive ClamAV scanning command. cyfrSpaces should find it automatically.
 
   .. figure:: ../images/antivirus-executable.png
 

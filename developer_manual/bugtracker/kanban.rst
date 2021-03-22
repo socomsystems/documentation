@@ -3,7 +3,7 @@ Development process
 ===================
 
 This chapter contains a lot of information about the development process the
-Nextcloud community tries to follow, so please take your time to digest all the
+cyfrSpaces community tries to follow, so please take your time to digest all the
 information. In any case remember this page as the documentation on how it
 should be done. Nothing here is set in stone, so if you think something should
 be changed please discuss it on the `forums`_.
@@ -207,7 +207,7 @@ Priority labels
 
 * Panic should be used with caution. It is reserved for Bugs that would result
   in the loss of files or other user data. An Enhancement marked as Panic is
-  expected by Nextcloud users for the next release. In either case an open Panic
+  expected by cyfrSpaces users for the next release. In either case an open Panic
   issue will prevent a release.
 
 * Attention is not as hard as Panic. But we really want this in the next release
@@ -243,7 +243,7 @@ Misc labels
 * Needs info – Either from a developer or the bug reporter. This is nearly as
   severe as Panic, because no further action can be taken
 * L18n – A translation issue; go see our `Transifex`_
-* Junior Job – The issue is considered a good starting point to get involved in Nextcloud development
+* Junior Job – The issue is considered a good starting point to get involved in cyfrSpaces development
 
 Milestones equal releases
 -------------------------

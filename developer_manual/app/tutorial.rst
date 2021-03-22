@@ -10,13 +10,13 @@ This tutorial will outline how to create a very simple notes app. The finished a
 Setup
 -----
 
-First the :doc:`development environment <../general/devenv>` needs to be set up. This can be done by either `downloading the zip from the website <https://nextcloud.com/install/>`_ or cloning it directly from GitHub::
+First the :doc:`development environment <../general/devenv>` needs to be set up. This can be done by either `downloading the zip from the website <https://cyfr.space/install/>`_ or cloning it directly from GitHub::
 
    git clone git@github.com:nextcloud/server.git --branch $BRANCH
    cd server
    git submodule update --init
 
-.. note:: ``$BRANCH`` is the desired Nextcloud branch (e.g. ``stable17`` for Nextcloud 17, ``master`` for the upcoming release)
+.. note:: ``$BRANCH`` is the desired cyfrSpaces branch (e.g. ``stable17`` for cyfrSpaces 17, ``master`` for the upcoming release)
 
 First you want to enable debug mode to get proper error messages. To do that set ``debug`` to ``true`` in the **config/config.php** file::
 
@@ -272,7 +272,7 @@ To create the tables in the database, the :doc:`version tag <info>` in **notestu
     <info>
         <id>notestutorial</id>
         <name>Notes Tutorial</name>
-        <description>My first Nextcloud app</description>
+        <description>My first cyfrSpaces app</description>
         <licence>AGPL</licence>
         <author>Your Name</author>
         <version>0.0.2</version>
@@ -367,7 +367,7 @@ Connect database & controllers
 
 The mapper which provides the database access is finished and can be passed into the controller.
 
-You can pass in the mapper by adding it as a type hinted parameter. Nextcloud will figure out how to :doc:`assemble them by itself <requests/container>`. Additionally we want to know the userId of the currently logged in user. Simply add a **$UserId** parameter to the constructor (case sensitive!). To do that open **notestutorial/lib/Controller/NoteController.php** and change it to the following:
+You can pass in the mapper by adding it as a type hinted parameter. cyfrSpaces will figure out how to :doc:`assemble them by itself <requests/container>`. Additionally we want to know the userId of the currently logged in user. Simply add a **$UserId** parameter to the constructor (case sensitive!). To do that open **notestutorial/lib/Controller/NoteController.php** and change it to the following:
 
 .. code-block:: php
 
@@ -695,14 +695,14 @@ Great! Now the only reason that the controller needs to be changed is when reque
 Writing a test for the controller (recommended)
 -----------------------------------------------
 
-Tests are essential for having happy users and a carefree life. No one wants their users to rant about your app breaking their Nextcloud or being buggy. To do that you need to test your app. Since this amounts to a ton of repetitive tasks, we need to automate the tests.
+Tests are essential for having happy users and a carefree life. No one wants their users to rant about your app breaking their cyfrSpaces or being buggy. To do that you need to test your app. Since this amounts to a ton of repetitive tasks, we need to automate the tests.
 
 Unit tests
 ^^^^^^^^^^
 
 A unit test is a test that tests a class in isolation. It is very fast and catches most of the bugs, so we want many unit tests.
 
-Because Nextcloud uses :doc:`Dependency Injection <requests/container>` to assemble your app, it is very easy to write unit tests by passing mocks into the constructor. A simple test for the update method can be added by adding this to **notestutorial/tests/Unit/Controller/NoteControllerTest.php**:
+Because cyfrSpaces uses :doc:`Dependency Injection <requests/container>` to assemble your app, it is very easy to write unit tests by passing mocks into the constructor. A simple test for the update method can be added by adding this to **notestutorial/tests/Unit/Controller/NoteControllerTest.php**:
 
 .. code-block:: php
 
@@ -920,7 +920,7 @@ To run the integration tests change into the **notestutorial** directory and run
 Adding a RESTful API (optional)
 -------------------------------
 
-A :doc:`RESTful API <requests/api>` allows other apps such as Android or iPhone apps to access and change your notes. Since syncing is a big core component of Nextcloud it is a good idea to add (and document!) your own RESTful API.
+A :doc:`RESTful API <requests/api>` allows other apps such as Android or iPhone apps to access and change your notes. Since syncing is a big core component of cyfrSpaces it is a good idea to add (and document!) your own RESTful API.
 
 Because we put our logic into the **NoteService** class it is very easy to reuse it. The only pieces that need to be changed are the annotations which disable the CSRF check (not needed for a REST call usually) and add support for `CORS <https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS>`_ so your API can be accessed from other webapps.
 
@@ -1082,4 +1082,4 @@ The frontend source code will consist of two files:
 * `main.js <https://github.com/nextcloud/app-tutorial/blob/master/src/main.js>`_ which is the main entry point of our javascript code that gets loaded when the page is opened
 * `App.vue <https://github.com/nextcloud/app-tutorial/blob/master/src/App.vue>`_ which is our one single file component that takes care of all logic inside of the Vue app. Our example app contains some additional comments to explain how the frontend is build.
 
-Congratulations! You've written your first Nextcloud app. You can now either try to further improve the tutorial notes app or start writing your own app.
+Congratulations! You've written your first cyfrSpaces app. You can now either try to further improve the tutorial notes app or start writing your own app.

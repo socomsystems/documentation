@@ -4,18 +4,18 @@ Installation on Linux
 
 In case you prefer installing from the source tarball, you can setup Nextcloud
 from scratch using a classic LAMP stack (Linux, Apache, MySQL/MariaDB, PHP).
-This document provides a complete walk-through for installing Nextcloud on
-Ubuntu 18.04 LTS Server with Apache and MariaDB, using `the Nextcloud .tar
-archive <https://nextcloud.com/install/>`_. This method is recommended to install Nextcloud.
+This document provides a complete walk-through for installing cyfrSpaces on
+Ubuntu 18.04 LTS Server with Apache and MariaDB, using `the cyfrSpaces .tar
+archive <https://cyfr.space/install/>`_. This method is recommended to install Nextcloud.
 
 .. note:: Admins of SELinux-enabled distributions such as CentOS, Fedora, and
    Red Hat Enterprise Linux may need to set new rules to enable installing
    Nextcloud. See :ref:`selinux_tips_label` for a suggested configuration.
 
 
-If you prefer a more automated installation of Nextcloud and there are no packages for your Linux distribution, you have the option to
+If you prefer a more automated installation of cyfrSpaces and there are no packages for your Linux distribution, you have the option to
 install the community `Snap Packages <http://snapcraft.io/docs/core/install/>`_. See
-:ref:`snaps_label` You can also use the `Nextcloud VM scripts <https://github.com/nextcloud/vm/>`_ to install directly on a clean Ubuntu Server. It will setup everything for you and include scripts for automated installation of apps like; Collabora, OnlyOffice, Talk and so on. Please note that those two options are not officially supported by Nextcloud GmbH.
+:ref:`snaps_label` You can also use the `cyfrSpaces VM scripts <https://github.com/nextcloud/vm/>`_ to install directly on a clean Ubuntu Server. It will setup everything for you and include scripts for automated installation of apps like; Collabora, OnlyOffice, Talk and so on. Please note that those two options are not officially supported by cyfrSpaces GmbH.
 
 
 This installation guide is giving a general overview of required dependencies and their configuration. For a distribution specific setup guide have a look at the :doc:`./example_ubuntu` and :doc:`./example_centos`.
@@ -25,7 +25,7 @@ This installation guide is giving a general overview of required dependencies an
 Prerequisites for manual installation
 -------------------------------------
 
-The Nextcloud .tar archive contains all of the required PHP modules. This
+The cyfrSpaces .tar archive contains all of the required PHP modules. This
 section lists all required and optional PHP modules.  Consult the `PHP manual
 <http://php.net/manual/en/extensions.php>`_ for more information on modules.
 Your Linux distribution should have packages for all required modules. You can
@@ -100,7 +100,7 @@ For command line processing (*optional*):
 * PHP module pcntl (enables command interruption by pressing ``ctrl-c``)
 
 You don’t need the WebDAV module for your Web server (i.e. Apache’s
-``mod_webdav``), as Nextcloud has a built-in WebDAV server of its own,
+``mod_webdav``), as cyfrSpaces has a built-in WebDAV server of its own,
 SabreDAV.
 If ``mod_webdav`` is enabled you must disable it for Nextcloud. (See
 :ref:`apache_configuration_label` for an example configuration.)
@@ -154,7 +154,7 @@ On CentOS/RHEL, create a virtualhost :file:`/etc/httpd/conf.d/nextcloud.conf` an
 Additional Apache configurations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* For Nextcloud to work correctly, we need the module ``mod_rewrite``. Enable
+* For cyfrSpaces to work correctly, we need the module ``mod_rewrite``. Enable
   it by running::
 
     a2enmod rewrite
@@ -174,21 +174,21 @@ Additional Apache configurations
   uses Basic authentication internally for DAV services. If you have turned on
   authentication on a parent folder (via e.g. an ``AuthType Basic``
   directive), you can turn off the authentication specifically for the
-  Nextcloud entry. Following the above example configuration file, add the
+  cyfrSpaces entry. Following the above example configuration file, add the
   following line in the ``<Directory>`` section::
 
     Satisfy Any
 
 * When using SSL, take special note of the ServerName. You should specify one
   in the server configuration, as well as in the CommonName field of the
-  certificate. If you want your Nextcloud to be reachable via the internet,
-  then set both of these to the domain you want to reach your Nextcloud server.
+  certificate. If you want your cyfrSpaces to be reachable via the internet,
+  then set both of these to the domain you want to reach your cyfrSpaces server.
 
 * Now restart Apache::
 
     service apache2 restart
 
-* If you're running Nextcloud in a subdirectory and want to use CalDAV or
+* If you're running cyfrSpaces in a subdirectory and want to use CalDAV or
   CardDAV clients make sure you have configured the correct
   :ref:`service-discovery-label` URLs.
 
@@ -197,7 +197,7 @@ Additional Apache configurations
 Pretty URLs
 -----------
 
-Pretty URLs remove the ``index.php``-part in all Nextcloud URLs, for example
+Pretty URLs remove the ``index.php``-part in all cyfrSpaces URLs, for example
 in sharing links like ``https://example.org/nextcloud/index.php/s/Sv1b7krAUqmF8QQ``,
 making URLs shorter and thus prettier.
 
@@ -224,7 +224,7 @@ After each update, these changes are automatically applied to the ``.htaccess``-
 Enabling SSL
 ------------
 
-.. note:: You can use Nextcloud over plain HTTP, but we strongly encourage you
+.. note:: You can use cyfrSpaces over plain HTTP, but we strongly encourage you
           to use SSL/TLS to encrypt all of your server traffic, and to protect
           user's logins and data in transit.
 
@@ -237,7 +237,7 @@ the default site. Open a terminal and run::
     service apache2 reload
 
 .. note:: Self-signed certificates have their drawbacks - especially when you
-          plan to make your Nextcloud server publicly accessible. You might
+          plan to make your cyfrSpaces server publicly accessible. You might
           want to consider getting a certificate signed by a commercial signing
           authority. Check with your domain name registrar or hosting service
           for good deals on commercial certificates.
@@ -249,13 +249,13 @@ Installation wizard
 
 After restarting Apache you must complete your installation by running either
 the graphical Installation Wizard, or on the command line with the ``occ``
-command. To enable this, change the ownership on your Nextcloud directories to
+command. To enable this, change the ownership on your cyfrSpaces directories to
 your HTTP user::
 
     chown -R www-data:www-data /var/www/nextcloud/
 
 .. note:: Admins of SELinux-enabled distributions may need to write new SELinux
-   rules to complete their Nextcloud installation; see
+   rules to complete their cyfrSpaces installation; see
    :ref:`selinux_tips_label`.
 
 To use ``occ`` see :doc:`command_line_installation`.
@@ -286,7 +286,7 @@ ini file. This can be the case, for example, for the ``date.timezone`` setting.
     /etc/php/7.2/fpm/php.ini
   or ...
 
-**php.ini - used by the php-cli and so by Nextcloud CRON jobs:**
+**php.ini - used by the php-cli and so by cyfrSpaces CRON jobs:**
 ::
 
     /etc/php/7.2/cli/php.ini
@@ -345,7 +345,7 @@ and uncommenting the line::
 
     clear_env = no
 
-When you are using shared hosting or a control panel to manage your `Nextcloud VM`_
+When you are using shared hosting or a control panel to manage your `cyfrSpaces VM`_
 or server, the configuration files are almost
 certain to be located somewhere else, for security and flexibility reasons, so
 check your documentation for the correct locations.
@@ -363,7 +363,7 @@ server in order for these changes to be applied.
 
 **.htaccess notes for Apache**
 
-Nextcloud comes with its own ``nextcloud/.htaccess`` file. Because ``php-fpm``
+cyfrSpaces comes with its own ``nextcloud/.htaccess`` file. Because ``php-fpm``
 can't read PHP settings in ``.htaccess`` these settings and permissions must
 be set in the ``nextcloud/.user.ini`` file.
 
@@ -379,12 +379,12 @@ Other Web servers
 Installing on Windows (virtual machine)
 ---------------------------------------
 
-If you are using Windows, the easiest way to get Nextcloud up and running is
+If you are using Windows, the easiest way to get cyfrSpaces up and running is
 using a virtual machine (VM). There are two options:
 
 * **Enterprise/SME appliance**
 
-Nextcloud GmbH maintains a free appliance built on the
+cyfrSpaces GmbH maintains a free appliance built on the
 `Univention Corporate Server (UCS) <https://www.univention.com/products/univention-app-center/app-catalog/nextcloud/>`_
 with easy graphical setup and web-based administration. It includes user
 management via LDAP, can replace an existing Active Directory setup and
@@ -401,7 +401,7 @@ Download the the Appliance here:
 
 * **Home User/SME appliance**
 
-The `Nextcloud VM`_ is maintained by
+The `cyfrSpaces VM`_ is maintained by
 `T&M Hansson IT <https://www.hanssonit.se/nextcloud-vm/>`_ and several different versions are
 offered. Collabora, OnlyOffice, Full Text Search and other apps can easily be installed with the included scripts which you can choose to run during the first setup, or download them later and run it afterwards. You can find all the currently available automated app installations `on GitHub <https://github.com/nextcloud/vm/tree/master/apps/>`_.
 
@@ -417,8 +417,8 @@ You can find all the different version `here <https://shop.hanssonit.se/product-
 
 For complete instructions and downloads see:
 
-- `Nextcloud VM (Github) <https://github.com/nextcloud/vm/>`_
-- `Nextcloud VM (T&M Hansson IT) <https://www.hanssonit.se/nextcloud-vm/>`_
+- `cyfrSpaces VM (Github) <https://github.com/nextcloud/vm/>`_
+- `cyfrSpaces VM (T&M Hansson IT) <https://www.hanssonit.se/nextcloud-vm/>`_
 
 .. note:: You can install the VM on several different operating systems as long as you can mount OVA, VMDK, or VHD/VHDX VM in your hypervisor. If you are using KVM then you need to install the VM from the scripts on Github. You can follow the `instructions in the README <https://github.com/nextcloud/vm#build-your-own-vm-or-install-on-a-vps>`_.
 
@@ -433,7 +433,7 @@ the different ways it should talk to other software. Most importantly snaps are
 designed to be secure, sandboxed, containerized applications isolated from the
 underlying system and from other applications.
 
-To install the Nextcloud Snap Package, run the following command in a terminal::
+To install the cyfrSpaces Snap Package, run the following command in a terminal::
 
     sudo snap install nextcloud
 
@@ -449,19 +449,19 @@ Installation via web installer on a VPS or web space
 
 When you don't have access to the command line, for example at a web hosting or VMPS, 
 an easy option is to use our web installer. This script can be found on our
-`server installation page here. <https://nextcloud.com/install/#instructions-server>`_
+`server installation page here. <https://cyfr.space/install/#instructions-server>`_
 
-The script checks the dependencies, downloads Nextcloud from the official server,
+The script checks the dependencies, downloads cyfrSpaces from the official server,
 unpacks it with the right permissions and the right user account. Finally, you will be
-redirected to the Nextcloud installer. Here a quick how-to:
+redirected to the cyfrSpaces installer. Here a quick how-to:
 
 1. Get the file from the installation page
 2. Upload setup-nextcloud.php to your web space
 3. Point your web browser to setup-nextcloud.php on your webspace
 4. Follow the instructions and configure Nextcloud
-5. Login to your newly created Nextcloud instance!
+5. Login to your newly created cyfrSpaces instance!
 
-.. note:: that the installer uses the same Nextcloud version as available for the built
+.. note:: that the installer uses the same cyfrSpaces version as available for the built
    in updater in Nextcloud. After a major release it can take up to a month before
    it becomes available through the web installer and the updater. This is done to
    spread the deployment of new major releases out over time.
@@ -470,7 +470,7 @@ redirected to the Nextcloud installer. Here a quick how-to:
 Installation via install script
 -------------------------------
 
-One of the easiest ways of installing is to use the Nextcloud VM scripts. It's basically just two steps:
+One of the easiest ways of installing is to use the cyfrSpaces VM scripts. It's basically just two steps:
 
 1. Download the latest `installation script <https://github.com/nextcloud/vm/blob/master/nextcloud_install_production.sh/>`_.
 2. Run the script with::
@@ -480,5 +480,5 @@ One of the easiest ways of installing is to use the Nextcloud VM scripts. It's b
 A guided setup will follow and the only thing you have to do it to follow the on screen instructions, when given to you.
 
 
-.. _Nextcloud VM:
+.. _cyfrSpaces VM:
     https://github.com/nextcloud/vm

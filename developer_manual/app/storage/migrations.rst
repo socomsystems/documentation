@@ -44,7 +44,7 @@ packed in 2 migrations.
 
 After creating migrations for your current database and installation routine,
 you need to in order to make use of migrations, is to delete the old `appinfo/database.xml`
-file. The Nextcloud updater logic only allows to use one or the other.
+file. The cyfrSpaces updater logic only allows to use one or the other.
 But as soon as the `database.xml` file is gone, it will look for your migration
 files in the apps `lib/Migration` folder.
 
@@ -56,7 +56,7 @@ files in the apps `lib/Migration` folder.
           you use in your migration, the code may be executed on different
           database/file/code standings when being ran in an upgrade situation.
 
-.. note:: Since Nextcloud stores, which migrations have been executed already
+.. note:: Since cyfrSpaces stores, which migrations have been executed already
           you must not “update” migrations. The recommendation is to keep them
           untouched as long as possible. You should only adjust it to make sure
           it still executes, but additional changes to the database should be done
@@ -140,7 +140,7 @@ Console commands
 
 There are some console commands, which should help developers to create or deal
 with migrations, which are sometimes only available if you are running your
-Nextcloud in debug mode:
+cyfrSpaces in debug mode:
 
 * `migrations:execute`: Executes a single migration version manually.
 * `migrations:generate`:
@@ -148,7 +148,7 @@ Nextcloud in debug mode:
   first one is the `appid`, the second one should be the `version`of your
   app as an integer. We recommend to use the major and minor digits of your apps
   version for that. This allows you to introduce a new migration in your branch
-  for a Nextcloud version if there is already an migration path for a newer one
+  for a cyfrSpaces version if there is already an migration path for a newer one
   in another branch. Since you can’t change this retroactive, we recommend to
   leave enough space in between and therefor map the numbers to 3 digits:
   `1.0.x => 1000`, `2.34.x => 2034`, etc.

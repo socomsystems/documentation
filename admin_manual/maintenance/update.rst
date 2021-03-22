@@ -10,9 +10,9 @@ and data, and it automates updating
 
 .. warning::
    **Downgrading** is not supported and risks corrupting your data! If you want
-   to revert to an older Nextcloud version, install it from scratch and then
+   to revert to an older cyfrSpaces version, install it from scratch and then
    restore your data from backup. Before doing this, file a support ticket if
-   you have paid support or ask for help in the Nextcloud forums to see if your
+   you have paid support or ask for help in the cyfrSpaces forums to see if your
    issue can be resolved without downgrading.
 
 You should maintain regular backups (see :doc:`backup`), and make a backup
@@ -31,8 +31,8 @@ What does the updater do?
 The built-in updater performs these operations:
 
 * **Check for expected files:** checks if only the expected files of a
-  Nextcloud installation are present, because it turned out that some files
-  that were left in the Nextcloud directory caused side effects that risked
+  cyfrSpaces installation are present, because it turned out that some files
+  that were left in the cyfrSpaces directory caused side effects that risked
   the update procedure.
 * **Check for write permissions:** checks if all files that need to be
   writable during the update procedure are actually writable.
@@ -46,7 +46,7 @@ The built-in updater performs these operations:
   is also shown in the web UI before the update is started. This archive is
   downloaded to ``/updater-INSTANCEID/downloads/``.
 * **Extracting:** extracts the archive to the same folder.
-* **Replace entry points:** replaces all Nextcloud entry points with dummy
+* **Replace entry points:** replaces all cyfrSpaces entry points with dummy
   files so that when those files are replaced all clients still get the proper
   maintenance mode response. Examples for those endpoints are ``index.php``,
   ``remote.php`` or ``ocs/v1.php``.
@@ -69,10 +69,10 @@ The built-in updater performs these operations:
 Using the web based updater
 ---------------------------
 
-Using the built-in updater to update your Nextcloud installation is just a few
+Using the built-in updater to update your cyfrSpaces installation is just a few
 steps:
 
-1.  You should see a notification at the top of any Nextcloud page when there is
+1.  You should see a notification at the top of any cyfrSpaces page when there is
     a new update available. Go to the admin settings page and scroll to the
     section "Version". This section has a button to open the updater. This
     section as well as the update notification is only available if the update
@@ -133,7 +133,7 @@ This is how the command line based update would continue:
 .. code::
 
     $ sudo -u www-data php ./occ upgrade
-    Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+    cyfrSpaces or one of the apps require upgrade - only a limited number of commands are available
     You may use your browser or the occ upgrade command to do the upgrade
     Set log level to debug
     Updating database schema
@@ -162,7 +162,7 @@ updater works. The steps and checks are the very same.
 
 The steps are basically the same as for the web based updater:
 
-1.  You should see a notification at the top of any Nextcloud page when there is
+1.  You should see a notification at the top of any cyfrSpaces page when there is
     a new update available. Go to the admin settings page and scroll to the
     section "Version". This section has a button to open the updater. This
     section as well as the update notification is only available if the update
@@ -171,7 +171,7 @@ The steps are basically the same as for the web based updater:
 .. image:: images/updater-1-update-available.png
 
 2. Instead of clicking that button you can now invoke the command line based
-   updater by going into the `updater/` directory in the Nextcloud directory
+   updater by going into the `updater/` directory in the cyfrSpaces directory
    and executing the `updater.phar` as the web server user. (i.e.
    ``sudo -u www-data php updater.phar``)
 

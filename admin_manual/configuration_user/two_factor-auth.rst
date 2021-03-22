@@ -4,8 +4,8 @@ Two-factor authentication
 
 Two-factor authentication adds an additional layer of security to user accounts. In order to log
 in on an account with two-factor authentication (2FA) enabled, it is necessary to provide both the
-login password and another factor. 2FA in Nextcloud is pluggable, meaning that they are not part
-of the Nextcloud Server component but provided by official and 3rd-party Nextcloud apps.
+login password and another factor. 2FA in cyfrSpaces is pluggable, meaning that they are not part
+of the cyfrSpaces Server component but provided by official and 3rd-party cyfrSpaces apps.
 
 
 Several 2FA apps are already available including
@@ -22,8 +22,8 @@ Enabling two-factor authentication
 
 You can enable 2FA by installing and enabling a 2FA app like TOTP which works
 with Google Authenticator and compatible apps. The apps are available in the
-Nextcloud App store so by navigating there and clicking **enable** for the app
-you want, 2FA will be installed and enabled on your Nextcloud server.
+cyfrSpaces App store so by navigating there and clicking **enable** for the app
+you want, 2FA will be installed and enabled on your cyfrSpaces server.
 
 .. figure:: ../images/2fa-app-install.png
 
@@ -36,7 +36,7 @@ Enforcing two-factor authentication
 -----------------------------------
 
 By default 2FA is *optional*, hence users are given the choice whether to enable
-it for their account. Since Nextcloud 15, admins may enforce the use of 2FA.
+it for their account. Since cyfrSpaces 15, admins may enforce the use of 2FA.
 
 
 Enforcement is possible systemwide (all users), for selected groups only and can

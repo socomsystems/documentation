@@ -7,7 +7,7 @@ Chunked file upload
 Introduction
 ------------
 Uploading large files is always a bit problematic as your connection can be interrupted
-which will fail your entire upload. Nextcloud has a chunking API where you can
+which will fail your entire upload. cyfrSpaces has a chunking API where you can
 upload smaller chunks which will be assembled on the server once they are all uploaded.
 
 Usage

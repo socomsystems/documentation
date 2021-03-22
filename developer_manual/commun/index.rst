@@ -21,5 +21,5 @@ Chat with us on `IRC <http://www.irchelp.org/>`_. All channels are on **irc.free
 
 Maintainers
 -----------
-* `Contact <https://nextcloud.com/contact/>`_ a maintainer of a certain app or division
+* `Contact <https://cyfr.space/contact/>`_ a maintainer of a certain app or division
 

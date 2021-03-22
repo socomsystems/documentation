@@ -2,13 +2,13 @@
 Events
 ======
 
-Events are used to communicate between different aspects of the Nextcloud eco system. They are used in the Nextcloud server internally, for server-to-apps communcation as well as inter-app communication.
+Events are used to communicate between different aspects of the cyfrSpaces eco system. They are used in the cyfrSpaces server internally, for server-to-apps communcation as well as inter-app communication.
 
 
 Overview
 --------
 
-The term "events" is a bit broad in Nextcloud and there are multiple ways of emitting them.
+The term "events" is a bit broad in cyfrSpaces and there are multiple ways of emitting them.
 
 * `OCP event dispatcher`_
 * `Symfony event dispatcher`_
@@ -32,7 +32,7 @@ Events are ususally evmitted *after* the event has happened. If it's emitted bef
 
 Thus `BeforeUserCreatedEvent` is emitted *before* the user data is written to the database.
 
-.. note:: Although you may chose to name your event classes differently, sticking to the convention will allow Nextcloud developers understand each other's apps more easily.
+.. note:: Although you may chose to name your event classes differently, sticking to the convention will allow cyfrSpaces developers understand each other's apps more easily.
 
 Writing events
 ``````````````

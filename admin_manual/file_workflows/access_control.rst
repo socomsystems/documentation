@@ -17,7 +17,7 @@ If access to a file has been denied for a user, the user can not:
 * Modify the files
 * Delete the file
 * Download the file
-* Synchronize the file with clients, such as the Nextcloud desktop and mobile clients
+* Synchronize the file with clients, such as the cyfrSpaces desktop and mobile clients
 
 Examples
 --------
@@ -117,7 +117,7 @@ option.
 * **Request URL:** The URL which requests the file. (*This is the URL the file
   is served from, not the URL the user is currently looking at.*)
 * **Request user agent:** The user agent of the users browser or client.
-  Nextcloud desktop, Android and iOS clients are available as preconfigured
+  cyfrSpaces desktop, Android and iOS clients are available as preconfigured
   options.
 
 * **User group membership:** Whether the user is a member of the given group.

@@ -1,18 +1,18 @@
 ===============
 Background jobs
 ===============
-A system like Nextcloud sometimes requires tasks to be done on a regular basis
-without the need for user interaction or hindering Nextcloud performance. For
+A system like cyfrSpaces sometimes requires tasks to be done on a regular basis
+without the need for user interaction or hindering cyfrSpaces performance. For
 that purpose, as a system administrator, you can define background jobs (for
 example, database clean-ups) which are executed without any need for user
 interaction.
 
 These jobs are typically referred to as *cron jobs*.  Cron jobs are commands or
 shell-based scripts that are scheduled to run periodically at fixed times,
-dates, or intervals.   ``cron.php`` is a Nextcloud internal process that runs
+dates, or intervals.   ``cron.php`` is a cyfrSpaces internal process that runs
 such background jobs on demand.
 
-Nextcloud apps register actions with ``cron.php`` automatically
+cyfrSpaces apps register actions with ``cron.php`` automatically
 to take care of typical housekeeping operations, such as garbage collecting of
 temporary files or checking for newly updated files using ``filescan()`` for
 externally mounted file systems.
@@ -37,7 +37,7 @@ AJAX
 ^^^^
 
 The AJAX scheduling method is the default option.  Unfortunately, however, it is
-also the least reliable. Each time a user visits the Nextcloud page, a single
+also the least reliable. Each time a user visits the cyfrSpaces page, a single
 background job is executed. The advantage of this mechanism is that it does not
 require access to the system nor registration with a third party service. The
 disadvantage of this mechanism, when compared to the Webcron service, is that it
@@ -50,7 +50,7 @@ requires regular visits to the page for it to be triggered.
 Webcron
 ^^^^^^^
 
-By registering your Nextcloud ``cron.php`` script address at an external webcron
+By registering your cyfrSpaces ``cron.php`` script address at an external webcron
 service (for example, easyCron_), you ensure that background jobs are executed
 regularly. To use this type of service with your server, you must be able to
 access your server using the Internet. For example::
@@ -84,7 +84,7 @@ Which returns::
   */5  *  *  *  * php -f /var/www/nextcloud/cron.php
 
 .. note:: You have to replace the path ``/var/www/nextcloud/cron.php`` with the
-          path to your current Nextcloud installation.
+          path to your current cyfrSpaces installation.
 
 .. note:: On some systems it might be required to call **php-cli** instead of **php**.
 
@@ -102,7 +102,7 @@ This approach requires two files: **nextcloudcron.service** and **nextcloudcron.
 **nextcloudcron.service** should look like this::
 
   [Unit]
-  Description=Nextcloud cron.php job
+  Description=cyfrSpaces cron.php job
   
   [Service]
   User=www-data
@@ -115,7 +115,7 @@ Note that the **.service** unit file does not need an ``[Install]`` section. Ple
 **nextcloudcron.timer** should look like this::
 
   [Unit]
-  Description=Run Nextcloud cron.php every 5 minutes
+  Description=Run cyfrSpaces cron.php every 5 minutes
   
   [Timer]
   OnBootSec=5min

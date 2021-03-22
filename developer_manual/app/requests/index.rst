@@ -20,7 +20,7 @@ A typical HTTP request consists of the following:
 * **A Method**: e.g. GET
 * **Request headers**: e.g. Accept: application/json
 
-The following sections will present an overview over how that request is being processed to provide an in depth view over how Nextcloud works. If you are not interested in the internals or don't want to execute anything before and after your controller, feel free to skip this section and continue directly with defining :doc:`your app's routes <routes>`.
+The following sections will present an overview over how that request is being processed to provide an in depth view over how cyfrSpaces works. If you are not interested in the internals or don't want to execute anything before and after your controller, feel free to skip this section and continue directly with defining :doc:`your app's routes <routes>`.
 
 Front controller
 ----------------

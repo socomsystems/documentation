@@ -2,9 +2,9 @@
 BigInt (64bit) identifiers
 ==========================
 
-Since Nextcloud 13 big integers are used to store identifiers and auto-increment keys in the database.
+Since cyfrSpaces 13 big integers are used to store identifiers and auto-increment keys in the database.
 Because changing columns on huge tables can take quite a while (up to hours or days), the update from
-Nextcloud 12 or earlier did not perform this migration on the filecache and activity table.
+cyfrSpaces 12 or earlier did not perform this migration on the filecache and activity table.
 
 To make it easy to force the update on those tables too, we've added a console command, which can be used
 to migrate the remaining columns to bigints.

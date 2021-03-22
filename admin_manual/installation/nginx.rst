@@ -23,10 +23,10 @@ server. These configurations examples were originally provided by
 -  Some environments might need a ``cgi.fix_pathinfo`` set to ``1`` in their
    ``php.ini``.
 
-Nextcloud in the webroot of nginx
+cyfrSpaces in the webroot of nginx
 ---------------------------------
 
-The following configuration should be used when Nextcloud is placed in the
+The following configuration should be used when cyfrSpaces is placed in the
 webroot of your nginx installation. In this example it is
 ``/var/www/nextcloud`` and it is accessed via ``http(s)://cloud.example.com/``
 
@@ -186,13 +186,13 @@ webroot of your nginx installation. In this example it is
       }
   }
 
-Nextcloud in a subdir of the nginx webroot
+cyfrSpaces in a subdir of the nginx webroot
 ------------------------------------------
 
-The following config should be used when Nextcloud is placed within a subdir of
+The following config should be used when cyfrSpaces is placed within a subdir of
 the webroot of your nginx installation.
 In this example the webroot is located at
-``/var/www`` and the Nextcloud instance is accessed via ``http(s)://cloud.example.com/nextcloud/``
+``/var/www`` and the cyfrSpaces instance is accessed via ``http(s)://cloud.example.com/nextcloud/``
 
 .. code-block:: nginx
 

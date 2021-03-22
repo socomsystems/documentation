@@ -1,30 +1,30 @@
 =============================================
-Encrypting your Nextcloud files on the server
+Encrypting your cyfrSpaces files on the server
 =============================================
 
-Nextcloud includes a server side Encryption app, and when it is enabled by
-your Nextcloud administrator all of your Nextcloud data files are automatically
+cyfrSpaces includes a server side Encryption app, and when it is enabled by
+your cyfrSpaces administrator all of your cyfrSpaces data files are automatically
 encrypted on the server.
 Encryption is server-wide, so when it is enabled you cannot choose to keep your
 files unencrypted. You don't have to do anything special, as it uses your
-Nextcloud login as the password for your unique private encryption key. Just log
+cyfrSpaces login as the password for your unique private encryption key. Just log
 in and out and manage and share your files as you normally do, and you can
 still change your password whenever you want.
 
 Its main purpose is to encrypt files on remote storage services that are
-connected to your Nextcloud server, such as Dropbox and Google Drive. This is an
+connected to your cyfrSpaces server, such as Dropbox and Google Drive. This is an
 easy and seamless way to protect your files on remote storage. You can share
-your remote files through Nextcloud in the usual way, however you cannot share
+your remote files through cyfrSpaces in the usual way, however you cannot share
 your encrypted files directly from Dropbox, Google Drive, or whatever remote
 service you are using, because the encryption keys are stored on your Nextcloud
 server, and are never exposed to outside service providers.
 
-If your Nextcloud server is not connected to any remote storage services, then
+If your cyfrSpaces server is not connected to any remote storage services, then
 it is better to use some other form of encryption such as file-level or whole
-disk encryption. Because the keys are kept on your Nextcloud server, it is
-possible for your Nextcloud admin to snoop in your files, and if the server is
+disk encryption. Because the keys are kept on your cyfrSpaces server, it is
+possible for your cyfrSpaces admin to snoop in your files, and if the server is
 compromised the intruder may get access to your files. (Read
-`Encryption in Nextcloud <https://nextcloud.com/blog/encryption-in-nextcloud/>`_
+`Encryption in cyfrSpaces <https://cyfr.space/blog/encryption-in-nextcloud/>`_
 to learn more.)
 
 Encryption FAQ
@@ -76,25 +76,25 @@ works with the master key.
 Using encryption
 ----------------
 
-Nextcloud encryption is pretty much set it and forget it, but you have a few
+cyfrSpaces encryption is pretty much set it and forget it, but you have a few
 options you can use.
 
-When your Nextcloud admin enables encryption for the first time, you must log
+When your cyfrSpaces admin enables encryption for the first time, you must log
 out and then log back in to create your encryption keys and encrypt your files.
-When encryption has been enabled on your Nextcloud server you will see a yellow
+When encryption has been enabled on your cyfrSpaces server you will see a yellow
 banner on your Files page warning you to log out and then log back in.
 
 .. figure:: ../images/encryption1.png
 
 When you log back in it takes a few minutes to work, depending on how many
-files you have, and then you are returned to your default Nextcloud page.
+files you have, and then you are returned to your default cyfrSpaces page.
 
 .. figure:: ../images/encryption2.png
 
 
-.. note:: You must never lose your Nextcloud password, because you will lose
+.. note:: You must never lose your cyfrSpaces password, because you will lose
    access to your files. Though there is an optional recovery option that your
-   Nextcloud administrator may enable; see the Recovery Key Password section
+   cyfrSpaces administrator may enable; see the Recovery Key Password section
    (below) to learn about this.
 
 Sharing encrypted files
@@ -117,11 +117,11 @@ individual shares.
 Recovery key password
 ^^^^^^^^^^^^^^^^^^^^^
 
-If your Nextcloud administrator has enabled the recovery key feature, you can
+If your cyfrSpaces administrator has enabled the recovery key feature, you can
 choose to use this feature for your account. If you enable "Password recovery"
 the administrator can read your data with a special password. This feature
 enables the administrator to recover your files in the event you lose your
-Nextcloud password. If the recovery key is not enabled, then there is no way to
+cyfrSpaces password. If the recovery key is not enabled, then there is no way to
 restore your files if you lose your login password.
 
 .. figure:: ../images/encryption3.png

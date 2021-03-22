@@ -6,7 +6,7 @@ Enabling MySQL 4-byte support
 
     Be sure to backup your database before performing this database upgrade.
 
-In order to use Emojis (textbased smilies) on your Nextcloud server with a MySQL database, the
+In order to use Emojis (textbased smilies) on your cyfrSpaces server with a MySQL database, the
 installation needs to be tweaked a bit.
 
 1. Make sure your database is set to use the Barracuda InnoDB file format:

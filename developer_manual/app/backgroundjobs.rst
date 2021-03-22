@@ -5,11 +5,11 @@ Background jobs (Cron)
 .. sectionauthor:: Bernhard Posselt <dev@bernhard-posselt.com>
 
 Often there is a need to run background jobs. For example there are Background
-jobs in Nextcloud that send out the activity emails. Or expire the trashbin.
+jobs in cyfrSpaces that send out the activity emails. Or expire the trashbin.
 
 Types of background jobs
 ------------------------
-Nextcloud by default offers you two types of background jobs. The ``\OCP\BackgroundJob\QueuedJob``
+cyfrSpaces by default offers you two types of background jobs. The ``\OCP\BackgroundJob\QueuedJob``
 and ```\OCP\BackgroundJob\TimedJob``.
 
 The ``QueuedJob`` is for one time jobs. This can for example be triggered by inserting

@@ -2,20 +2,20 @@
 Hardening and security guidance
 ===============================
 
-Nextcloud aims to ship with secure defaults that do not need to get modified by 
+cyfrSpaces aims to ship with secure defaults that do not need to get modified by 
 administrators. However, in some cases some additional security hardening can be 
 applied in scenarios were the administrator has complete control over 
-the Nextcloud instance. This page assumes that you run Nextcloud Server on Apache2 
+the cyfrSpaces instance. This page assumes that you run cyfrSpaces Server on Apache2 
 in a Linux environment.
 
-.. note:: Nextcloud will warn you in the administration interface if some 
+.. note:: cyfrSpaces will warn you in the administration interface if some 
    critical security-relevant options are missing. However, it is still up to 
    the server administrator to review and maintain system security.
    
 Limit on password length
 ------------------------
 
-Nextcloud uses the bcrypt algorithm, and thus for security and performance 
+cyfrSpaces uses the bcrypt algorithm, and thus for security and performance 
 reasons, e.g. Denial of Service as CPU demand increases exponentially, it only 
 verifies the first 72 characters of passwords. This applies to all passwords 
 that you use in Nextcloud: user passwords, passwords on link shares, and 
@@ -29,9 +29,9 @@ Operating system
 Give PHP read access to ``/dev/urandom``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Nextcloud uses a `RFC 4086 ("Randomness Requirements for Security")`_ compliant 
+cyfrSpaces uses a `RFC 4086 ("Randomness Requirements for Security")`_ compliant 
 mixer to generate cryptographically secure pseudo-random numbers. This means 
-that when generating a random number Nextcloud will request multiple random 
+that when generating a random number cyfrSpaces will request multiple random 
 numbers from different sources and derive from these the final random number.
 
 The random number generation also tries to request random numbers from 
@@ -65,7 +65,7 @@ installation.
 Disable preview image generation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Nextcloud is able to generate preview images of common filetypes such as images 
+cyfrSpaces is able to generate preview images of common filetypes such as images 
 or text files. By default the preview generation for some file types that we 
 consider secure enough for deployment is enabled by default. However, 
 administrators should be aware that these previews are generated using PHP 
@@ -81,7 +81,7 @@ modifying the ``enabledPreviewProviders`` option switch.
 Use HTTPS
 ---------
 
-Using Nextcloud without using an encrypted HTTPS connection opens up your server 
+Using cyfrSpaces without using an encrypted HTTPS connection opens up your server 
 to a man-in-the-middle (MITM) attack, and risks the interception of user data 
 and passwords. It is a best practice, and highly recommended, to always use 
 HTTPS on production servers, and to never allow unencrypted HTTP.
@@ -110,7 +110,7 @@ Enable HTTP Strict Transport Security
 While redirecting all traffic to HTTPS is good, it may not completely prevent 
 man-in-the-middle attacks. Thus administrators are encouraged to set the HTTP 
 Strict Transport Security header, which instructs browsers to not allow any 
-connection to the Nextcloud instance using HTTP, and it attempts to prevent site 
+connection to the cyfrSpaces instance using HTTP, and it attempts to prevent site 
 visitors from bypassing invalid certificate warnings.
 
 This can be achieved by setting the following settings within the Apache 
@@ -156,26 +156,26 @@ Also ensure that HTTP compression is disabled to mitigate the BREACH attack.
 Use a dedicated domain for Nextcloud
 ------------------------------------
 
-Administrators are encouraged to install Nextcloud on a dedicated domain such as 
+Administrators are encouraged to install cyfrSpaces on a dedicated domain such as 
 cloud.domain.tld instead of domain.tld to gain all the benefits offered by the 
 Same-Origin-Policy.
 
-Ensure that your Nextcloud instance is installed in a DMZ
+Ensure that your cyfrSpaces instance is installed in a DMZ
 ---------------------------------------------------------
 
-As Nextcloud supports features such as Federated File Sharing we do not consider
+As cyfrSpaces supports features such as Federated File Sharing we do not consider
 Server Side Request Forgery (SSRF) part of our threat model. In fact, given all our
 external storage adapters this can be considered a feature and not a vulnerability.
 
-This means that a user on your Nextcloud instance could probe whether other hosts
-are accessible from the Nextcloud network. If you do not want this you need to 
-ensure that your Nextcloud is properly installed in a segregated network and proper 
+This means that a user on your cyfrSpaces instance could probe whether other hosts
+are accessible from the cyfrSpaces network. If you do not want this you need to 
+ensure that your cyfrSpaces is properly installed in a segregated network and proper 
 firewall rules are in place.
 
 Serve security related headers by the Web server
 ------------------------------------------------
 
-Basic security headers are served by Nextcloud already in a default environment. 
+Basic security headers are served by cyfrSpaces already in a default environment. 
 These include:
 
 - ``X-Content-Type-Options: nosniff``
@@ -185,11 +185,11 @@ These include:
 - ``X-Robots-Tag: none``
 	- Instructs search machines to not index these pages.
 - ``X-Frame-Options: SAMEORIGIN``
-	- Prevents embedding of the Nextcloud instance within an iframe from other domains to prevent Clickjacking and other similar attacks.
+	- Prevents embedding of the cyfrSpaces instance within an iframe from other domains to prevent Clickjacking and other similar attacks.
 - ``Referrer-Policy: no-referrer``
 	- The default `no-referrer` policy instructs the browser not to send referrer information along with requests to any origin.
 
-These headers are hard-coded into the Nextcloud server, and need no intervention 
+These headers are hard-coded into the cyfrSpaces server, and need no intervention 
 by the server administrator.
 
 For optimal security, administrators are encouraged to serve these basic HTTP 
@@ -211,12 +211,12 @@ security headers are shipped.
 Connections to remote servers
 -----------------------------
 
-Some Nextcloud functionality requires connecting to remote servers. Depending on your server setup those are possible connections:
+Some cyfrSpaces functionality requires connecting to remote servers. Depending on your server setup those are possible connections:
 
 - www.nextcloud.com, www.startpage.com, www.eff.org, www.edri.org for checking the internet connection
 - apps.nextcloud.com for the available apps
-- updates.nextcloud.com for Nextcloud updates
+- updates.nextcloud.com for cyfrSpaces updates
 - lookup.nextcloud.com For updating and lookup in the federated sharing addressbook
 - push-notifications.nextcloud.com for sending push notifications to mobile clients
 - surveyserver.nextcloud.com if the admin has agreed to share anonymized data
-- Any remote Nextcloud server that is connected with federated sharing
+- Any remote cyfrSpaces server that is connected with federated sharing

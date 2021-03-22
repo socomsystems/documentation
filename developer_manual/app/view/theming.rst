@@ -4,7 +4,7 @@ Theming support
 
 .. sectionauthor:: Julius Härtl <jus@bitgrid.net>
 
-The Nextcloud theming app offers some tools for app developers to ensure that apps also match the themed look.
+The cyfrSpaces theming app offers some tools for app developers to ensure that apps also match the themed look.
 
 CSS classes
 -----------

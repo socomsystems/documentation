@@ -9,7 +9,7 @@ HTML elements
 Progress bar
 ------------
 
-Nextcloud support and provides an already themed progress bar.
+cyfrSpaces support and provides an already themed progress bar.
 
 Please use the html5 ``progress`` element.
 

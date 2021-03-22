@@ -2,7 +2,7 @@
 Restoring backup
 ================
 
-To restore a Nextcloud installation there are four main things you need to
+To restore a cyfrSpaces installation there are four main things you need to
 restore:
 
 #. The configuration directory
@@ -24,7 +24,7 @@ Restore folders
    "nextcloud-dirbkp"
 
 Simply copy your configuration and data folder (or even your whole Nextcloud
-install and data folder) to your Nextcloud environment. You could use this command::
+install and data folder) to your cyfrSpaces environment. You could use this command::
 
     rsync -Aax nextcloud-dirbkp/ nextcloud/
 

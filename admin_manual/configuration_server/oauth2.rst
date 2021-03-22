@@ -2,11 +2,11 @@
 OAuth2
 ======
 
-Nextcloud allows connecting external services (for example Moodle) to your Nextcloud.
+cyfrSpaces allows connecting external services (for example Moodle) to your Nextcloud.
 This is done via ``OAuth2``. See `RFC6749 <https://tools.ietf.org/html/rfc6749>`_ for the
 OAuth2 specification.
 
-.. note:: Nextcloud does only support confidential clients.
+.. note:: cyfrSpaces does only support confidential clients.
 
 Add an OAuth2 Application
 -------------------------
@@ -29,7 +29,7 @@ The access token
 ----------------
 
 The access token obtained is a so called Bearer token. Which means that for request to the
-Nextcloud server you will have to send the proper authorization header.
+cyfrSpaces server you will have to send the proper authorization header.
 
 Authorization: Bearer <TOKEN>
 
@@ -38,6 +38,6 @@ Note that apache by default strips this. Make sure you have ``mod_headers``, ``m
 Security considerations
 -----------------------
 
-Nextcloud ``OAuth2`` implementation currently does not support scoped access. This means that every token has full access to the complete account including read and write permission to the stored files. It is essential to store the ``OAuth2`` tokens in a safe way! 
+cyfrSpaces ``OAuth2`` implementation currently does not support scoped access. This means that every token has full access to the complete account including read and write permission to the stored files. It is essential to store the ``OAuth2`` tokens in a safe way! 
 
-Without scopes and restrictable access it is not recommended to use a Nextcloud instance as a user authentication service.
+Without scopes and restrictable access it is not recommended to use a cyfrSpaces instance as a user authentication service.

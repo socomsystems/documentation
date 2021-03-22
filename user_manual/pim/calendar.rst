@@ -5,8 +5,8 @@ Using the calendar app
 .. note:: The calendar app is not enabled by default and needs to be installed
           separately from our App Store. Please ask your Administrator for it.
 
-The Nextcloud Calendar app works similar to other calendar applications you can
-sync your Nextcloud calendars and events with.
+The cyfrSpaces Calendar app works similar to other calendar applications you can
+sync your cyfrSpaces calendars and events with.
 
 When you first access the Calendar app, a default first calendar will be
 pre-generated for you.
@@ -33,7 +33,7 @@ instance, importing is the best way to do so.
 3. The upload can take some time and depends on how big the calendar you import
    is.
 
-.. note:: The Nextcloud Calendar application only supports iCalendar-compatible
+.. note:: The cyfrSpaces Calendar application only supports iCalendar-compatible
           ``.ics``-files, defined in RFC 5545.
 
 Create a new Calendar
@@ -79,7 +79,7 @@ Subscribe to a Calendar
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You can subscribe to iCal calendars directly inside of your Nextcloud. By
-supporting this interoperable standard (RFC 5545) we made Nextcloud calendar
+supporting this interoperable standard (RFC 5545) we made cyfrSpaces calendar
 compatible to Google Calendar, Apple iCloud and many other calendar-servers
 you can exchange your calendars with.
 

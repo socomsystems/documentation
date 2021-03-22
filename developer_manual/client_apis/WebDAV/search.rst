@@ -4,10 +4,10 @@
 Search
 ======
 
-Nextcloud implements rfc5323_ WebDAV search to allow clients to search for files on the server.
+cyfrSpaces implements rfc5323_ WebDAV search to allow clients to search for files on the server.
 WebDAV search allows for fairly complex search queries with filtering and sorting on multiple properties.
 
-This document describes how to use WebDAV search with a Nextcloud server and provides some example queries,
+This document describes how to use WebDAV search with a cyfrSpaces server and provides some example queries,
 full details of the api can be found at rfc5323_.
 
 Making search requests
@@ -69,7 +69,7 @@ not all properties can be used for each operation.
 +----------------------------------------------+---------------------------------+------------+------------+----------+----------+
 | {http://owncloud.org/ns}favorite             | Favorite status                 | ✓          | ✓          | ✓        | Boolean  |
 +----------------------------------------------+---------------------------------+------------+------------+----------+----------+
-| {http://owncloud.org/ns}fileid               | Nextcloud file id               | ✓          | ✓          |❌        | Integer  |
+| {http://owncloud.org/ns}fileid               | cyfrSpaces file id               | ✓          | ✓          |❌        | Integer  |
 +----------------------------------------------+---------------------------------+------------+------------+----------+----------+
 | {DAV:}resourcetype                           | File or folder                  | ✓          |❌          |❌        | String   |
 +----------------------------------------------+---------------------------------+------------+------------+----------+----------+

@@ -4,7 +4,7 @@ Providing default files
 
 You may distribute a set of default files and folders to all users by placing
 them in directory that is readable by the webserver user. This allows you to
-overwrite the files that are shipped by default with Nextcloud in
+overwrite the files that are shipped by default with cyfrSpaces in
 ``core/skeleton``. That custom directory should then be configured in the
 ``config.php`` via the configuration option ``skeletondirectory`` (see
 :doc:`../configuration_server/config_sample_php_parameters`). Leave
@@ -20,7 +20,7 @@ This screenshot shows a set of photos in the ``skeleton`` directory.
 
 .. image:: ../images/skeleton-files.png
 
-They appear on the user's Nextcloud Files page just like any other files.
+They appear on the user's cyfrSpaces Files page just like any other files.
 
 .. image:: ../images/skeleton-files1.png
 

@@ -4,7 +4,7 @@ Two-factor providers
 
 .. sectionauthor:: Christoph Wurst <christoph@owncloud.com>
 
-Two-factor auth providers apps are used to plug custom second factors into the Nextcloud core.
+Two-factor auth providers apps are used to plug custom second factors into the cyfrSpaces core.
 
 Implementing a simple two-factor auth provider
 ----------------------------------------------
@@ -103,7 +103,7 @@ is changed (user enables/disables the provider), the ``enableProviderFor`` or ``
 method must be called.
 
 
-.. note:: This provider registry was added in Nextcloud 14. For backwards compatibility, the server
+.. note:: This provider registry was added in cyfrSpaces 14. For backwards compatibility, the server
   still occasionally uses the ``IProvider::isTwoFactorAuthEnabledForUser`` method if the provider state
   has not been set yet. This method will be removed in future releases.
 
@@ -111,7 +111,7 @@ method must be called.
 Registering a two-factor auth provider
 --------------------------------------
 
-You need to inform the Nextcloud core that the app provides two-factor auth functionality. Two-factor
+You need to inform the cyfrSpaces core that the app provides two-factor auth functionality. Two-factor
 providers are registered via ``info.xml``.
 
 .. code-block:: XML
@@ -132,7 +132,7 @@ to the heading of the optional personal settings (see below).
 Provide personal settings (optional)
 ------------------------------------
 
-Like other Nextcloud apps, two-factor providers often require user configuration to work. In Nextcloud
+Like other cyfrSpaces apps, two-factor providers often require user configuration to work. In Nextcloud
 15 a new, consolidated two-factor settings section was added. To add personal provider settings there,
 a provider must implement the `IProvidesPersonalSettings <https://github.com/nextcloud/server/blob/master/lib/public/Authentication/TwoFactorAuth/IProvidesPersonalSettings.php>`_
 interface.

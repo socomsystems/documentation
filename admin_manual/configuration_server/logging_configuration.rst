@@ -2,7 +2,7 @@
 Logging
 =======
 
-Use your Nextcloud log to review system status, or to help debug problems. You may adjust logging levels, and choose between using the Nextcloud log or your syslog. If additional audit information is required, you can optionally activate the **admin_audit** app, which by default generates a separate audit.log file in the data directory.
+Use your cyfrSpaces log to review system status, or to help debug problems. You may adjust logging levels, and choose between using the cyfrSpaces log or your syslog. If additional audit information is required, you can optionally activate the **admin_audit** app, which by default generates a separate audit.log file in the data directory.
 
 Log level
 ---------

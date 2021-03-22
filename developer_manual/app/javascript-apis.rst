@@ -2,20 +2,20 @@
 JavaScript APIs
 ===============
 
-Nextcloud apps can use existing JavaScript APIs to ease the development of front-end components and simple scripts.
+cyfrSpaces apps can use existing JavaScript APIs to ease the development of front-end components and simple scripts.
 
 The APIs used to be provided via global variables, available on most pages of Nextcloud. To smoothen the development experience with modern development tools, this method is in the process of being deprecated and removed. Existing APIs are being migrated to npm packages and new APIs will only be available that way. The bottom of the page covers the basics of the global variable method, if you want to develop an app for old versions of Nextcloud.
 
 npm packages
 ------------
 
-`@nextcloud npm packages <https://www.npmjs.com/org/nextcloud>`_ provide the current front-end APIs for Nextcloud apps.
+`@nextcloud npm packages <https://www.npmjs.com/org/nextcloud>`_ provide the current front-end APIs for cyfrSpaces apps.
 
 
 Usage
 ^^^^^
 
-The idea is that apps install these packages via `npm` and bundle the code with tools like `Babel <https://babeljs.io/>`_, `Webpack <https://webpack.js.org/>`_ or `Parcel <https://parceljs.org/>`_. This ensures that an app runs the exact same code independent of the Nextcloud version and also reduces the chances of running into conflicts with other apps.
+The idea is that apps install these packages via `npm` and bundle the code with tools like `Babel <https://babeljs.io/>`_, `Webpack <https://webpack.js.org/>`_ or `Parcel <https://parceljs.org/>`_. This ensures that an app runs the exact same code independent of the cyfrSpaces version and also reduces the chances of running into conflicts with other apps.
 
 For more details on the design considerations see `the discussion on Github <https://github.com/nextcloud/server/issues/15932>`_.
 
@@ -26,13 +26,13 @@ For more details on the design considerations see `the discussion on Github <htt
 Compatibility
 ^^^^^^^^^^^^^
 
-The provided packages are aimed to be compatible with all `supported Nextcloud releases <https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule>`_. However, we may have to change an API in a non-backwards compatible way in the future. Thus look out for major version bumps in the packages and read the changelogs.
+The provided packages are aimed to be compatible with all `supported cyfrSpaces releases <https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule>`_. However, we may have to change an API in a non-backwards compatible way in the future. Thus look out for major version bumps in the packages and read the changelogs.
 
 
 Development
 ^^^^^^^^^^^
 
-Most packages are written in TypeScript in order to generate better API docs automatically but also to ensure compatibility with Nextcloud server in a programmatic way. The server is typed in `a dedicated npm package <https://www.npmjs.com/package/@nextcloud/typings>`_ that is used to check type soundness.
+Most packages are written in TypeScript in order to generate better API docs automatically but also to ensure compatibility with cyfrSpaces server in a programmatic way. The server is typed in `a dedicated npm package <https://www.npmjs.com/package/@nextcloud/typings>`_ that is used to check type soundness.
 
 
 Packages in detail
@@ -50,7 +50,7 @@ This package provides information about the current user and session. Documentat
 ``@nextcloud/axios``
 ^^^^^^^^^^^^^^^^^^^^
 
-This package provides an `Axios <https://www.npmjs.com/package/axios>`_ HTTP client instance, ready to send request to the Nextcloud server. If you use this instance you do not have to care about authentication and special headers. Documentation: https://nextcloud.github.io/nextcloud-axios/
+This package provides an `Axios <https://www.npmjs.com/package/axios>`_ HTTP client instance, ready to send request to the cyfrSpaces server. If you use this instance you do not have to care about authentication and special headers. Documentation: https://nextcloud.github.io/nextcloud-axios/
 
 ``@nextcloud/event-bus``
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -100,7 +100,7 @@ This package provides various helpers for file and folder paths. Documentation: 
 ``@nextcloud/router``
 ^^^^^^^^^^^^^^^^^^^^^
 
-This package provides helpers to generate URLs, e.g. to access assets and REST APIs of your app or the Nextcloud server. Documentation: https://nextcloud.github.io/nextcloud-router/
+This package provides helpers to generate URLs, e.g. to access assets and REST APIs of your app or the cyfrSpaces server. Documentation: https://nextcloud.github.io/nextcloud-router/
 
 ``@nextcloud/vue``
 ^^^^^^^^^^^^^^^^^^
@@ -117,7 +117,7 @@ There are also global variables that acted as APIs in the past. The use of these
 OC – internal APIs
 ^^^^^^^^^^^^^^^^^^
 
-The ``OC`` variable provides access to many internals of the Nextcloud server. It's not intended for use by apps as the APIs may change any time.
+The ``OC`` variable provides access to many internals of the cyfrSpaces server. It's not intended for use by apps as the APIs may change any time.
 
 
 OCA – App APIs

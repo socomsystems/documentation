@@ -40,7 +40,7 @@ Cross site scripting
 
 `Cross site scripting <http://en.wikipedia.org/wiki/Cross-site_scripting>`_ happens when user input is passed directly to templates. A potential attacker might be able to inject HTML/JavaScript into the page to steal the users session, log keyboard entries, even perform DDOS attacks on other websites or other malicious actions.
 
-Despite the fact that Nextcloud uses Content-Security-Policy to prevent the execution of inline JavaScript code developers are still required to prevent XSS. CSP is just another layer of defense that is not implemented in all web browsers.
+Despite the fact that cyfrSpaces uses Content-Security-Policy to prevent the execution of inline JavaScript code developers are still required to prevent XSS. CSP is just another layer of defense that is not implemented in all web browsers.
 
 To prevent XSS in your app you have to sanitize the templates and all JavaScripts which performs a DOM manipulation.
 
@@ -105,9 +105,9 @@ Clickjacking
 
 `Clickjacking <http://en.wikipedia.org/wiki/Clickjacking>`_ tricks the user to click into an invisible iframe to perform an arbitrary action (e.g. delete an user account)
 
-To prevent such attacks Nextcloud sends the `X-Frame-Options` header to all template responses. Don't remove this header if you don't really need it!
+To prevent such attacks cyfrSpaces sends the `X-Frame-Options` header to all template responses. Don't remove this header if you don't really need it!
 
-This is already built into Nextcloud in :php:class:`OC_Template`.
+This is already built into cyfrSpaces in :php:class:`OC_Template`.
 
 Code executions / file inclusions
 ---------------------------------
@@ -198,7 +198,7 @@ Auth bypass / privilege escalations
 
 Auth bypass/privilege escalations happen when a user is able to perform unauthorized actions.
 
-Nextcloud offers three simple checks:
+cyfrSpaces offers three simple checks:
 
 * **OCP\\JSON::checkLoggedIn()**: Checks if the logged in user is logged in
 * **OCP\\JSON::checkAdminUser()**: Checks if the logged in user has admin privileges

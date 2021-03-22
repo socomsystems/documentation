@@ -441,7 +441,7 @@ A :doc:`template <../view/templates>` can be rendered by returning a TemplateRes
 
     $_['key']
 
-* **renderAs**: defaults to *user*, tells Nextcloud if it should include it in the web interface, or in case *blank* is passed solely render the template
+* **renderAs**: defaults to *user*, tells cyfrSpaces if it should include it in the web interface, or in case *blank* is passed solely render the template
 
 .. code-block:: php
 
@@ -465,7 +465,7 @@ Public page templates
 ^^^^^^^^^^^^^^^^^^^^^
 
 For public pages, that are rendered to users who are not logged in to the
-Nextcloud instance, a :any:`PublicTemplateResponse <OCP\\AppFramework\\Http\\Template\\PublicTemplateResponse>` should be used, to load the
+cyfrSpaces instance, a :any:`PublicTemplateResponse <OCP\\AppFramework\\Http\\Template\\PublicTemplateResponse>` should be used, to load the
 correct base template. It also allows adding an optional set of actions that
 will be shown in the top right corner of the public page.
 
@@ -627,7 +627,7 @@ If you want to use a custom, lazily rendered response simply implement the inter
 Modifying the content security policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default Nextcloud disables all resources which are not served on the same domain, forbids cross domain requests and disables inline CSS and JavaScript by setting a `Content Security Policy <https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy>`_. However if an app relies on third-party media or other features which are forbidden by the current policy the policy can be relaxed.
+By default cyfrSpaces disables all resources which are not served on the same domain, forbids cross domain requests and disables inline CSS and JavaScript by setting a `Content Security Policy <https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy>`_. However if an app relies on third-party media or other features which are forbidden by the current policy the policy can be relaxed.
 
 .. note:: Double check your content and edge cases before you relax the policy! Also read the `documentation provided by MDN <https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy>`_
 
@@ -801,13 +801,13 @@ A controller method that turns off all checks would look like this:
 Rate limiting
 -------------
 
-Nextcloud supports rate limiting on a controller method basis. By default controller methods are not rate limited. Rate limiting should be used on expensive or security sensitive functions (e.g. password resets) to increase the overall security of your application.
+cyfrSpaces supports rate limiting on a controller method basis. By default controller methods are not rate limited. Rate limiting should be used on expensive or security sensitive functions (e.g. password resets) to increase the overall security of your application.
 
-The native rate limiting will return a 429 status code to clients when the limit is reached and a default Nextcloud error page. When implementing rate limiting in your application, you should thus consider handling error situations where a 429 is returned by Nextcloud.
+The native rate limiting will return a 429 status code to clients when the limit is reached and a default cyfrSpaces error page. When implementing rate limiting in your application, you should thus consider handling error situations where a 429 is returned by Nextcloud.
 
 To enable rate limiting the following *Annotations* can be added to the controller:
 
-* **@UserRateThrottle(limit=int, period=int)**: The rate limiting that is applied to logged-in users. If not specified Nextcloud will fallback to AnonUserRateThrottle.
+* **@UserRateThrottle(limit=int, period=int)**: The rate limiting that is applied to logged-in users. If not specified cyfrSpaces will fallback to AnonUserRateThrottle.
 * **@AnonRateThrottle(limit=int, period=int)**: The rate limiting that is applied to guests.
 
 A controller method that would allow five requests for logged-in users and one request for anonymous users within the last 100 seconds would look as following:
@@ -835,7 +835,7 @@ A controller method that would allow five requests for logged-in users and one r
 Brute-force protection
 ----------------------
 
-Nextcloud supports brute-force protection on an action basis. By default controller methods are not protected. Brute-force protection should be used on security sensitive functions (e.g. login attempts) to increase the overall security of your application.
+cyfrSpaces supports brute-force protection on an action basis. By default controller methods are not protected. Brute-force protection should be used on security sensitive functions (e.g. login attempts) to increase the overall security of your application.
 
 The native brute-force protection will slow down requests if too many violations have been found. This slow down will be applied to all requests against a brute-force protected controller with the same action from the affected IP.
 

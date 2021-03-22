@@ -2,15 +2,15 @@
 Warnings on admin page
 ======================
 
-Your Nextcloud server has a built-in configuration checker, and it reports its 
+Your cyfrSpaces server has a built-in configuration checker, and it reports its 
 findings at the top of your Admin page. These are some of the warnings you 
 might see, and what to do about them.
 
 .. figure:: ../images/security-setup-warning-1.png
 
-You can use the  `Nextcloud Security Scan <https://scan.nextcloud.com>`_ to see
+You can use the  `cyfrSpaces Security Scan <https://scan.nextcloud.com>`_ to see
 if your system is up to date and well secured. We have ran this scan over public
-IP addresses in the past to try and reach out to `extremely outdated systems <https://nextcloud.com/blog/nextcloud-releases-security-scanner-to-help-protect-private-clouds/>`_
+IP addresses in the past to try and reach out to `extremely outdated systems <https://cyfr.space/blog/nextcloud-releases-security-scanner-to-help-protect-private-clouds/>`_
 and might again in the future. Please, protect your privacy and keep your server
 up to date! Privacy means little without security.
 
@@ -18,7 +18,7 @@ Cache warnings
 --------------
 
 "No memory cache has been configured. To enhance your performance please 
-configure a memcache if available." Nextcloud supports multiple php caching
+configure a memcache if available." cyfrSpaces supports multiple php caching
 extensions:
 
 * APCu (minimum required PHP extension version 4.0.6)
@@ -52,7 +52,7 @@ You are accessing this site via HTTP
 server to require using HTTPS instead." Please take this warning seriously; 
 using HTTPS is a fundamental security measure. You must configure your Web 
 server to support it, and then there are some settings in the **Security** 
-section of your Nextcloud Admin page to enable. The following pages 
+section of your cyfrSpaces Admin page to enable. The following pages 
 describe how to enable HTTPS on the Apache and Nginx Web servers.
 
 :ref:`enabling_ssl_label` (on Apache)
@@ -108,7 +108,7 @@ Cloud Sharing will not work reliably."
 
 There are known bugs in older OpenSSL and NSS versions leading to misbehavior in 
 combination with remote hosts using SNI. A technology used by most of the HTTPS
-websites. To ensure that Nextcloud will work properly you need to update OpenSSL
+websites. To ensure that cyfrSpaces will work properly you need to update OpenSSL
 to at least 1.0.2b or 1.0.1d. For NSS the patch version depends on your distribution
 and an heuristic is running the test which actually reproduces the bug. There
 are distributions such as RHEL/CentOS which have this backport still `pending 

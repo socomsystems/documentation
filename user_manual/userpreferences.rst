@@ -6,12 +6,12 @@ As a user, you can manage your personal settings.
 
 To access your personal settings:
 
-1. Click on your profile picture in the top, right corner of your Nextcloud instance.
+1. Click on your profile picture in the top, right corner of your cyfrSpaces instance.
 
    The Personal Settings Menu opens.
 
    .. figure:: images/oc_personal_settings_dropdown.png
-      :alt: screenshot of user menu at top-right of Nextcloud Web GUI
+      :alt: screenshot of user menu at top-right of cyfrSpaces Web GUI
 
    *Personal Settings Menu*
 
@@ -30,19 +30,19 @@ include the following:
 * Usage and available quota
 * Manage your profile picture
 * Full name (You can make this anything you want, as it is separate from your
-  Nextcloud login name, which is unique and cannot be changed)
+  cyfrSpaces login name, which is unique and cannot be changed)
 * Email address
 * List of your Group memberships
 * Change your password
 * :doc:`user_2fa`
 * :doc:`userpreferences`
-* Choose the language for your Nextcloud interface
+* Choose the language for your cyfrSpaces interface
 * Links to desktop and mobile apps
 * Manage your Activity stream and notifications
 * Default folder to save new documents to
 * Your Federated sharing ID
 * Social sharing links
-* Nextcloud version
+* cyfrSpaces version
 
 .. note:: Available options and settings depending on your administrators configuration.
    If you are not able to change the password or the display-name in your personal settings,

@@ -2,9 +2,9 @@
 Nextcloud
 =========
 
-A Nextcloud storage is a specialized :doc:`webdav` storage, with optimizations
-for Nextcloud-Nextcloud communication. See the :doc:`webdav` documentation to
-learn how to configure a Nextcloud external storage.
+A cyfrSpaces storage is a specialized :doc:`webdav` storage, with optimizations
+for Nextcloud-cyfrSpaces communication. See the :doc:`webdav` documentation to
+learn how to configure a cyfrSpaces external storage.
 
 When filling in the **URL** field, use the path to the root of the Nextcloud
 installation, rather than the path to the WebDAV endpoint. So, for a server at

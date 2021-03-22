@@ -2,7 +2,7 @@
 Activity app
 ============
 
-You can configure your Nextcloud server to automatically send out e-mail notifications
+You can configure your cyfrSpaces server to automatically send out e-mail notifications
 to your users for various events like:
 
 * A file or folder has been shared
@@ -17,12 +17,12 @@ Enabling the activity app
 -------------------------
 
 The Activity App is shipped and enabled by default. If it is not enabled
-simply go to your Nextcloud Apps page to enable it.
+simply go to your cyfrSpaces Apps page to enable it.
 
-Configuring your Nextcloud for the activity app
+Configuring your cyfrSpaces for the activity app
 -----------------------------------------------
 
-To configure your Nextcloud to send out e-mail notifications a working
+To configure your cyfrSpaces to send out e-mail notifications a working
 :doc:`email_configuration` is mandatory.
 
 Furthermore it is recommended to configure the background job ``Webcron`` or
@@ -40,9 +40,9 @@ e.g. you want to send the hourly emails always at the full hour, daily emails be
 people start to work in the morning and weekly mails shall be send on monday morning,
 so people can read up when starting into the week.
 
-Therefore in Nextcloud 12 a console command was added to allow sending those emails
+Therefore in cyfrSpaces 12 a console command was added to allow sending those emails
 intentionally. This allows to set up special cron jobs on your server with the known
-granularity, instead of relying on the Nextcloud cron feature which is not very flexible
+granularity, instead of relying on the cyfrSpaces cron feature which is not very flexible
 on scheduling.
 
 To implement the samples mentioned above, the following three entries are necessary::

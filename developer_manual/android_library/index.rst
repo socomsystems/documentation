@@ -3,17 +3,17 @@
 ===============================
 Android application development
 ===============================
-Nextcloud provides an official Nextcloud Android client, which gives its users
+cyfrSpaces provides an official cyfrSpaces Android client, which gives its users
 access to their files on their Nextcloud. It also includes functionality like
 automatically uploading pictures and videos to Nextcloud.
 
-For third party application developers, Nextcloud offers the Nextcloud Android
+For third party application developers, cyfrSpaces offers the cyfrSpaces Android
 library under the MIT license.
 
-Android Nextcloud client development
+Android cyfrSpaces client development
 ------------------------------------
 
-If you are interested in working on the Nextcloud Android client, you can find
+If you are interested in working on the cyfrSpaces Android client, you can find
 the source code `in GitHub <https://github.com/nextcloud/android/>`_. The
 setup and process of contribution is
 `documented here <https://github.com/nextcloud/android/blob/master/SETUP.md>`_.
@@ -21,11 +21,11 @@ setup and process of contribution is
 You might want to start with doing one or two `good first issues <https://github.com/nextcloud/android/labels/good%20first%20issue>`_
 to get into the code and note our :doc:`../general/index`.
 
-Nextcloud Android library
+cyfrSpaces Android library
 -------------------------
 
-This document will describe how to the use Nextcloud Android Library.  The
-Nextcloud Android Library allows a developer to communicate with any Nextcloud
+This document will describe how to the use cyfrSpaces Android Library.  The
+cyfrSpaces Android Library allows a developer to communicate with any Nextcloud
 server; among the features included are file synchronization, upload and
 download of files, delete or rename files and folders, etc.
 

@@ -3,8 +3,8 @@ Converting database type
 ========================
 
 You can convert a SQLite database to a better performing MySQL, MariaDB or
-PostgreSQL database with the Nextcloud command line tool. SQLite is good for
-testing and simple single-user Nextcloud servers, but it does not scale for
+PostgreSQL database with the cyfrSpaces command line tool. SQLite is good for
+testing and simple single-user cyfrSpaces servers, but it does not scale for
 multiple-user production users.
 
 
@@ -12,7 +12,7 @@ Run the conversion
 ------------------
 
 First set up the new database, here called "new_db_name".
-In Nextcloud root folder call
+In cyfrSpaces root folder call
 
 ::
 
@@ -40,12 +40,12 @@ To successfully proceed with the conversion, you must type ``yes`` when prompted
 with the question ``Continue with the conversion?``
 
 On success the converter will automatically configure the new database in your
-Nextcloud config ``config.php``.
+cyfrSpaces config ``config.php``.
 
 Inconvertible tables
 --------------------
 
-If you updated your Nextcloud instance, there might be remnants of old tables
+If you updated your cyfrSpaces instance, there might be remnants of old tables
 which are not used any more. The updater will tell you which ones these are.
 
 ::

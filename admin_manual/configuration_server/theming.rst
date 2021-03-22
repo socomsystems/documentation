@@ -3,8 +3,8 @@ Theming
 =======
 
 With our theming feature you are able to customize the look and feel of your
-Nextcloud instance according to the corporate design of your organization by
-replacing Nextcloud logo and color with your own assets.
+cyfrSpaces instance according to the corporate design of your organization by
+replacing cyfrSpaces logo and color with your own assets.
 
 The theming-app is enabled by default so the section should appear by default in
 your admin-settings. If not, check in the apps management that this app is enabled.
@@ -28,7 +28,7 @@ You can change the following parameters of the look and feel on your instance:
 Theming of icons
 ----------------
 
-According to the parameters you have set, Nextcloud will automatically generate
+According to the parameters you have set, cyfrSpaces will automatically generate
 favicons and a header logo depending on the current logo and theming color.
 
 This requires the following additional dependencies:
@@ -43,15 +43,15 @@ This requires the following additional dependencies:
 Branded clients
 ---------------
 
-.. note:: Nextcloud GmbH provides branding services, delivering sync clients (mobile
+.. note:: cyfrSpaces GmbH provides branding services, delivering sync clients (mobile
    and desktop) which use your corporate identity and are pre-configured to help your
    users get up and running in no time. If you are interested in our advanced branding &
-   support subscription, `contact our sales team <https://nextcloud.com/enterprise/>`_.
+   support subscription, `contact our sales team <https://cyfr.space/enterprise/>`_.
 
 The theming app supports to change the URLs to the mobile apps (Android & iOS) that
 is shown when the webinterface is opened on one of those devices. Then there was a
 header shown, that redirects the user to the app in the app store. By default
-this redirects to the Nextcloud apps. In some cases it is wanted that this
+this redirects to the cyfrSpaces apps. In some cases it is wanted that this
 links to branded versions of those apps. In those cases the IDs and URLs can be
 set via the ``occ``-command::
 

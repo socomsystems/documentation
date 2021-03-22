@@ -13,7 +13,7 @@ hard limits that cannot be exceeded:
 64-bit filesystems have much higher limits; consult the documentation for your 
 filesystem.
 
-.. note:: The Nextcloud sync client is not affected by these upload limits
+.. note:: The cyfrSpaces sync client is not affected by these upload limits
    as it is uploading files in smaller chunks.
 
 System configuration
@@ -29,7 +29,7 @@ System configuration
 Configuring your Web server
 ---------------------------
 
-.. note:: Nextcloud comes with its own ``nextcloud/.htaccess`` file. Because ``php-fpm``
+.. note:: cyfrSpaces comes with its own ``nextcloud/.htaccess`` file. Because ``php-fpm``
    can't read PHP settings in ``.htaccess`` these settings must be set in the
    ``nextcloud/.user.ini`` file.
 
@@ -101,11 +101,11 @@ By default, downloads will be limited to 1GB due to ``proxy_buffering`` and ``pr
 Configuring PHP
 ---------------
 
-If you don't want to use the Nextcloud ``.htaccess`` or ``.user.ini`` file, you may 
+If you don't want to use the cyfrSpaces ``.htaccess`` or ``.user.ini`` file, you may 
 configure PHP instead. Make sure to comment out any lines ``.htaccess`` 
 pertaining to upload size, if you entered any.
 
-If you are running Nextcloud on a 32-bit system, any ``open_basedir`` directive 
+If you are running cyfrSpaces on a 32-bit system, any ``open_basedir`` directive 
 in your ``php.ini`` file needs to be commented out.
 
 Set the following two parameters inside ``php.ini``, using your own desired 

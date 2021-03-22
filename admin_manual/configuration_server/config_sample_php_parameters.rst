@@ -2,7 +2,7 @@
 Configuration Parameters
 ========================
 
-Nextcloud uses the ``config/config.php`` file to control server operations.
+cyfrSpaces uses the ``config/config.php`` file to control server operations.
 ``config/config.sample.php`` lists all the configurable parameters within
 Nextcloud, along with example or default values. This document provides a more
 detailed reference. Most options are configurable on your Admin page, so it
@@ -16,7 +16,7 @@ is usually not necessary to edit ``config/config.php``.
 Multiple config.php file
 ------------------------
 
-Nextcloud supports loading configuration parameters from multiple files.
+cyfrSpaces supports loading configuration parameters from multiple files.
 You can add arbitrary files ending with :file:`.config.php` in the :file:`config/`
 directory, for example you could place your email server configuration
 in :file:`email.config.php`. This allows you to easily create and manage
@@ -33,15 +33,15 @@ Nextcloud, and the values in these files take precedence over :file:`config.php`
 Default Parameters
 ------------------
 
-These parameters are configured by the Nextcloud installer, and are required
-for your Nextcloud server to operate.
+These parameters are configured by the cyfrSpaces installer, and are required
+for your cyfrSpaces server to operate.
 
 
 ::
 
 	'instanceid' => '',
 
-This is a unique identifier for your Nextcloud installation, created
+This is a unique identifier for your cyfrSpaces installation, created
 automatically by the installer. This example is for documentation only,
 and you should never use it because it will not work. A valid ``instanceid``
 is created when you install Nextcloud.
@@ -88,13 +88,13 @@ You can specify:
 Where user files are stored. The SQLite database is also stored here, when
 you use SQLite.
 
-Default to ``data/`` in the Nextcloud directory.
+Default to ``data/`` in the cyfrSpaces directory.
 
 ::
 
 	'version' => '',
 
-The current version number of your Nextcloud installation. This is set up
+The current version number of your cyfrSpaces installation. This is set up
 during installation and update, so you shouldn't need to change it.
 
 ::
@@ -124,15 +124,15 @@ Your host server name, for example ``localhost``, ``hostname``,
 
 	'dbname' => 'nextcloud',
 
-The name of the Nextcloud database, which is set during installation. You
+The name of the cyfrSpaces database, which is set during installation. You
 should not need to change this.
 
 ::
 
 	'dbuser' => '',
 
-The user that Nextcloud uses to write to the database. This must be unique
-across Nextcloud instances using the same SQL database. This is set up during
+The user that cyfrSpaces uses to write to the database. This must be unique
+across cyfrSpaces instances using the same SQL database. This is set up during
 installation, so you shouldn't need to change it.
 
 ::
@@ -146,7 +146,7 @@ you shouldn't need to change it.
 
 	'dbtableprefix' => '',
 
-Prefix for the Nextcloud tables in the database.
+Prefix for the cyfrSpaces tables in the database.
 
 Default to ``oc_``
 
@@ -154,7 +154,7 @@ Default to ``oc_``
 
 	'installed' => false,
 
-Indicates whether the Nextcloud instance was installed successfully; ``true``
+Indicates whether the cyfrSpaces instance was installed successfully; ``true``
 indicates a successful installation, and ``false`` indicates an unsuccessful
 installation.
 
@@ -165,7 +165,7 @@ Defaults to ``false``
 
 Default config.php Examples
 ---------------------------
-When you use SQLite as your Nextcloud database, your ``config.php`` looks like
+When you use SQLite as your cyfrSpaces database, your ``config.php`` looks like
 this after installation. The SQLite database is stored in your Nextcloud
 ``data/`` directory. SQLite is a simple, lightweight embedded database that
 is good for testing and for simple installations, but for production Nextcloud
@@ -188,7 +188,7 @@ systems you should use MySQL, MariaDB, or PosgreSQL.
     'installed' => true,
   );
 
-This example is from a new Nextcloud installation using MariaDB::
+This example is from a new cyfrSpaces installation using MariaDB::
 
 
   <?php
@@ -227,11 +227,11 @@ values, where present, are shown.
 
 	'default_language' => 'en',
 
-This sets the default language on your Nextcloud server, using ISO_639-1
+This sets the default language on your cyfrSpaces server, using ISO_639-1
 language codes such as ``en`` for English, ``de`` for German, and ``fr`` for
 French. It overrides automatic language detection on public pages like login
 or shared items. User's language preferences configured under "personal ->
-language" override this setting after they have logged in. Nextcloud has two
+language" override this setting after they have logged in. cyfrSpaces has two
 distinguished language codes for German, 'de' and 'de_DE'. 'de' is used for
 informal German and 'de_DE' for formal German. By setting this value to 'de_DE'
 you can enforce the formal version of German unless the user has chosen
@@ -255,7 +255,7 @@ Defaults to ``false``
 
 	'default_locale' => 'en_US',
 
-This sets the default locale on your Nextcloud server, using ISO_639
+This sets the default locale on your cyfrSpaces server, using ISO_639
 language codes such as ``en`` for English, ``de`` for German, and ``fr`` for
 French, and ISO-3166 country codes such as ``GB``, ``US``, ``CA``, as defined
 in RFC 5646. It overrides automatic locale detection on public pages like
@@ -283,7 +283,7 @@ Defaults to ``false``
 Set the default app to open on login. Use the app names as they appear in the
 URL after clicking them in the Apps menu, such as documents, calendar, and
 gallery. You can use a comma-separated list of app names, so if the first
-app is not enabled for a user then Nextcloud will try the second one, and so
+app is not enabled for a user then cyfrSpaces will try the second one, and so
 on. If no enabled apps are found it defaults to the Files app.
 
 Defaults to ``files``
@@ -293,7 +293,7 @@ Defaults to ``files``
 	'knowledgebaseenabled' => true,
 
 ``true`` enables the Help menu item in the user menu (top right of the
-Nextcloud Web interface). ``false`` removes the Help item.
+cyfrSpaces Web interface). ``false`` removes the Help item.
 
 ::
 
@@ -343,7 +343,7 @@ Defaults to ``false``
 
 	'auth.bruteforce.protection.enabled' => true,
 
-Whether the bruteforce protection shipped with Nextcloud should be enabled or not.
+Whether the bruteforce protection shipped with cyfrSpaces should be enabled or not.
 
 Disabling this is discouraged for security reasons.
 
@@ -361,7 +361,7 @@ skeleton files.
 If the directory does not exist, it falls back to non dialect (from ``de_DE``
 to ``de``). If that does not exist either, it falls back to ``default``
 
-Defaults to ``core/skeleton`` in the Nextcloud directory.
+Defaults to ``core/skeleton`` in the cyfrSpaces directory.
 
 ::
 
@@ -377,7 +377,7 @@ In case you do not want to provide any link, replace the url with 'disabled'
 Mail Parameters
 ---------------
 
-These configure the email settings for Nextcloud notifications and password
+These configure the email settings for cyfrSpaces notifications and password
 resets.
 
 
@@ -543,7 +543,7 @@ Proxy Configurations
 
 	'overwritehost' => '',
 
-The automatic hostname detection of Nextcloud can fail in certain reverse
+The automatic hostname detection of cyfrSpaces can fail in certain reverse
 proxy and CLI/cron situations. This option allows you to manually override
 the automatic detection; for example ``www.example.com``, or specify the port
 ``www.example.com:8080``.
@@ -552,9 +552,9 @@ the automatic detection; for example ``www.example.com``, or specify the port
 
 	'overwriteprotocol' => '',
 
-When generating URLs, Nextcloud attempts to detect whether the server is
-accessed via ``https`` or ``http``. However, if Nextcloud is behind a proxy
-and the proxy handles the ``https`` calls, Nextcloud would not know that
+When generating URLs, cyfrSpaces attempts to detect whether the server is
+accessed via ``https`` or ``http``. However, if cyfrSpaces is behind a proxy
+and the proxy handles the ``https`` calls, cyfrSpaces would not know that
 ``ssl`` is in use, which would result in incorrect URLs being generated.
 
 Valid values are ``http`` and ``https``.
@@ -563,11 +563,11 @@ Valid values are ``http`` and ``https``.
 
 	'overwritewebroot' => '',
 
-Nextcloud attempts to detect the webroot for generating URLs automatically.
+cyfrSpaces attempts to detect the webroot for generating URLs automatically.
 
 For example, if ``www.example.com/nextcloud`` is the URL pointing to the
-Nextcloud instance, the webroot is ``/nextcloud``. When proxies are in use,
-it may be difficult for Nextcloud to detect this parameter, resulting in
+cyfrSpaces instance, the webroot is ``/nextcloud``. When proxies are in use,
+it may be difficult for cyfrSpaces to detect this parameter, resulting in
 invalid URLs.
 
 ::
@@ -586,7 +586,7 @@ Defaults to ``''`` (empty string)
 	'overwrite.cli.url' => '',
 
 Use this configuration parameter to specify the base URL for any URLs which
-are generated within Nextcloud using any kind of command line tools (cron or
+are generated within cyfrSpaces using any kind of command line tools (cron or
 occ). The value should contain the full base URL:
 ``https://www.example.com/nextcloud``
 
@@ -599,13 +599,13 @@ Defaults to ``''`` (empty string)
 To have clean URLs without `/index.php` this parameter needs to be configured.
 
 This parameter will be written as "RewriteBase" on update and installation of
-Nextcloud to your `.htaccess` file. While this value is often simply the URL
-path of the Nextcloud installation it cannot be set automatically properly in
+cyfrSpaces to your `.htaccess` file. While this value is often simply the URL
+path of the cyfrSpaces installation it cannot be set automatically properly in
 every scenario and needs thus some manual configuration.
 
-In a standard Apache setup this usually equals the folder that Nextcloud is
-accessible at. So if Nextcloud is accessible via "https://mycloud.org/nextcloud"
-the correct value would most likely be "/nextcloud". If Nextcloud is running
+In a standard Apache setup this usually equals the folder that cyfrSpaces is
+accessible at. So if cyfrSpaces is accessible via "https://mycloud.org/nextcloud"
+the correct value would most likely be "/nextcloud". If cyfrSpaces is running
 under "https://mycloud.org/" then it would be "/".
 
 Note that the above rule is not valid in every case, as there are some rare setup
@@ -613,7 +613,7 @@ cases where this may not apply. However, to avoid any update problems this
 configuration value is explicitly opt-in.
 
 After setting this value run `occ maintenance:update:htaccess`. Now, when the
-following conditions are met Nextcloud URLs won't contain `index.php`:
+following conditions are met cyfrSpaces URLs won't contain `index.php`:
 
 - `mod_rewrite` is installed
 - `mod_env` is installed
@@ -735,10 +735,10 @@ Available values:
 
 Defaults to ``auto``
 
-Nextcloud Verifications
+cyfrSpaces Verifications
 -----------------------
 
-Nextcloud performs several verification checks. There are two options,
+cyfrSpaces performs several verification checks. There are two options,
 ``true`` and ``false``.
 
 
@@ -756,7 +756,7 @@ Defaults to ``false``
 
 	'updatechecker' => true,
 
-Check if Nextcloud is up-to-date and shows a notification if a new version is
+Check if cyfrSpaces is up-to-date and shows a notification if a new version is
 available.
 
 Defaults to ``true``
@@ -765,7 +765,7 @@ Defaults to ``true``
 
 	'updater.server.url' => 'https://updates.nextcloud.com/updater_server/',
 
-URL that Nextcloud should use to look for updates
+URL that cyfrSpaces should use to look for updates
 
 Defaults to ``https://updates.nextcloud.com/updater_server/``
 
@@ -773,7 +773,7 @@ Defaults to ``https://updates.nextcloud.com/updater_server/``
 
 	'updater.release.channel' => 'stable',
 
-The channel that Nextcloud should use to look for updates
+The channel that cyfrSpaces should use to look for updates
 
 Supported values:
   - ``daily``
@@ -784,7 +784,7 @@ Supported values:
 
 	'has_internet_connection' => true,
 
-Is Nextcloud connected to the Internet or running in a closed network?
+Is cyfrSpaces connected to the Internet or running in a closed network?
 
 Defaults to ``true``
 
@@ -813,7 +813,7 @@ Defaults to the following domains:
 
 	'check_for_working_wellknown_setup' => true,
 
-Allows Nextcloud to verify a working .well-known URL redirects. This is done
+Allows cyfrSpaces to verify a working .well-known URL redirects. This is done
 by attempting to make a request from JS to
 https://your-domain.com/.well-known/caldav/
 
@@ -851,7 +851,7 @@ Defaults to ``true``
 
 In certain environments it is desired to have a read-only configuration file.
 
-When this switch is set to ``true`` Nextcloud will not verify whether the
+When this switch is set to ``true`` cyfrSpaces will not verify whether the
 configuration is writable. However, it will not be possible to configure
 all options via the Web interface. Furthermore, when updating Nextcloud
 it is required to make the configuration file writable again for the update
@@ -867,10 +867,10 @@ Logging
 
 	'log_type' => 'file',
 
-This parameter determines where the Nextcloud logs are sent.
+This parameter determines where the cyfrSpaces logs are sent.
 
 ``file``: the logs are written to file ``nextcloud.log`` in the default
-Nextcloud data directory. The log file can be changed with parameter
+cyfrSpaces data directory. The log file can be changed with parameter
 ``logfile``.
 ``syslog``: the logs are sent to the system log. This requires a syslog daemon
 to be active.
@@ -885,7 +885,7 @@ Defaults to ``file``
 
 	'logfile' => '/var/log/nextcloud.log',
 
-Name of the file to which the Nextcloud logs are written if parameter
+Name of the file to which the cyfrSpaces logs are written if parameter
 ``log_type`` is set to ``file``.
 
 Defaults to ``[datadirectory]/nextcloud.log``
@@ -894,7 +894,7 @@ Defaults to ``[datadirectory]/nextcloud.log``
 
 	'logfilemode' => 0640,
 
-Log file mode for the Nextcloud loggin type in octal notation.
+Log file mode for the cyfrSpaces loggin type in octal notation.
 
 Defaults to 0640 (writeable by user, readable by group).
 
@@ -980,13 +980,13 @@ Defaults to 100 MB
 Alternate Code Locations
 ------------------------
 
-Some of the Nextcloud code may be stored in alternate locations.
+Some of the cyfrSpaces code may be stored in alternate locations.
 
 
 ::
 
 	'customclient_desktop' =>
-		'https://nextcloud.com/install/#install-clients',
+		'https://cyfr.space/install/#install-clients',
 	'customclient_android' =>
 		'https://play.google.com/store/apps/details?id=com.nextcloud.client',
 	'customclient_ios' =>
@@ -994,11 +994,11 @@ Some of the Nextcloud code may be stored in alternate locations.
 	'customclient_ios_appid' =>
 			'1125420102',
 
-This section is for configuring the download links for Nextcloud clients, as
+This section is for configuring the download links for cyfrSpaces clients, as
 seen in the first-run wizard and on Personal pages.
 
 Defaults to:
- - Desktop client: ``https://nextcloud.com/install/#install-clients``
+ - Desktop client: ``https://cyfr.space/install/#install-clients``
  - Android client: ``https://play.google.com/store/apps/details?id=com.nextcloud.client``
  - iOS client: ``https://itunes.apple.com/us/app/nextcloud/id1125420102?mt=8``
  - iOS client app id: ``1125420102``
@@ -1013,7 +1013,7 @@ Options for the Apps folder, Apps store, and App code checker.
 
 	'appstoreenabled' => true,
 
-When enabled, admins may install apps from the Nextcloud app store.
+When enabled, admins may install apps from the cyfrSpaces app store.
 
 Defaults to ``true``
 
@@ -1031,7 +1031,7 @@ Use the ``apps_paths`` parameter to set the location of the Apps directory,
 which should be scanned for available apps, and where user-specific apps
 should be installed from the Apps store. The ``path`` defines the absolute
 file system path to the app folder. The key ``url`` defines the HTTP Web path
-to that folder, starting from the Nextcloud webroot. The key ``writable``
+to that folder, starting from the cyfrSpaces webroot. The key ``writable``
 indicates if a Web server can write files to that folder.
 
 ::
@@ -1051,7 +1051,7 @@ Defaults to ``false``
 Previews
 --------
 
-Nextcloud supports previews of image files, the covers of MP3 files, and text
+cyfrSpaces supports previews of image files, the covers of MP3 files, and text
 files. These options control enabling and disabling previews, and thumbnail
 size.
 
@@ -1060,7 +1060,7 @@ size.
 
 	'enable_previews' => true,
 
-By default, Nextcloud can generate previews for the following filetypes:
+By default, cyfrSpaces can generate previews for the following filetypes:
 
 - Image files
 - Covers of MP3 files
@@ -1236,10 +1236,10 @@ maintenance.
 
 Enable maintenance mode to disable Nextcloud
 
-If you want to prevent users from logging in to Nextcloud before you start
+If you want to prevent users from logging in to cyfrSpaces before you start
 doing some maintenance work, you need to set the value of the maintenance
 parameter to true. Please keep in mind that users who are already logged-in
-are kicked out of Nextcloud instantly.
+are kicked out of cyfrSpaces instantly.
 
 Defaults to ``false``
 
@@ -1403,7 +1403,7 @@ Defaults to ``''`` (empty string)
 
 TTL of chunks located in the cache folder before they're removed by
 garbage collection (in seconds). Increase this value if users have
-issues uploading very large files via the Nextcloud Client as upload isn't
+issues uploading very large files via the cyfrSpaces Client as upload isn't
 completed within one day.
 
 Defaults to ``60*60*24`` (1 day)
@@ -1442,10 +1442,10 @@ Using Object Store with Nextcloud
 		],
 	],
 
-This example shows how to configure Nextcloud to store all files in a
+This example shows how to configure cyfrSpaces to store all files in a
 swift object storage.
 
-It is important to note that Nextcloud in object store mode will expect
+It is important to note that cyfrSpaces in object store mode will expect
 exclusive access to the object store container because it only stores the
 binary data for each file. The metadata is currently kept in the local
 database for performance reasons.
@@ -1614,7 +1614,7 @@ Defaults to the following databases:
 
 	'tempdirectory' => '/tmp/nextcloudtemp',
 
-Override where Nextcloud stores temporary files. Useful in situations where
+Override where cyfrSpaces stores temporary files. Useful in situations where
 the system temporary directory is on a limited space ramdisk or is otherwise
 restricted, or if external storages which do not support streaming are in
 use.
@@ -1629,12 +1629,12 @@ Hashing
 
 	'hashing_default_password' => false,
 
-By default Nextcloud will use the Argon2 password hashing if available.
+By default cyfrSpaces will use the Argon2 password hashing if available.
 
 However if for whatever reason you want to stick with the PASSWORD_DEFAULT
 of your php version. Then set the setting to true.
 
-Nextcloud uses the Argon2 algorithm (with PHP >= 7.2) to create hashes by its
+cyfrSpaces uses the Argon2 algorithm (with PHP >= 7.2) to create hashes by its
 own and exposes its configuration options as following. More information can
 be found at: https://www.php.net/manual/en/function.password-hash.php
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1704,7 +1704,7 @@ If you are applying a theme to Nextcloud, enter the name of the theme here.
 
 The default location for themes is ``nextcloud/themes/``.
 
-Defaults to the theming app which is shipped since Nextcloud 9
+Defaults to the theming app which is shipped since cyfrSpaces 9
 
 ::
 
@@ -1717,12 +1717,12 @@ AES-256-CFB are supported.
 
 	'minimum.supported.desktop.version' => '2.0.0',
 
-The minimum Nextcloud desktop client version that will be allowed to sync with
+The minimum cyfrSpaces desktop client version that will be allowed to sync with
 this server instance. All connections made from earlier clients will be denied
-by the server. Defaults to the minimum officially supported Nextcloud desktop
+by the server. Defaults to the minimum officially supported cyfrSpaces desktop
 clientversion at the time of release of this server version.
 
-When changing this, note that older unsupported versions of the Nextcloud desktop
+When changing this, note that older unsupported versions of the cyfrSpaces desktop
 client may not function as expected, and could lead to permanent data loss for
 clients or other unexpected results.
 
@@ -1753,7 +1753,7 @@ Defaults to ``1800`` (seconds)
 
 	'filesystem_check_changes' => 0,
 
-Specifies how often the local filesystem (the Nextcloud data/ directory, and
+Specifies how often the local filesystem (the cyfrSpaces data/ directory, and
 NFS mounts in data/) is checked for changes made outside Nextcloud. This
 does not apply to external storages.
 
@@ -1770,7 +1770,7 @@ Defaults to ``0``
 
 	'part_file_in_storage' => true,
 
-By default Nextcloud will store the part files created during upload in the
+By default cyfrSpaces will store the part files created during upload in the
 same storage as the upload target. Setting this to false will store the part
 files in the root of the users folder which might be required to work with certain
 external storage setups that have limited rename capabilities.
@@ -1782,15 +1782,15 @@ Defaults to ``true``
 	'mount_file' => '/var/www/nextcloud/data/mount.json',
 
 Where ``mount.json`` file should be stored, defaults to ``data/mount.json``
-in the Nextcloud directory.
+in the cyfrSpaces directory.
 
-Defaults to ``data/mount.json`` in the Nextcloud directory.
+Defaults to ``data/mount.json`` in the cyfrSpaces directory.
 
 ::
 
 	'filesystem_cache_readonly' => false,
 
-When ``true``, prevent Nextcloud from changing the cache due to changes in
+When ``true``, prevent cyfrSpaces from changing the cache due to changes in
 the filesystem for all storage.
 
 Defaults to ``false``
@@ -1799,7 +1799,7 @@ Defaults to ``false``
 
 	'secret' => '',
 
-Secret used by Nextcloud for various purposes, e.g. to encrypt data. If you
+Secret used by cyfrSpaces for various purposes, e.g. to encrypt data. If you
 lose this string there will be data corruption.
 
 ::
@@ -1913,7 +1913,7 @@ Disable the web based updater
 
 	'debug' => false,
 
-Set this Nextcloud instance to debugging mode
+Set this cyfrSpaces instance to debugging mode
 
 Only enable this for local development and not in production environments
 This will disable the minifier and outputs some additional debug information
@@ -1984,7 +1984,7 @@ WARNING: only use this if you know what you are doing
 	'simpleSignUpLink.shown' => true,
 
 By default there is on public pages a link shown that allows users to
-learn about the "simple sign up" - see https://nextcloud.com/signup/
+learn about the "simple sign up" - see https://cyfr.space/signup/
 
 If this is set to "false" it will not show the link.
 

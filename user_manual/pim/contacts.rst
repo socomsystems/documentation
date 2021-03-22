@@ -2,10 +2,10 @@
 Using the Contacts app
 ======================
 
-The Contacts app is not enabled by default in Nextcloud |version| and needs to
+The Contacts app is not enabled by default in cyfrSpaces |version| and needs to
 be installed separately from our App Store.
 
-The Nextcloud Contacts app is similar to other mobile contact applications, but
+The cyfrSpaces Contacts app is similar to other mobile contact applications, but
 with more functionality. 
 Let's run through basic features that will help you maintain your address book
 in the application. 
