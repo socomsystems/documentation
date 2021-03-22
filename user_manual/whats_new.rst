@@ -1,16 +1,16 @@
 ===========================================
-What's new for users in Nextcloud |version|
+What's new for users in cyfrSpaces |version|
 ===========================================
 
 1. Easier way to select a new app
 
    .. figure:: images/apps_menu.png
-      :alt: screenshot of apps menu at top-left of Nextcloud Web GUI
+      :alt: screenshot of apps menu at top-left of cyfrSpaces Web GUI
       
 2. New Contacts menu to reach your colleagues or friends easier
 
    .. figure:: images/contacts_menu.png
-      :alt: screenshot of contacts menu at top-right of Nextcloud Web GUI
+      :alt: screenshot of contacts menu at top-right of cyfrSpaces Web GUI
 
 3. A contact popup menu over avatars everywhere
 
